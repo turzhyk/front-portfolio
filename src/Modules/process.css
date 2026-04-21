@@ -28,14 +28,14 @@
   align-items: center;
   gap: 12px;
 
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   border: 1px solid #ddd;
   background: white;
 
   text-align: left;
   font-weight: 600;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 1px;
 
   transition: all 0.3s ease;
 }
@@ -58,7 +58,7 @@
   /* height: auto; */
 
   opacity: 0.9;
-      
+
   z-index: 1;
   pointer-events: none;
 }
@@ -82,7 +82,13 @@
 /* номер */
 .index {
   font-weight: bold;
-  opacity: 0.5;
+  font-size: 6rem;
+  line-height: 0px;
+  opacity: 0.1;
+  margin-left: -1rem;
+}
+.index.active {
+  transform: rotate(15deg);
 }
 
 /* RIGHT SIDE */
@@ -94,7 +100,7 @@
   width: 100%;
   padding: 30px;
   border: 1px solid #ddd;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   background: white;
 
   min-height: 180px;

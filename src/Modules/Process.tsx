@@ -81,7 +81,7 @@ export const Process: React.FC = () => {
                   setIsAuto(false);
                 }}
               >
-                <span className="index">{i + 1}</span>
+                <span className={`index + ${i === active? "active":""}`}>{i + 1}</span>
 
                 <span className="title">{t(step.title[0], step.title[1])}</span>
 
