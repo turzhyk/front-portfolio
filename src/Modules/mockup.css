@@ -1,0 +1,19 @@
+.laptop {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 20px;
+  background: #1a1a1a;
+}
+
+.screen {
+  border-radius: 10px;
+  overflow: hidden;
+  background: black;
+}
+
+.screen video {
+  width: 100%;
+  display: block;
+}
