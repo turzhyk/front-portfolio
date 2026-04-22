@@ -10,15 +10,21 @@
 /* GRID */
 .process-grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 40px;
+  grid-template-columns: 300px 150px 1fr;
+  gap: 0px;
+  align-items: stretch;
+}
+.process-grid .hr{
+  border-top: var(--border-param);
+  height: 1px;
+
 }
 
 /* LEFT SIDE */
 .steps {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  
 }
 .step {
   position: relative;
@@ -29,9 +35,9 @@
   gap: 12px;
 
   padding: 2.5rem 2rem;
-  border: 1px solid #ddd;
+  outline: var(--border-param);
   background: white;
-
+  border: none;
   text-align: left;
   font-weight: 600;
   cursor: pointer;
@@ -76,7 +82,7 @@
 
 /* hover */
 .step:hover {
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 /* номер */
@@ -99,7 +105,7 @@
 .card {
   width: 100%;
   padding: 30px;
-  border: 1px solid #ddd;
+  outline: var(--border-param);
   /* border-radius: 12px; */
   background: white;
 
@@ -130,8 +136,8 @@
 .card {
   width: 100%;
   padding: 30px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  outline: var(--border-param);
+  border-radius: 1px;
   background: white;
 
   min-height: 180px;

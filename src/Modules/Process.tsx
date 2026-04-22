@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { t } from "../Data/i18n";
 import "./process.css";
+import { WorkflowConnector } from "./WorkflowConnector";
 
 type Step = {
   title: [string, string];
@@ -38,6 +39,13 @@ export const Process: React.FC = () => {
   const [active, setActive] = useState(0);
   const [fade, setFade] = useState(true);
   const [isAuto, setIsAuto] = useState(true);
+  const stepRefs = [
+    useRef<HTMLButtonElement>(null),
+    useRef<HTMLButtonElement>(null),
+    useRef<HTMLButtonElement>(null),
+    useRef<HTMLButtonElement>(null),
+  ];
+  const cardRef = useRef<HTMLDivElement>(null);
 
   // 🔁 авто-переключение
   useEffect(() => {
@@ -72,6 +80,7 @@ export const Process: React.FC = () => {
             {steps.map((step, i) => (
               <button
                 key={i}
+                ref={stepRefs[i]}
                 className={`step ${i === active ? "active" : ""}`}
                 style={
                   i === active ? { backgroundColor: steps[i].color } : undefined
@@ -81,7 +90,9 @@ export const Process: React.FC = () => {
                   setIsAuto(false);
                 }}
               >
-                <span className={`index + ${i === active? "active":""}`}>{i + 1}</span>
+                <span className={`index + ${i === active ? "active" : ""}`}>
+                  {i + 1}
+                </span>
 
                 <span className="title">{t(step.title[0], step.title[1])}</span>
 
@@ -91,10 +102,20 @@ export const Process: React.FC = () => {
               </button>
             ))}
           </div>
-
+          <div style={{ width: "auto", alignSelf: "stretch" }}>
+            <WorkflowConnector
+              activeIndex={active}
+              colors={steps.map(i=>i.color)}
+              stepRefs={stepRefs}
+              cardRef={cardRef}
+            />
+          </div>
           {/* RIGHT */}
           <div className="content">
-            <div className={`card ${fade ? "fade-in" : "fade-out"}`}>
+            <div
+              className={`card ${fade ? "fade-in" : "fade-out"}`}
+              ref={cardRef}
+            >
               <h3>{t(steps[active].title[0], steps[active].title[1])}</h3>
 
               <p>{t(steps[active].text[0], steps[active].text[1])}</p>
