@@ -4,16 +4,50 @@
   margin: 0 auto;
   border-radius: 16px;
   padding: 20px;
-  background: #1a1a1a;
+  /* background: #1a1a1a; */
+  height: 400px;
+  position: relative;
+}
+.laptop-mock {
+  position: absolute;
+  max-width: 400px;
+  z-index: 5;
 }
 
-.screen {
-  border-radius: 10px;
+.laptop-screen {
+  position: absolute;
   overflow: hidden;
   background: black;
+  left: 65px;
+  width: 310px;
+  top: 50px;
+  height: 200px;
+  background: white;
+  background: radial-gradient(125% 125% at 50% 10%, #fff 40%, #63e 100%);
 }
 
 .screen video {
   width: 100%;
   display: block;
+}
+
+.phone-mock {
+  position: absolute;
+  max-width: 110px;
+  z-index: 7;
+  left: 300px;
+  top: 100px;
+}
+.phone-screen {
+  position: absolute;
+  overflow: hidden;
+  background: black;
+  left: 310px;
+  width: 88px;
+  top: 110px;
+  height: 185px;
+  border-radius: 15px;
+  z-index: 6;
+  background: white;
+  background: radial-gradient(125% 125% at 50% 10%, #de6767 40%, rgb(51, 210, 238) 100%);
 }

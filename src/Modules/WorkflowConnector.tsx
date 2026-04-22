@@ -39,108 +39,123 @@ export function WorkflowConnector({
   const pathRef = useRef<SVGPathElement>(null);
   const animRef = useRef<number | null>(null);
   const dotStartRef = useRef<SVGCircleElement>(null);
-const dotEndRef = useRef<SVGCircleElement>(null);
+  const dotEndRef = useRef<SVGCircleElement>(null);
 
   const currentFromRef = useRef<{ x: number; y: number } | null>(null);
-    const updatePath = useCallback((
-  from: { x: number; y: number },
-  to: { x: number; y: number },
-) => {
-  pathRef.current?.setAttribute("d", buildPath(from, to));
-  dotStartRef.current?.setAttribute("cx", String(from.x));
-  dotStartRef.current?.setAttribute("cy", String(from.y));
-  dotEndRef.current?.setAttribute("cx", String(to.x));
-  dotEndRef.current?.setAttribute("cy", String(to.y));
-}, []);
+  const updatePath = useCallback(
+    (from: { x: number; y: number }, to: { x: number; y: number }) => {
+      pathRef.current?.setAttribute("d", buildPath(from, to));
+      dotStartRef.current?.setAttribute("cx", String(from.x));
+      dotStartRef.current?.setAttribute("cy", String(from.y));
+      dotEndRef.current?.setAttribute("cx", String(to.x));
+      dotEndRef.current?.setAttribute("cy", String(to.y));
+    },
+    [],
+  );
+  const stepCount = 4;
   const getStepAnchor = useCallback(
-    (index: number): { x: number; y: number } | null => {
-      const container = containerRef.current;
-      const el = stepRefs[index]?.current;
-      if (!container || !el) return null;
-
-      const cRect = container.getBoundingClientRect();
-      const eRect = el.getBoundingClientRect();
+    (index: number, height: number) => {
       return {
-        x: 0, // левый край контейнера = правый край левой колонки
-        y: eRect.top - cRect.top + eRect.height / 2,
+        x: 0,
+        y: ((index + 0.5) / stepCount) * height,
       };
     },
-    [stepRefs],
+    [stepCount],
   );
 
-  const getCardAnchor = useCallback((): { x: number; y: number } | null => {
-    const container = containerRef.current;
-    const el = cardRef?.current;
-    if (!container || !el) return null;
-
-    const cRect = container.getBoundingClientRect();
-    const eRect = el.getBoundingClientRect();
+  const getCardAnchor = useCallback((width: number, height: number) => {
     return {
-      x: cRect.width, // правый край контейнера = левый край карточки
-      y: eRect.top - cRect.top + eRect.height / 2,
+      x: width,
+      y: height / 2,
     };
-  }, [cardRef]);
+  }, []);
 
-  const animateTo = useCallback((
-  from: { x: number; y: number },
-  to: { x: number; y: number },
-  cardAnchor: { x: number; y: number },
-) => {
-  if (animRef.current !== null) cancelAnimationFrame(animRef.current);
+  const animateTo = useCallback(
+    (
+      from: { x: number; y: number },
+      to: { x: number; y: number },
+      cardAnchor: { x: number; y: number },
+    ) => {
+      if (animRef.current !== null) cancelAnimationFrame(animRef.current);
 
-  // Фиксируем from в замыкании — он не изменится во время анимации
-  const fixedFrom = { ...from };
-  let startTime: number | null = null;
+      // Фиксируем from в замыкании — он не изменится во время анимации
+      const fixedFrom = { ...from };
+      let startTime: number | null = null;
 
-  const frame = (ts: number) => {
-    if (startTime === null) startTime = ts;
-    const raw = Math.min((ts - startTime) / ANIM_DURATION, 1);
-    const t = easeInOut(raw);
+      const frame = (ts: number) => {
+        if (startTime === null) startTime = ts;
+        const raw = Math.min((ts - startTime) / ANIM_DURATION, 1);
+        const t = easeInOut(raw);
 
-    const cur = {
-      x: lerp(fixedFrom.x, to.x, t),
-      y: lerp(fixedFrom.y, to.y, t),
-    };
+        const cur = {
+          x: lerp(fixedFrom.x, to.x, t),
+          y: lerp(fixedFrom.y, to.y, t),
+        };
 
-    currentFromRef.current = cur;
-    updatePath(cur, cardAnchor);
+        currentFromRef.current = cur;
+        updatePath(cur, cardAnchor);
 
-    if (raw < 1) {
+        if (raw < 1) {
+          animRef.current = requestAnimationFrame(frame);
+        } else {
+          animRef.current = null;
+        }
+      };
+
       animRef.current = requestAnimationFrame(frame);
-    } else {
-      animRef.current = null;
-    }
+    },
+    [updatePath],
+  );
+  const getSize = () => {
+    const el = containerRef.current;
+    if (!el) return null;
+
+    return {
+      width: el.clientWidth,
+      height: el.clientHeight,
+    };
   };
-
-  animRef.current = requestAnimationFrame(frame);
-}, [updatePath]);
-  
-
   // При смене activeIndex — анимируем стартовую точку
-  useEffect(() => {
-    const toAnchor = getStepAnchor(activeIndex);
-    const cardAnchor = getCardAnchor();
-    if (!toAnchor || !cardAnchor) return;
+useEffect(() => {
+  const size = getSize();
+  if (!size) return;
 
-    const fromAnchor = currentFromRef.current ?? toAnchor;
-    animateTo(fromAnchor, toAnchor, cardAnchor);
-  }, [activeIndex, getStepAnchor, getCardAnchor, animateTo]);
+  const toAnchor = getStepAnchor(activeIndex, size.height);
+  const cardAnchor = getCardAnchor(size.width, size.height);
+
+  const prevFrom = currentFromRef.current;
+
+  if (!prevFrom) {
+    currentFromRef.current = toAnchor;
+    updatePath(toAnchor, cardAnchor);
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    animateTo(prevFrom, toAnchor, cardAnchor);
+  });
+}, [activeIndex, getStepAnchor, getCardAnchor, animateTo]);
 
   // Пересчёт при ресайзе без анимации
   useEffect(() => {
     const recalc = () => {
-      const anchor = getStepAnchor(activeIndex);
-      const cardAnchor = getCardAnchor();
-      if (!anchor || !cardAnchor || !pathRef.current) return;
-      currentFromRef.current = anchor;
-      pathRef.current.setAttribute("d", buildPath(anchor, cardAnchor));
-    };
+      const size = getSize();
+      if (!size) return;
 
+      const anchor = getStepAnchor(activeIndex, size.height);
+      const cardAnchor = getCardAnchor(size.width, size.height);
+
+      // НЕ трогаем во время анимации
+      if (animRef.current !== null) return;
+
+      currentFromRef.current = anchor;
+      updatePath(anchor, cardAnchor);
+    };
     const observer = new ResizeObserver(recalc);
     if (containerRef.current) observer.observe(containerRef.current);
 
     return () => observer.disconnect();
-  }, [activeIndex, getStepAnchor, getCardAnchor]);
+  }, [activeIndex, getStepAnchor, getCardAnchor, updatePath]);
 
   return (
     <div
@@ -176,8 +191,8 @@ const dotEndRef = useRef<SVGCircleElement>(null);
           strokeWidth="1.5"
           strokeLinecap="round"
         />
-         <circle ref={dotStartRef} r={6} fill="#000000" z={10}/>
-  <circle ref={dotEndRef} r={6} fill="#000000" z={10} />
+        <circle ref={dotStartRef} r={6} fill="#000000" z={10} />
+        <circle ref={dotEndRef} r={6} fill="#000000" z={10} />
       </svg>
     </div>
   );

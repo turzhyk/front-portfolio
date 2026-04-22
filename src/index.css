@@ -7,6 +7,7 @@
   --border-param:  1px solid rgb(201, 201, 201);
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
+    --accent2: #2a8bdf;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
@@ -136,4 +137,10 @@ code {
 }
 button:hover{
   border: none;
+}
+.t-accent1{
+  color: var(--accent);
+}
+.t-accent2{
+  color: var(--accent2);
 }

@@ -38,6 +38,7 @@ const steps = [
 export const Process: React.FC = () => {
   const [active, setActive] = useState(0);
   const [fade, setFade] = useState(true);
+  const [displayed, setDisplayed] = useState(active);
   const [isAuto, setIsAuto] = useState(true);
   const stepRefs = [
     useRef<HTMLButtonElement>(null),
@@ -60,11 +61,14 @@ export const Process: React.FC = () => {
 
   // 🎬 fade анимация при смене
   useEffect(() => {
+    // запускаем fade-out
     setFade(false);
 
     const timeout = setTimeout(() => {
-      setFade(true);
-    }, 100); // задержка перед fade-in
+      // меняем контент ПОСЛЕ затухания
+      setDisplayed(active);
+      setFade(true); // fade-in
+    }, 200); // должно совпадать с CSS transition
 
     return () => clearTimeout(timeout);
   }, [active]);
@@ -105,20 +109,16 @@ export const Process: React.FC = () => {
           <div style={{ width: "auto", alignSelf: "stretch" }}>
             <WorkflowConnector
               activeIndex={active}
-              colors={steps.map(i=>i.color)}
+              colors={steps.map((i) => i.color)}
               stepRefs={stepRefs}
               cardRef={cardRef}
             />
           </div>
           {/* RIGHT */}
           <div className="content">
-            <div
-              className={`card ${fade ? "fade-in" : "fade-out"}`}
-              ref={cardRef}
-            >
-              <h3>{t(steps[active].title[0], steps[active].title[1])}</h3>
-
-              <p>{t(steps[active].text[0], steps[active].text[1])}</p>
+            <div className={`card ${fade ? "fade-in" : "fade-out"}`} ref={cardRef}>
+              <h3>{t(steps[displayed].title[0], steps[displayed].title[1])}</h3>
+              <p>{t(steps[displayed].text[0], steps[displayed].text[1])}</p>
             </div>
           </div>
         </div>

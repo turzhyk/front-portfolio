@@ -9,6 +9,7 @@
   background-color: #ffffffa4;
   border-bottom: var(--border-param);
   backdrop-filter: blur(10px);
+  z-index: 100;
 }
 
 .header-inner {
