@@ -3,7 +3,7 @@
 
   display: flex;
   justify-content: stretch;
-  width: calc(80% - 3px);
+  width: calc(65% - 3px);
   margin: auto;
   position: fixed;
   background-color: #ffffffa4;

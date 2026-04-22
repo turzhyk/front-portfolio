@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap");
 :root {
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
-  --border-param:  1px solid rgb(201, 201, 201);
+  --border-param: 1px solid rgb(201, 201, 201);
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
-    --accent2: #2a8bdf;
+  --accent2: #2a8bdf;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   /* font: 18px/145% var(--sans); */
-   font-family: "Mozilla Text", sans-serif;
+  font-family: "Mozilla Text", sans-serif;
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -28,7 +28,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
 
   @media (max-width: 1024px) {
     font-size: 16px;
@@ -54,11 +53,8 @@
     filter: invert(1) brightness(2);
   }
 } */
-button{
-  color: #08060d;
-}
-#root {
 
+#root {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -67,10 +63,10 @@ button{
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-   position: relative;
+  position: relative;
 }
 .page {
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
   border-inline: 1px solid var(--border);
   min-height: 100svh;
@@ -127,20 +123,21 @@ code {
   background: var(--code-bg);
 }
 
-.border1{
+.border1 {
   outline: var(--border-param);
 }
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+  position: relative;
   /* border: var(--border-param); */
 }
-button:hover{
-  border: none;
+
+
+.t-accent1 {
+  color: black;
+  font-weight: 600;
 }
-.t-accent1{
-  color: var(--accent);
-}
-.t-accent2{
+.t-accent2 {
   color: var(--accent2);
 }
