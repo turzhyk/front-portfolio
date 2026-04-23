@@ -16,7 +16,7 @@ const steps = [
     image: "/images/step1.png",
   },
   {
-    title: ["Прототип", "Wireframe"],
+    title: ["Прототип", "Prototype"],
     text: ["...", "..."],
     color: "#eedffd",
     image: "/images/step2.png",

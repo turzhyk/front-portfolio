@@ -37,6 +37,7 @@
   padding: 2.5rem 2rem;
   outline: var(--border-param);
   background: white;
+  color: var(--text);
   border: none;
   text-align: left;
   font-weight: 600;

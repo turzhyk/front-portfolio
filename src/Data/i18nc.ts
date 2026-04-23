@@ -23,8 +23,8 @@ i18n.use(initReactI18next).init({
           title:
             "I build <hi1>landing pages</hi1> and <hi1>websites</hi1> that generate <hi2>leads</hi2>",
           subtitle:
-            "Fast launch, responsive, Firebase integrations",
-          cta: "Discuss project",
+            "Fast launch, responsive, Google Maps & Google Ads ready",
+          cta: "Get a free consultation",
         },
       },
     },

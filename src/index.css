@@ -53,7 +53,9 @@
     filter: invert(1) brightness(2);
   }
 } */
-
+a button a:visited{
+  color: var(--text);
+}
 #root {
   max-width: 100%;
   margin: 0 auto;
@@ -71,8 +73,17 @@
   border-inline: 1px solid var(--border);
   min-height: 100svh;
 }
+.page::selection{
+  background-color: #cf8fff;
+}
+@media (max-width: 800px) {
+  .page{
+    width: 100%;
+  }
+}
 body {
   margin: 0;
+   color: var(--text);
 }
 *,
 *::before,
