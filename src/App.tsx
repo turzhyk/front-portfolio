@@ -8,6 +8,8 @@ import { Cases } from "./Modules/Cases";
 import { LaptopMockup } from "./Modules/LaptopMockup";
 import { Header } from "./Modules/Header";
 import { Process } from "./Modules/Process";
+import { AboutMe } from "./Modules/AboutMe";
+import { Footer } from "./Modules/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,11 +17,13 @@ function App() {
   return (
     <>
       <div className="page">
-      <Header />
+        <Header />
         <Hero />
         <Cases />
+        <AboutMe />
         <Process />
       </div>
+      <Footer/>
     </>
   );
 }

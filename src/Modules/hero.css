@@ -15,9 +15,13 @@ h1 {
 .subtitle {
   font-size: 18px;
   color: #666;
+  margin-bottom: 15px;
+}
+.subtitle2{
+  font-size: 15px;
+  color: #666;
   margin-bottom: 30px;
 }
-
 .actions {
   display: flex;
   gap: 16px;

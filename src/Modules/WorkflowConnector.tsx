@@ -11,7 +11,7 @@ interface WorkflowConnectorProps {
   cardRef: React.RefObject<HTMLElement | null>;
 }
 
-const ANIM_DURATION = 380;
+const ANIM_DURATION = 200;
 
 function easeInOut(t: number): number {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
@@ -180,8 +180,8 @@ useEffect(() => {
             x2="100%"
             y2="0%"
           >
-            <stop offset="0%" stopColor={colors[activeIndex]} stopOpacity="1" />
-            <stop offset="100%" stopColor="#8f8f8f" stopOpacity="1" />
+            <stop offset="0%" stopColor="#000" stopOpacity="1" />
+            <stop offset="100%" stopColor="#000000" stopOpacity="1" />
           </linearGradient>
         </defs>
         <path
@@ -191,7 +191,7 @@ useEffect(() => {
           strokeWidth="1.5"
           strokeLinecap="round"
         />
-        <circle ref={dotStartRef} r={6} fill="#000000" z={10} />
+        {/* <circle ref={dotStartRef} r={6} fill="#000000" z={10} /> */}
         <circle ref={dotEndRef} r={6} fill="#000000" z={10} />
       </svg>
     </div>

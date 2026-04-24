@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { t } from "../Data/i18n";
 import "./process.css";
 import { WorkflowConnector } from "./WorkflowConnector";
+import { useTranslation } from "react-i18next";
 
 type Step = {
   title: [string, string];
@@ -10,28 +11,35 @@ type Step = {
 
 const steps = [
   {
-    title: ["Обсуждение", "Discussion"],
-    text: ["...", "..."],
+    title: "step1",
+    text: [
+      "...",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et nisi vulputate, porttitor neque nec, feugiat libero. Etiam vulputate erat sagittis tempor fringilla. Aliquam nec nisi sed tellus gravida elementum. Nunc molestie, lectus quis sodales hendrerit, ipsum ipsum feugiat diam, in dignissim leo est ut turpis. Ut vehicula, nisi vitae ultricies consectetur, nulla purus elementum sapien, in ornare magna lorem eget lorem. ",
+    ],
     color: "#dffbd2",
     image: "/images/step1.png",
+    desc: "We discuss adndwad dw"
   },
   {
-    title: ["Прототип", "Prototype"],
+    title: ["Прототип", "Design & Feedback"],
     text: ["...", "..."],
     color: "#eedffd",
     image: "/images/step2.png",
+    desc: "We discuss adndwad dw"
   },
   {
-    title: ["Разработка", "Development"],
+    title: ["Разработка", "Clean Coding & SEO-ready"],
     text: ["...", "..."],
     color: "#d6ffe6",
     image: "/images/step3.png",
+    desc: "We discuss adndwad dw"
   },
   {
-    title: ["Запуск", "Launch"],
+    title: ["Запуск", "Ready to sell"],
     text: ["...", "..."],
     color: "#ffead6",
     image: "/images/step4.png",
+    desc: "We discuss adndwad dw"
   },
 ];
 
@@ -40,6 +48,7 @@ export const Process: React.FC = () => {
   const [fade, setFade] = useState(true);
   const [displayed, setDisplayed] = useState(active);
   const [isAuto, setIsAuto] = useState(true);
+  const {t} = useTranslation();
   const stepRefs = [
     useRef<HTMLButtonElement>(null),
     useRef<HTMLButtonElement>(null),
@@ -80,29 +89,31 @@ export const Process: React.FC = () => {
 
         <div className="process-grid">
           {/* LEFT */}
+          <div className="left-line"></div>
           <div className="steps">
             {steps.map((step, i) => (
               <button
                 key={i}
                 ref={stepRefs[i]}
                 className={`step ${i === active ? "active" : ""}`}
-                style={
-                  i === active ? { backgroundColor: steps[i].color } : undefined
-                }
+                // style={
+                //   i === active ? { backgroundColor: steps[i].color } : undefined
+                // }
                 onClick={() => {
                   setActive(i);
                   setIsAuto(false);
                 }}
               >
-                <span className={`index + ${i === active ? "active" : ""}`}>
-                  {i + 1}
-                </span>
+                <div className="step-header">
+                  <span className={`index + ${i === active ? "active" : ""}`}>
+                    {i+1}
+                  </span>
 
-                <span className="title">{t(step.title[0], step.title[1])}</span>
-
-                {i === active && (
-                  <img src={step.image} className="step-image" alt="" />
-                )}
+                  <span className="title">
+                  {t("process.step"+(i+1)+".title")}
+                  </span>
+                </div>
+                <p>  {t("process.step"+(i+1)+".subtitle")}</p>
               </button>
             ))}
           </div>
@@ -116,9 +127,17 @@ export const Process: React.FC = () => {
           </div>
           {/* RIGHT */}
           <div className="content">
-            <div className={`card ${fade ? "fade-in" : "fade-out"}`} ref={cardRef}>
-              <h3>{t(steps[displayed].title[0], steps[displayed].title[1])}</h3>
-              <p>{t(steps[displayed].text[0], steps[displayed].text[1])}</p>
+            <div
+              className={`card ${fade ? "fade-in" : "fade-out"}`}
+              ref={cardRef}
+            >
+              <h3> {t("process.step"+(active+1)+".title")}</h3>
+              <div className="card-content">
+                <p>  {t("process.step"+(active+1)+".desc")}</p>
+                <div className="card-img-wrapper">
+                  <img src="images/watsup_scr.png" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

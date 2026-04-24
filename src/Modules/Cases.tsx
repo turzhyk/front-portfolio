@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useTransition } from "react";
 import { LaptopMockup } from "./LaptopMockup";
 import "./cases.css";
 import { useInView } from "../Data/useInView";
 import { VerticalDivider } from "./Components/VerticalDivider";
+import { useTranslation } from "react-i18next";
 
 type Case = {
   title: string;
@@ -11,23 +12,11 @@ type Case = {
   video: string;
 };
 
-const cases: Case[] = [
-  {
-    title: "Интернет-магазин одежды",
-    description: "Редизайн лендинга + адаптив",
-    result: "+35% заявок",
-    video: "/videos/shop.mp4",
-  },
-  {
-    title: "Сайт для студии",
-    description: "Разработка с нуля",
-    result: "Запуск за 7 дней",
-    video: "/videos/studio.mp4",
-  },
-];
+
 
 export const Cases: React.FC = () => {
   const { ref: ref1, isVisible: isV1 } = useInView<HTMLHeadingElement>();
+  const {t} = useTranslation();
   return (
     <section id="cases" className="cases">
       <h2>My Projects</h2>
@@ -40,20 +29,15 @@ export const Cases: React.FC = () => {
             dots={["0%", "20%", "52%", "100%"]}
           />
           <div className="left">
-            <h2 className="title">Page for Printing service</h2>
+            <h2 className="title">{t("cases.case1.title")}</h2>
             <hr />
-            <h3 className="subtitle">Task</h3>
+            <h3 className="subtitle">{t("cases.task")}</h3>
             <p className="">
-              Developed a landing site for a print shop featuring service
-              catalog, individual service pages with pricing calculators,
-              customer reviews, and a contact form for inquiries.
+            {t("cases.case1.task")}
             </p>
-            <h3 className="subtitle">Result</h3>
+            <h3 className="subtitle">{t("cases.result")}</h3>
             <p className="">
-              Improved lead generation by making it easier for users to
-              calculate prices and request services instantly, resulting in
-              higher conversion rate and more qualified customer inquiries for
-              both B2C and B2B clients.
+               {t("cases.case1.result")}
             </p>
             <br />
             <hr />
@@ -66,12 +50,12 @@ export const Cases: React.FC = () => {
               </div>
               <div>
                 <h3 className="subtitle">Development time</h3>
-                <h4 className={`reveal ${isV1 ? "show" : ""}`}>&lt;3 weeks</h4>
+                <h4 className={`reveal ${isV1 ? "show" : ""}`}>&lt;5 weeks</h4>
               </div>
             </div>
           </div>
           <div className="right">
-            <LaptopMockup videoSrc={""} />
+              <LaptopMockup pcSrc={"videos/case1_pc.webm"} mobileSrc={"videos/case1_mobile.mp4"} />
           </div>
         </div>
       </div>
@@ -83,19 +67,15 @@ export const Cases: React.FC = () => {
             dots={["0%", "20%", "52%", "100%"]}
           />
           <div className="left">
-            <h2 className="title">Driving School Landing Page</h2>
+            <h2 className="title">{t("cases.case2.title")}</h2>
             <hr />
-            <h3 className="subtitle">Task</h3>
+            <h3 className="subtitle">{t("cases.task")}</h3>
             <p className="">
-              Built a simple 2–3 page landing website for a driving school,
-              including course information, pricing, and a contact form for
-              quick enrollment.
+               {t("cases.case2.task")}
             </p>
-            <h3 className="subtitle">Result</h3>
+            <h3 className="subtitle">{t("cases.result")}</h3>
             <p className="">
-              Increased student sign-ups by simplifying access to key
-              information and enabling fast inquiries, leading to more
-              consistent lead flow and reduced drop-off during registration.
+               {t("cases.case2.result")}
             </p>
             <br />
             <hr />
@@ -108,16 +88,16 @@ export const Cases: React.FC = () => {
               </div>
               <div>
                 <h3 className="subtitle">Development time</h3>
-                <h4 className={`reveal ${isV1 ? "show" : ""}`}>&lt;2 weeks</h4>
+                <h4 className={`reveal ${isV1 ? "show" : ""}`}>&lt;3 weeks</h4>
               </div>
             </div>
           </div>
           <div className="right">
-            <LaptopMockup videoSrc={""} />
+            <LaptopMockup pcSrc={"videos/case1_pc.webm"} mobileSrc={"videos/case1_mobile.mp4"} />
           </div>
         </div>
       </div>
-      <button className="btn show-more-btn">Show more</button>
+      {/* <button className="btn show-more-btn">Show more</button> */}
       
     </section>
   );
