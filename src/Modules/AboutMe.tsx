@@ -12,7 +12,7 @@ export const AboutMe = () => {
   const {t} = useTranslation();
   return (
     <section className="aboutme">
-      <h2>About me</h2>
+      <h2>Kim jestem</h2>
       <div className="container">
         <div className="top">
           <div className="img-wrapper"><img src="images/aboutme.jpeg"/></div>

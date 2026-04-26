@@ -20,7 +20,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  height: 400px;
+  height: auto;
   text-align: left;
 }
 .aboutme .img-wrapper {
@@ -28,8 +28,9 @@
   overflow: hidden;
   border-radius: 1rem;
 }
-.aboutme .img-wrapper img{
+.aboutme .img-wrapper img {
   width: 100%;
+  height: auto;
 }
 .top .content {
   display: flex;
@@ -47,53 +48,71 @@
   width: 100%;
   margin-bottom: 1rem;
 }
-.bottom{
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 1rem;
-      margin-top: 2rem;
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
 }
-.bottom .about-card{
-      outline: var(--border-param);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      border-radius: 1px;
+.bottom .about-card {
+  outline: var(--border-param);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1px;
 }
-.bottom  .about-card .title{
-      font-weight: 600;
-      font-size: 16px;
-      color: var(--text-h);
-      margin: 0;
-}
-.bottom .about-card:hover p{
-      background-color: var(--text-h);
-      color: var(--bg);
-      margin: 0rem -1rem -1rem -1rem;
-      padding: 0rem 1rem 1rem 1rem;
-}
-.bottom  .about-card p{
-      color: var(--text);
-      flex: 1;
-}
-.bottom  .about-card img{
-      filter: invert(1);
-      width: 40px;
-      flex-basis: 1;
-      margin: 0.5rem;
+.bottom .about-card .title {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-h);
+  margin: 1rem 0 0 0;
+
 }
 
-.factura{
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      margin-top: auto;
-      
-      gap:0.7rem;
-      color:var(--text-h);
+.bottom .about-card p {
+  color: var(--text);
+  flex: 1;padding: 1rem;
 }
-.factura img{
-      width: 25px;
+.bottom .about-card:hover p {
+  background-color: var(--text-h);
+  color: var(--bg);
+
+}
+.bottom .about-card img {
+  filter: invert(1);
+  width: 40px;
+  flex-basis: 1;
+  margin: 0.5rem;
+}
+
+.factura {
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+
+  gap: 0.7rem;
+  color: var(--text-h);
+}
+.factura img {
+  width: 25px;
+}
+@media (max-width: 1000px) {
+  .aboutme .top {
+    grid-template-columns: 1fr;
+  }
+  .bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bottom .about-card p {
+    color: var(--text);
+    flex: 1;
+    
+  }
+}
+@media (max-width: 400px) {
+.bottom {
+    grid-template-columns: 1fr;
+  }
 }

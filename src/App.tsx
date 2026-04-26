@@ -3,7 +3,7 @@ import { Cases } from "./Modules/Cases";
 import { Header } from "./Modules/Header";
 import { Process } from "./Modules/Process";
 import { AboutMe } from "./Modules/AboutMe";
-import { Footer } from "./Modules/Footer";
+
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
         <AboutMe />
         <Process />
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

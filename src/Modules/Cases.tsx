@@ -1,3 +1,4 @@
+import React from "react";
 import { LaptopMockup } from "./LaptopMockup";
 import "./cases.css";
 import { useInView } from "../Data/useInView";
@@ -6,30 +7,29 @@ import { useTranslation } from "react-i18next";
 
 
 
-
 export const Cases: React.FC = () => {
   const { ref: ref1, isVisible: isV1 } = useInView<HTMLHeadingElement>();
   const {t} = useTranslation();
   return (
     <section id="cases" className="cases">
-      <h2>My Projects</h2>
+      <h2>Moje Projekty</h2>
 
-      <div className="project">
-        <div className="project-content">
+      <div className="cases-project">
+      
           <VerticalDivider
             startMargin="25px"
             length="20rem"
             dots={["0%", "20%", "52%", "100%"]}
           />
-          <div className="left">
+          <div className="cases-project-leftcol">
             <h2 className="title">{t("cases.case1.title")}</h2>
             <hr />
             <h3 className="subtitle">{t("cases.task")}</h3>
-            <p className="">
+            <p >
             {t("cases.case1.task")}
             </p>
             <h3 className="subtitle">{t("cases.result")}</h3>
-            <p className="">
+            <p >
                {t("cases.case1.result")}
             </p>
             <br />
@@ -47,12 +47,12 @@ export const Cases: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="right">
+          <div className="cases-project-right-col">
               <LaptopMockup pcSrc={"videos/case1_pc.webm"} mobileSrc={"videos/case1_mobile.mp4"} />
           </div>
-        </div>
+        
       </div>
-      <div className="project">
+      {/* <div className="project">
         <div className="project-content">
           <VerticalDivider
             startMargin="25px"
@@ -89,7 +89,7 @@ export const Cases: React.FC = () => {
             <LaptopMockup pcSrc={"videos/case1_pc.webm"} mobileSrc={"videos/case1_mobile.mp4"} />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <button className="btn show-more-btn">Show more</button> */}
       
     </section>

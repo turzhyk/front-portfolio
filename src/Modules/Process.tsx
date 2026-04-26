@@ -84,7 +84,7 @@ useEffect(() => {
   return (
     <section className="process">
       <div className="container">
-        <h2>{t("Как я работаю", "How I work")}</h2>
+        <h2>Jak pracuję</h2>
 
         <div className="process-grid">
           {/* LEFT */}
@@ -116,7 +116,7 @@ useEffect(() => {
               </button>
             ))}
           </div>
-          <div style={{ width: "auto", alignSelf: "stretch" }}>
+          <div className="process-connector" style={{ width: "auto", alignSelf: "stretch" }}>
             <WorkflowConnector
               activeIndex={active}
               colors={steps.map((i) => i.color)}
