@@ -1,13 +1,15 @@
 import React from "react";
 import "./aboutme.css";
+import { useTranslation } from "react-i18next";
 
 const Features = [
-  { title: "Lokalizacja", img:"svg/location.svg"},
-  { title: "Podejście" , img:"svg/bulb.svg"},
-  { title: "Technologie" , img:"svg/code.svg"},
-  { title: "Gwarancja", img:"svg/handshake.svg" },
+  { key: "location", img:"svg/location.svg"},
+  { key: "way" , img:"svg/bulb.svg"},
+  { key: "tech" , img:"svg/code.svg"},
+  { key: "garanty", img:"svg/handshake.svg" },
 ];
 export const AboutMe = () => {
+  const {t} = useTranslation();
   return (
     <section className="aboutme">
       <h2>About me</h2>
@@ -27,10 +29,10 @@ export const AboutMe = () => {
         <div className="bottom">
           {Features.map((i) => {
             return (
-              <div className="card">
-                <h3 className="title">{i.title}</h3>
+              <div className="about-card">
+                <h3 className="title">{t("about."+i.key+".title")}</h3>
                 <img src={i.img}/>
-                <p> dasdadda ads asd as dasd ad</p>
+                <p> {t("about."+i.key+".desc")}</p>
                 
               </div>
             );

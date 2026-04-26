@@ -53,7 +53,7 @@
       gap: 1rem;
       margin-top: 2rem;
 }
-.bottom .card{
+.bottom .about-card{
       outline: var(--border-param);
       display: flex;
       flex-direction: column;
@@ -62,23 +62,23 @@
       padding: 1rem;
       border-radius: 1px;
 }
-.bottom  .card .title{
+.bottom  .about-card .title{
       font-weight: 600;
       font-size: 16px;
       color: var(--text-h);
       margin: 0;
 }
-.card:hover .title{
-      font-weight: 600;
-      font-size: 20px;
-      color: var(--text-h);
-      margin: 0;
+.bottom .about-card:hover p{
+      background-color: var(--text-h);
+      color: var(--bg);
+      margin: 0rem -1rem -1rem -1rem;
+      padding: 0rem 1rem 1rem 1rem;
 }
-.bottom  .card p{
+.bottom  .about-card p{
       color: var(--text);
       flex: 1;
 }
-.bottom  .card img{
+.bottom  .about-card img{
       filter: invert(1);
       width: 40px;
       flex-basis: 1;

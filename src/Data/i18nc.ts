@@ -99,6 +99,24 @@ i18n.use(initReactI18next).init({
             desc: "Na tym etapie publikuję stronę i upewniam się, że wszystko działa bez zarzutu. Formularze, integracje i podstawowa analityka są skonfigurowane, dzięki czemu możesz od razu zacząć pozyskiwać klientów. W razie potrzeby pomagam też z pierwszym uruchomieniem kampanii lub dalszym rozwojem strony.",
           },
         },
+        about:{
+          location:{
+            title:"Localizacja",
+            desc:"Działam w Polsce: Doskonale rozumiem specyfikę lokalnego rynku i potrzeby polskich klientów."
+          },
+          way:{
+            title:"Podejście",
+            desc:"Koncentracja na wynikach: Tworzę narzędzia, które sprzedają и generują leady, a nie tylko „ładne obrazki”."
+          }
+          ,tech:{
+            title:'Technologie',
+            desc:"Szybkość i wydajność: Korzystam z najnowocześniejszych rozwiązań, aby Twoja strona była błyskawiczna i responsywna na smartfonach."
+          },
+          garanty:{
+            title:"Gwarancja",
+            desc:"Pełne wsparcie: Zapewniam opiekę techniczną po wdrożeniu oraz szkolenie z obsługi strony — nie zostawiam Cię samego po projekcie."
+          }
+        }
       },
     },
   },

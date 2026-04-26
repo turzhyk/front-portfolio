@@ -1,16 +1,9 @@
-import React, { useTransition } from "react";
 import { LaptopMockup } from "./LaptopMockup";
 import "./cases.css";
 import { useInView } from "../Data/useInView";
 import { VerticalDivider } from "./Components/VerticalDivider";
 import { useTranslation } from "react-i18next";
 
-type Case = {
-  title: string;
-  description: string;
-  result: string;
-  video: string;
-};
 
 
 

@@ -31,9 +31,6 @@ function buildPath(
 
 export function WorkflowConnector({
   activeIndex,
-  stepRefs,
-  colors,
-  cardRef,
 }: WorkflowConnectorProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const pathRef = useRef<SVGPathElement>(null);

@@ -1,13 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { t } from "../Data/i18n";
 import "./process.css";
 import { WorkflowConnector } from "./WorkflowConnector";
 import { useTranslation } from "react-i18next";
-
-type Step = {
-  title: [string, string];
-  text: [string, string];
-};
 
 const steps = [
   {
@@ -46,7 +40,7 @@ const steps = [
 export const Process: React.FC = () => {
   const [active, setActive] = useState(0);
   const [fade, setFade] = useState(true);
-  const [displayed, setDisplayed] = useState(active);
+
   const [isAuto, setIsAuto] = useState(true);
   const {t} = useTranslation();
   const stepRefs = [
@@ -69,18 +63,23 @@ export const Process: React.FC = () => {
   }, [isAuto]);
 
   // 🎬 fade анимация при смене
-  useEffect(() => {
-    // запускаем fade-out
-    setFade(false);
+useEffect(() => {
+  let cancelled = false;
 
-    const timeout = setTimeout(() => {
-      // меняем контент ПОСЛЕ затухания
-      setDisplayed(active);
-      setFade(true); // fade-in
-    }, 200); // должно совпадать с CSS transition
+  const fadeOut = setTimeout(() => {
+    if (!cancelled) setFade(false);
+  }, 0);
 
-    return () => clearTimeout(timeout);
-  }, [active]);
+  const fadeIn = setTimeout(() => {
+    if (!cancelled) setFade(true);
+  }, 200);
+
+  return () => {
+    cancelled = true;
+    clearTimeout(fadeOut);
+    clearTimeout(fadeIn);
+  };
+}, [active]);
 
   return (
     <section className="process">
@@ -93,7 +92,7 @@ export const Process: React.FC = () => {
           <div className="steps">
             {steps.map((step, i) => (
               <button
-                key={i}
+                key={i+""+step.title}
                 ref={stepRefs[i]}
                 className={`step ${i === active ? "active" : ""}`}
                 // style={
