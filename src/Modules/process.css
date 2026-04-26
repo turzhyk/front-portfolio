@@ -118,21 +118,6 @@ padding: 0;
   margin-bottom: 30px;
 }
 
-/* 📱 адаптив */
-@media (max-width: 768px) {
-  .process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .steps {
-    flex-direction: row;
-    overflow-x: auto;
-  }
-
-  .step {
-    flex: 0 0 auto;
-  }
-}
 
 .card {
   width: 100%;
@@ -168,4 +153,33 @@ padding: 0;
 .fade-out {
   opacity: 0;
   /* transform: translateY(10px); */
+}
+/* 📱 адаптив */
+@media (max-width: 1000px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+  .left-line{
+  display: none;}
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* overflow-x: auto; */
+  }
+  .step p {
+    display: none;
+  }
+  .step {
+    flex: 0 0 auto;
+  }
+  .process-connector{
+    display: none;
+  }
+  .card-content {grid-template-columns: 1fr;}
+  .card{
+    padding: 0;
+  }
+  .card p {
+    font-size: 1rem;
+  }
 }

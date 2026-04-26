@@ -18,8 +18,8 @@ export const Hero: React.FC = () => {
           />
         </h1>
 
-        <p className="subtitle">[{t("hero.subtitle")}]</p>
-        <p className="subtitle2">
+        <p className="hero-subtitle">[{t("hero.subtitle")}]</p>
+        <p className="hero-subtitle2">
           <strong>{t("hero.subtitle2")}</strong>
         </p>
         <div className="actions">

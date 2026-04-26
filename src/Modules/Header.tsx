@@ -1,9 +1,7 @@
 import React from "react";
-import { getLang, setLang } from "../Data/i18n";
 import "./header.css";
 
 export const Header: React.FC = () => {
-  const lang = getLang();
 
   return (
     <header className="header">
@@ -11,15 +9,15 @@ export const Header: React.FC = () => {
         <div className="logo">Andrii Turzhanskyi</div>
 
         <div className="right">
-          <button
+          {/* <button
             className="lang-btn"
             onClick={() => setLang(lang === "ru" ? "en" : "ru")}
           >
             {lang === "ru" ? "EN" : "RU"}
-          </button>
+          </button> */}
 
           <a href="#contact" className="btn primary small">
-            {lang === "ru" ? "Связаться" : "Contact"}
+            Skontaktuj
           </a>
         </div>
       </div>

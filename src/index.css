@@ -83,6 +83,7 @@ a button a:visited{
   .page{
     width: 100%;
   }
+  
 }
 body {
   margin: 0;
@@ -101,26 +102,22 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+  font-size: 2rem;
+  color: rgb(78, 78, 78);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 h2 {
-  font-size: 24px;
-  line-height: 118%;
+  font-size: 1.5rem;
+  /* line-height: 118%; */
   letter-spacing: -0.24px;
   margin: 0 0 8px;
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 }
-p {
-  margin: 0;
-}
+
 
 code,
 .counter {

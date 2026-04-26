@@ -25,20 +25,18 @@
   right: -18px;
   bottom: -18px;
 }
-.project {
+
+.cases-project {
   margin-bottom: -70px;
-}
-.project-content {
   display: grid;
   padding: 2rem 0rem;
   max-width: 1000px;
-  grid-template-columns: 5px 500px 350px;
+  grid-template-columns: 5px 1fr 1fr;
   gap: 20px;
   text-align: left;
   margin: auto;
-  
 }
-.project .left {
+.cases-project-leftcol {
   /* outline: var(--border-param); */
   /* border-left: var(--border-param); */
   padding: 1rem;
@@ -46,44 +44,45 @@
   flex-direction: column;
   gap: 0rem;
 }
-.project .title {
+.cases-project .title {
   font-weight: 400;
   text-align: left;
 }
-.project hr {
+.cases-project hr {
   border-bottom: var(--border-param);
   border-top: none;
-  width:100%;
+  width: 100%;
   /* margin-left: -1rem; */
- 
 }
-.project .right {
+.cases-project-rightcol {
   max-width: 400px;
-  
+  width: 400px;
+  margin: auto;
 }
-.project .subtitle {
+.cases-project-leftcol .subtitle {
   font-size: 16px;
   font-weight: 600;
   color: black;
   margin-bottom: 0.5rem;
 }
-.project .footer{
+.cases-project-leftcol>.footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.project h4{
+.cases-project-leftcol>.footer h4 {
   font-size: 40px;
-  /* line-height: 10px; */
+  margin-bottom: 0;
   margin-top: 0px;
   font-weight: 400;
 }
 
-
 .reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
   will-change: opacity, transform;
 }
 
@@ -92,7 +91,7 @@
   transform: translateY(0);
 }
 
-.show-more-btn{
+.show-more-btn {
   padding: 1rem 2rem;
   background-color: white;
   font-size: 16px;
@@ -101,4 +100,32 @@
   font-weight: 600;
   border: 2px solid black;
 }
-/* .show-more-btn:hover{border: 2px solid black;} */
+
+@media (max-width: 1000px) {
+  .cases-project {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 0;
+    align-items: center;
+  }
+  .vertical-roadmap {
+    display: none;
+  }
+  .cases::after,
+  .cases::before {
+    display: none;
+  }
+  .cases-project-leftcol>p {
+    font-size: 1rem;
+  }
+  .cases-project .right {
+    max-width: 100%px;
+  }
+   
+}
+@media (max-width: 400px) {.cases-project-leftcol>.footer {
+    flex-direction: column;
+    
+   }
+}
+
