@@ -1,5 +1,6 @@
 .process {
   padding: 5rem 20px;
+    border-bottom: var(--border-param);
 }
 
 .process h2 {
@@ -13,7 +14,7 @@
   grid-template-columns: 250px 70px 1fr;
   gap: 0px;
   align-items: stretch;
-  height: 500px;
+  
   position: relative;
 }
 .left-line{

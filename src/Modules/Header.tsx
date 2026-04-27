@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-inner">
-        <div className="logo">Andrii Turzhanskyi</div>
+        <div className="header-logo"><img src="svg/icon.svg" alt="AT"></img>Andrii Turzhanskyi</div>
 
         <div className="right">
           {/* <button

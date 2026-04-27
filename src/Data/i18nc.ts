@@ -100,6 +100,7 @@ i18n.use(initReactI18next).init({
           },
         },
         about:{
+          desc:"Od ponad 2 lat zajmuję się tworzeniem stron internetowych dla biznesów lokalnych. Zrealizowałem już kilka projektów, które realnie wspierają sprzedaż i pomagają klientom wyróżnić się w internecie.",
           location:{
             title:"Localizacja",
             desc:"Działam w Polsce: Doskonale rozumiem specyfikę lokalnego rynku i potrzeby polskich klientów."

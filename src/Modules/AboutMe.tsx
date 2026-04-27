@@ -17,11 +17,10 @@ export const AboutMe = () => {
         <div className="top">
           <div className="img-wrapper"><img src="images/aboutme.jpeg"/></div>
           <div className="content">
-            <h2 className="title">Name Surname</h2>
+            <h2 className="title">Andrzej Turzański</h2>
             <div className="hr" />
             <p>
-              Ddad ajdiajwoidjnmg opifesom3ioh nfehjfo jfo iewjfj fjqi fjqp
-              joij{" "}
+              {t("about.desc")}
             </p>
             <span className="factura"><img src="svg/checkmark.svg"/><p>Wystawiam faktury VAT</p></span>
           </div>
