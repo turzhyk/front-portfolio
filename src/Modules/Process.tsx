@@ -82,7 +82,7 @@ useEffect(() => {
 }, [active]);
 
   return (
-    <section className="process">
+    <section id="process" className="process">
       <div className="container">
         <h2>Jak pracuję</h2>
 

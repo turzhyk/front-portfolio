@@ -11,7 +11,7 @@ const Features = [
 export const AboutMe = () => {
   const {t} = useTranslation();
   return (
-    <section className="aboutme">
+    <section id="aboutme" className="aboutme">
       <h2>Kim jestem</h2>
       <div className="container">
         <div className="top">
