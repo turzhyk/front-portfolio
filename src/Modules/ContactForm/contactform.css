@@ -15,14 +15,14 @@
   padding: 1rem 2rem;
   text-align: left;
   background-color: #ffffff; /* Твой основной фон */
-  
+
   /* Магия создания сетки */
   background-image: 
     /* Горизонтальные линии (очень бледные) */
-    linear-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px), 
+    linear-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px),
     /* Вертикальные линии (очень бледные) */
     linear-gradient(90deg, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
-  
+
   /* Настройка размера квадратов (плотность сетки) */
   /* Чем больше число, тем больше квадраты. 50px-60px выглядит ок */
   background-size: 50px 50px;
@@ -38,7 +38,11 @@
   /* border: var(--border-param);
   background-color: var(--bg-rich); */
 }
-
+.contactform .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 .contactform input {
   width: 100%;
   padding: 1rem;
@@ -55,7 +59,9 @@
   background-color: var(--full-front);
   color: var(--bg);
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 1px;
+  /* padding: 1.5rem; */
 }
 .contactform textarea {
   width: 100%;
@@ -72,38 +78,46 @@
   align-items: center;
   gap: 0;
 }
-.contactform .select > div{
+
+.contactform .select > button {
   padding: 1rem;
   flex: 1;
+  height: 100%;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  outline: none;
+  font-weight: 600;
+  border: none;
 }
-.contactform .select > div:hover{
+.contactform .select > button span {
+  position: relative;
+  z-index: 1;
+}
+.contactform .select > button:hover {
   color: var(--bg);
-  
 }
-.contactform .select > div::after{
+.contactform .select > button::before {
   width: 100%;
   background-color: var(--text);
   position: absolute;
-  top:-100%;
+  top: 0;
+  transform: translateY(-150%);
   content: "";
   height: 100%;
   left: 0;
-  z-index: -1;
+
   transition-duration: 0.1s;
 }
-.contactform .select > div:hover:after{
-  top: 0;
+.contactform .select > button:hover:before {
+  transform: translateY(0%);
 }
 
-.contactform .select > div.active {
+.contactform .select > button.active {
   background-color: var(--full-front);
-  font-weight: 700;
   color: var(--bg);
 }
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .contactform .content {
     grid-template-columns: 100%;
   }

@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import "./contactform.css";
+import { useInView } from "../../Data/useInView";
 export default function ContactForm() {
   const [active, setActive] = useState(0);
+    const { ref, isVisible } = useInView<HTMLDivElement>();
+
+ const onButtonClick = (e: React.MouseEvent<HTMLButtonElement>, n:number) => {
+  e.preventDefault();
+  setActive(n);
+};
   return (
-    <section id="contact" className="contactform">
-      <div className="container">
-        <h2>Skontaktuj</h2>
+    <section ref={ref} id="contact" className="contactform">
+      <div className={`container `+(isVisible? " fade-in":"hidden")}>
+        <h2>Zamów bezpłatną wycenę</h2>
         <div className="content">
           <div className="left">
             <p>
@@ -16,29 +23,32 @@ export default function ContactForm() {
           <div className="right">
             <form>
               <div className="select">
-                <div
+                <button
                   className={`${active == 0 ? "active" : ""}`}
-                  onClick={() => setActive(0)}
+                  onClick={(e) => onButtonClick(e, 0)}
                 >
-                  Landing Page
-                </div>
-                <div
+                  <span>Landing Page</span>
+                  
+                </button>
+                <button
                   className={`${active == 1 ? "active" : ""}`}
-                  onClick={() => setActive(1)}
+                 onClick={(e) => onButtonClick(e, 1)}
                 >
-                  Strona firmowa
-                </div>
-                <div
+                  <span>Strona firmowa</span>
+                  
+                </button>
+                <button
                   className={`${active == 2 ? "active" : ""}`}
-                  onClick={() => setActive(2)}
+                 onClick={(e) => onButtonClick(e, 2)}
                 >
-                  Inne
-                </div>
+                  <span>Inne</span>
+                  
+                </button>
               </div>
-
-              <input placeholder="Twoje imię"></input>
+              <div className="row"><input placeholder="Twoje imię"></input>  <input placeholder="Twój telefon"></input></div>
+              
               <input placeholder="Twój e-mail"></input>
-              <input placeholder="Twój telefon"></input>
+            
               <textarea placeholder="Treść"></textarea>
               <input
                 className="btn"

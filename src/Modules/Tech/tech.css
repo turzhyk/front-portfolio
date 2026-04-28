@@ -1,0 +1,44 @@
+.tech {
+  padding: 5rem 20px;
+  border-bottom: var(--border-param);
+  position: relative;
+}
+.tech h2{
+      margin-bottom: 60px;
+}
+
+.tech-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ 
+}
+.tech-content h3 {
+  text-align: left;
+  color: black;
+  margin-bottom: 0px;
+}
+.tech-content > div {
+  height: 15rem;
+  transition-duration: 0.4s;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-width: 0;
+  border-color: var(--bg);
+}
+.tech-content > div:hover {
+  background-color: var(--bg-rich);
+  border: var(--border-param);
+}
+.tech-content .left{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.tech-content .right {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  text-align: left;
+}
