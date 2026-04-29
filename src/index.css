@@ -11,6 +11,7 @@
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent2: #1061a8;
+  --accent3: #5954E3;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
@@ -35,6 +36,13 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+}
+@font-face {
+  font-family: "Jet Brains Mono";
+  src: url("/fonts/JetBrainsMono-SemiBold.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Mozilla Text";
@@ -177,7 +185,7 @@ code {
   outline: var(--border-param);
 }
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   /* border: var(--border-param); */

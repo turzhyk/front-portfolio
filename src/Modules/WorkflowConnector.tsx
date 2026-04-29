@@ -162,6 +162,7 @@ useEffect(() => {
       <svg
         style={{
           position: "absolute",
+          top:-43,
           inset: 0,
           width: "100%",
           height: "100%",

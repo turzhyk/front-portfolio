@@ -117,6 +117,25 @@ i18n.use(initReactI18next).init({
             title:"Gwarancja",
             desc:"Pełne wsparcie: Zapewniam opiekę techniczną po wdrożeniu oraz szkolenie z obsługi strony — nie zostawiam Cię samego po projekcie."
           }
+        },
+        tech:{
+          case1:{
+            title:"Wydajność",
+            desc:"Strona ładuje się błyskawicznie, więc klient nie czeka i nie ucieka do konkurencji."
+          },
+          case2:{
+            title:"Dostępność",
+            desc:"Serwis jest wygodny dla każdego użytkownika, co realnie zwiększa zaufanie i lojalność."
+          },
+          case3:{
+            title:"Best Practices",
+            desc:"Kod jest nowoczesny, bezpieczny i napisany zgodnie ze standardami — bez zbędnych błędów."
+          },
+          case4:{
+            title:"SEO",
+            desc:"Google premiuje szybkie strony, dlatego taka witryna trafia wyżej w wynikach wyszukiwania."
+          }
+          ,after:"Szybkość to pieniądze. Każda sekunda oczekiwania na załadowanie strony to utrata 20% potencjalnych klientów"
         }
       },
     },

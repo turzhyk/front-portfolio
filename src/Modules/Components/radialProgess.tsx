@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function RadialProgress({ size = 150, stroke = 10, value = 75 }) {
+export default function RadialProgress({
+  size = 150,
+  stroke = 10,
+  value = 75,
+  delay = "0s",
+}) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -17,7 +22,7 @@ export default function RadialProgress({ size = 150, stroke = 10, value = 75 }) 
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -30,10 +35,10 @@ export default function RadialProgress({ size = 150, stroke = 10, value = 75 }) 
     if (!visible) return;
 
     let start = 0;
-    const duration = 1200; // ms
+    const duration = 900; // ms
     const startTime = performance.now();
 
-    function animate(time:number) {
+    function animate(time: number) {
       const progressTime = (time - startTime) / duration;
       const current = Math.min(progressTime, 1) * value;
 
@@ -50,8 +55,8 @@ export default function RadialProgress({ size = 150, stroke = 10, value = 75 }) 
   const offset = circumference - (progress / 100) * circumference;
 
   return (
-    <div ref={ref} style={{ width: size, height: size }}>
-      <svg width={size} height={size}>
+    <div className="jet" ref={ref} style={{ width: size, height: size,position:"relative" }}>
+      <svg width={size} height={size} style={{ overflow: "visible" }}>
         {/* фон */}
         <circle
           cx={size / 2}
@@ -66,32 +71,26 @@ export default function RadialProgress({ size = 150, stroke = 10, value = 75 }) 
         <circle
           cx={size / 2}
           cy={size / 2}
+          className="glow"
           r={radius}
-          stroke="#4f46e5"
+          stroke="#5954E3"
           strokeWidth={stroke}
           fill="none"
           strokeLinecap="round"
           strokeDasharray={circumference}
           strokeDashoffset={offset}
           transform={`rotate(-90 ${size / 2} ${size / 2})`}
-          style={{ transition: "stroke-dashoffset 0.3s linear" }}
+          style={{
+             transition: "stroke-dashoffset 0.3s linear, stroke-width 0.3s ease",
+            animationDelay: delay,
+          }}
         />
       </svg>
 
       {/* текст */}
-      <div
-        style={{
-          position: "relative",
-          top: -size,
-          height: size,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: 30,
-          fontWeight: 600,
-        }}
-      >
-        {Math.round(progress)}
+      <div className="text">
+        <span>{Math.round(progress)}</span>
+        <span className="sub">/100</span>
       </div>
     </div>
   );

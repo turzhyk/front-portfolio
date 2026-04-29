@@ -1,28 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./tech.css";
 import RadialProgress from "../Components/radialProgess";
-const Featurs = [
+import { useTranslation } from "react-i18next";
+import { useInView } from "../../Data/useInView";
+const Features = [
+  {
+    key: "Wydajność",
+  },
+  {
+    key: "Wydajność",
+  },
+  {
+    key: "Wydajność",
+  },
   {
     key: "Wydajność",
   },
 ];
 const Tech = () => {
+  const [active, setActive] = useState(-1);
+  const {t} = useTranslation();
+  const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <section className="tech" id="tech">
-      <div className="container">
+    <section ref={ref} className="tech" id="tech">
+      <div className={`container `+(isVisible? " fade-in":"hidden")}>
         <h2>Quality / Performance</h2>
+        <p className="subtitle">Twoja strona będzie szybsza niż 95% konkurencji</p>
         <div className="tech-content">
-          <div>
-            <div className="left"><RadialProgress value={85} /></div>
+         {Features.map((item, i)=>{
+          return  <div key={item.key+i} onMouseEnter={()=>setActive(i)}>
+            <div className="left"><RadialProgress value={100} stroke={active==i? 8:5} delay={i/2+"s"}/></div>
             <div className="right">
-              <h3>Wydajność</h3>
-              <p>asdasd asdasd asd asdasds</p>
+              <h3>{t("tech.case"+(i+1)+".title")}</h3>
+              <p>{t("tech.case"+(i+1)+".desc")}</p>
             </div>
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
+         })}
         </div>
+        <i>UWAGA! Liczby są rzeczywiste na podstawie metryk z <strong>Google PageSpeed Insights</strong></i>
+        <p>{t("tech.after")}</p>
       </div>
     </section>
   );
