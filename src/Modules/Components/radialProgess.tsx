@@ -13,7 +13,6 @@ export default function RadialProgress({
   const radius = (size - stroke) / 2;
   const circumference = 2 * Math.PI * radius;
 
-  // наблюдение за появлением во viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -30,11 +29,9 @@ export default function RadialProgress({
     return () => observer.disconnect();
   }, []);
 
-  // анимация заполнения
   useEffect(() => {
     if (!visible) return;
 
-    let start = 0;
     const duration = 900; // ms
     const startTime = performance.now();
 
@@ -57,7 +54,7 @@ export default function RadialProgress({
   return (
     <div className="jet" ref={ref} style={{ width: size, height: size,position:"relative" }}>
       <svg width={size} height={size} style={{ overflow: "visible" }}>
-        {/* фон */}
+        
         <circle
           cx={size / 2}
           cy={size / 2}
@@ -67,7 +64,7 @@ export default function RadialProgress({
           fill="none"
         />
 
-        {/* прогресс */}
+      
         <circle
           cx={size / 2}
           cy={size / 2}
@@ -87,7 +84,7 @@ export default function RadialProgress({
         />
       </svg>
 
-      {/* текст */}
+     
       <div className="text">
         <span>{Math.round(progress)}</span>
         <span className="sub">/100</span>

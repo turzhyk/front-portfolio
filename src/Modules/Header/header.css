@@ -28,6 +28,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+   font-family: "Jet Brains Mono", monospace;
 }
 .header-logo img{
   height: 40px;
@@ -42,12 +43,18 @@
 .lang-btn {
   background: none;
   border: 1px solid #000000;
-  padding: 14px 14px;
+  /* padding: 1rem; */
+  padding: 12px 14px;
   width: 50px;
+  font-family: "Jet Brains Mono", monospace;
   color: var(--text);
   font-weight: 800;
   border-radius: 1px;
   cursor: pointer;
+}
+.lang-btn:hover{
+  background-color: var(--full-front);
+  color: var(--bg);
 }
 
 .small {

@@ -88,7 +88,7 @@ useEffect(() => {
   return (
     <section ref={ref} id="process" className="process">
       <div className={`container `+(isVisible? " fade-in":"hidden")}>
-        <h2>Jak pracuję</h2>
+        <h2>{t("process.title")}</h2>
 
         <div className="process-grid">
           {/* LEFT */}

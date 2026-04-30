@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
   const {t} = useTranslation();
   return (
     <section id="cases" className="cases">
-      <h2>Moje Projekty</h2>
+      <h2>{t("cases.title")}</h2>
 
       <div className="cases-project">
       

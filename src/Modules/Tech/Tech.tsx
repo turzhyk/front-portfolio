@@ -24,8 +24,8 @@ const Tech = () => {
   return (
     <section ref={ref} className="tech" id="tech">
       <div className={`container `+(isVisible? " fade-in":"hidden")}>
-        <h2>Quality / Performance</h2>
-        <p className="subtitle">Twoja strona będzie szybsza niż 95% konkurencji</p>
+        <h2>{t("tech.title")}</h2>
+        <p className="subtitle">{t("tech.subtitle")}</p>
         <div className="tech-content">
          {Features.map((item, i)=>{
           return  <div key={item.key+i} onMouseEnter={()=>setActive(i)}>
@@ -37,7 +37,7 @@ const Tech = () => {
           </div>
          })}
         </div>
-        <i>UWAGA! Liczby są rzeczywiste na podstawie metryk z <strong>Google PageSpeed Insights</strong></i>
+        <i>{t("tech.warning")} <strong>Google PageSpeed Insights</strong></i>
         <p>{t("tech.after")}</p>
       </div>
     </section>

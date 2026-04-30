@@ -1,6 +1,5 @@
 import "./aboutme.css";
 import { useTranslation } from "react-i18next";
-import { lazy, Suspense } from "react";
 import { useInView } from "../Data/useInView";
 const Features = [
   { key: "location", img: "svg/location.svg" },
@@ -13,7 +12,7 @@ const AboutMe = () => {
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
     <section ref={ref} id="aboutme" className="aboutme">
-      <h2 className={isVisible ? "fade-in" : "hidden"}>Kim jestem</h2>
+      <h2 className={isVisible ? "fade-in" : "hidden"}>{t("about.title")}</h2>
       <div className={`container ` + (isVisible ? " fade-in" : "hidden")}>
         <div className="top">
           <div className="img-wrapper">
