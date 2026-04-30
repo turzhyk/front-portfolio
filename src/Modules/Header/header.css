@@ -29,6 +29,7 @@
   align-items: center;
   gap: 1rem;
    font-family: "Jet Brains Mono", monospace;
+   text-align: left;
 }
 .header-logo img{
   height: 40px;
@@ -51,6 +52,7 @@
   font-weight: 800;
   border-radius: 1px;
   cursor: pointer;
+  text-transform:uppercase;
 }
 .lang-btn:hover{
   background-color: var(--full-front);
