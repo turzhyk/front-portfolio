@@ -6,13 +6,12 @@ import { VerticalDivider } from "./Components/VerticalDivider";
 import { useTranslation } from "react-i18next";
 
 
-
-export const Cases: React.FC = () => {
+ const Cases: React.FC = () => {
   const { ref: ref1, isVisible: isV1 } = useInView<HTMLHeadingElement>();
   const {t} = useTranslation();
   return (
     <section id="cases" className="cases">
-      <h2>Moje Projekty</h2>
+      <h2>{t("cases.title")}</h2>
 
       <div className="cases-project">
       
@@ -48,7 +47,7 @@ export const Cases: React.FC = () => {
             </div>
           </div>
           <div className="cases-project-right-col">
-              <LaptopMockup pcSrc={"videos/case1_pc.webm"} mobileSrc={"videos/case1_mobile.mp4"} />
+              <LaptopMockup pcSrc={"videos/case1_pc.webm"} mobileSrc={"videos/case1_mobile.webm"} />
           </div>
         
       </div>
@@ -95,3 +94,4 @@ export const Cases: React.FC = () => {
     </section>
   );
 };
+export default Cases;

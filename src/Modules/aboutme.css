@@ -19,18 +19,19 @@
 .aboutme .top {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
   height: auto;
   text-align: left;
 }
 .aboutme .img-wrapper {
   background-color: blanchedalmond;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 1rem;max-height: 350px;
 }
 .aboutme .img-wrapper img {
   width: 100%;
   height: auto;
+ 
 }
 .top .content {
   display: flex;
@@ -61,29 +62,35 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 1px;
+  transition-duration: 0.4s;
 }
 .bottom .about-card .title {
   font-weight: 600;
   font-size: 16px;
   color: var(--text-h);
   margin: 1rem 0 0 0;
-
 }
 
 .bottom .about-card p {
   color: var(--text);
-  flex: 1;padding: 1rem;
+  flex: 1;
+  padding: 1rem;
+  font-size: 14px;
 }
-.bottom .about-card:hover p {
-  background-color: var(--text-h);
-  color: var(--bg);
-
+.bottom .about-card:hover  {
+  background-color: var(--bg-rich);
+  /* color: var(--bg); */
+  transition-duration: 0.4s;
+}
+.bottom .about-card:hover img{
+  transition-duration: 0.3s;
+  transform: scale(1.1);
 }
 .bottom .about-card img {
   filter: invert(1);
   width: 40px;
   flex-basis: 1;
-  margin: 0.5rem;
+  margin: 1rem 0 0.5rem 0;
 }
 
 .factura {
@@ -108,11 +115,10 @@
   .bottom .about-card p {
     color: var(--text);
     flex: 1;
-    
   }
 }
 @media (max-width: 400px) {
-.bottom {
+  .bottom {
     grid-template-columns: 1fr;
   }
 }

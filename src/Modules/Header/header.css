@@ -1,0 +1,69 @@
+.header {
+  padding: 20px;
+
+  display: flex;
+  justify-content: stretch;
+  /* width: calc(65% - 3px); */
+  max-width: 998px;
+  width: 998px;
+  margin: auto;
+  position: fixed;
+  background: linear-gradient(0deg,var(--bg-a) 0%, var(--bg) 100%);
+  border-bottom: var(--border-param);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  
+}
+
+.header-inner {
+  width: 100%;
+  /* max-width: 1000px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+   font-family: "Jet Brains Mono", monospace;
+}
+.header-logo img{
+  height: 40px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid #000000;
+  /* padding: 1rem; */
+  padding: 12px 14px;
+  width: 50px;
+  font-family: "Jet Brains Mono", monospace;
+  color: var(--text);
+  font-weight: 800;
+  border-radius: 1px;
+  cursor: pointer;
+}
+.lang-btn:hover{
+  background-color: var(--full-front);
+  color: var(--bg);
+}
+
+.small {
+  padding: 12px 24px;
+  
+}
+@media (max-width: 1000px) {
+  .header{
+    width: 100%;
+    padding: 0.5rem;
+  }
+}

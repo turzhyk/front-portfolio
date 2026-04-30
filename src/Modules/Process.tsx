@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./process.css";
 import { WorkflowConnector } from "./WorkflowConnector";
 import { useTranslation } from "react-i18next";
+import { useInView } from "../Data/useInView";
 
 const steps = [
   {
@@ -11,37 +12,40 @@ const steps = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et nisi vulputate, porttitor neque nec, feugiat libero. Etiam vulputate erat sagittis tempor fringilla. Aliquam nec nisi sed tellus gravida elementum. Nunc molestie, lectus quis sodales hendrerit, ipsum ipsum feugiat diam, in dignissim leo est ut turpis. Ut vehicula, nisi vitae ultricies consectetur, nulla purus elementum sapien, in ornare magna lorem eget lorem. ",
     ],
     color: "#dffbd2",
-    image: "/images/step1.png",
-    desc: "We discuss adndwad dw"
+    image: "images/watsup_scr.webp",
+    desc: "We discuss adndwad dw",
+    alt:"screenshot czata whatsapp z klientem"
   },
   {
     title: ["Прототип", "Design & Feedback"],
     text: ["...", "..."],
     color: "#eedffd",
     image: "/images/step2.png",
-    desc: "We discuss adndwad dw"
+    desc: "We discuss adndwad dw",
+    alt:""
   },
   {
     title: ["Разработка", "Clean Coding & SEO-ready"],
     text: ["...", "..."],
     color: "#d6ffe6",
     image: "/images/step3.png",
-    desc: "We discuss adndwad dw"
+    desc: "We discuss adndwad dw",alt:""
   },
   {
     title: ["Запуск", "Ready to sell"],
     text: ["...", "..."],
     color: "#ffead6",
     image: "/images/step4.png",
-    desc: "We discuss adndwad dw"
+    desc: "We discuss adndwad dw",alt:""
   },
 ];
 
-export const Process: React.FC = () => {
+ const Process: React.FC = () => {
   const [active, setActive] = useState(0);
   const [fade, setFade] = useState(true);
 
   const [isAuto, setIsAuto] = useState(true);
+  const { ref, isVisible } = useInView<HTMLDivElement>();
   const {t} = useTranslation();
   const stepRefs = [
     useRef<HTMLButtonElement>(null),
@@ -82,9 +86,9 @@ useEffect(() => {
 }, [active]);
 
   return (
-    <section className="process">
-      <div className="container">
-        <h2>Jak pracuję</h2>
+    <section ref={ref} id="process" className="process">
+      <div className={`container `+(isVisible? " fade-in":"hidden")}>
+        <h2>{t("process.title")}</h2>
 
         <div className="process-grid">
           {/* LEFT */}
@@ -134,7 +138,7 @@ useEffect(() => {
               <div className="card-content">
                 <p>  {t("process.step"+(active+1)+".desc")}</p>
                 <div className="card-img-wrapper">
-                  <img src="images/watsup_scr.png" />
+                  <img  loading="lazy" alt={steps[active].alt} src={steps[active].image} />
                 </div>
               </div>
             </div>
@@ -144,3 +148,4 @@ useEffect(() => {
     </section>
   );
 };
+export default Process;

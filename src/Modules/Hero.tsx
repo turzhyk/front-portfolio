@@ -6,7 +6,7 @@ import { Trans, useTranslation } from "react-i18next";
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="container">
         <h1>
           <Trans

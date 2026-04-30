@@ -1,0 +1,124 @@
+.contactform {
+  padding: 5rem 20px;
+  border-bottom: var(--border-param);
+  position: relative;
+}
+.contactform .content {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.contactform .left {
+  border-top: 1px solid var(--full-front);
+  border-left: 1px solid var(--full-front);
+  padding: 1rem 2rem;
+  text-align: left;
+  background-color: #ffffff; /* Твой основной фон */
+
+  /* Магия создания сетки */
+  background-image: 
+    /* Горизонтальные линии (очень бледные) */
+    linear-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    /* Вертикальные линии (очень бледные) */
+    linear-gradient(90deg, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+
+  /* Настройка размера квадратов (плотность сетки) */
+  /* Чем больше число, тем больше квадраты. 50px-60px выглядит ок */
+  background-size: 50px 50px;
+}
+.contactform .right {
+  width: 100%;
+}
+.contactform form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  /* border: var(--border-param);
+  background-color: var(--bg-rich); */
+}
+.contactform .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.contactform input {
+  width: 100%;
+  padding: 1rem;
+  border: var(--border-param);
+  background-color: var(--bg-rich);
+}
+.contactform input::placeholder,
+.contactform textarea::placeholder {
+  color: var(--text);
+  opacity: 0.5;
+  font-weight: 500;
+}
+.contactform input[type="submit"] {
+  background-color: var(--full-front);
+  color: var(--bg);
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  /* padding: 1.5rem; */
+}
+.contactform textarea {
+  width: 100%;
+  padding: 1rem;
+  border: var(--border-param);
+  background-color: var(--bg-rich);
+}
+.contactform .select {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid var(--full-front);
+  border-bottom: 1px solid var(--full-front);
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+.contactform .select > button {
+  padding: 1rem;
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  font-weight: 600;
+  border: none;
+}
+.contactform .select > button span {
+  position: relative;
+  z-index: 1;
+}
+.contactform .select > button:hover {
+  color: var(--bg);
+}
+.contactform .select > button::before {
+  width: 100%;
+  background-color: var(--text);
+  position: absolute;
+  top: 0;
+  transform: translateY(-150%);
+  content: "";
+  height: 100%;
+  left: 0;
+
+  transition-duration: 0.1s;
+}
+.contactform .select > button:hover:before {
+  transform: translateY(0%);
+}
+
+.contactform .select > button.active {
+  background-color: var(--full-front);
+  color: var(--bg);
+}
+@media (max-width: 1000px) {
+  .contactform .content {
+    grid-template-columns: 100%;
+  }
+}

@@ -1,39 +1,44 @@
-import React from "react";
 import "./aboutme.css";
 import { useTranslation } from "react-i18next";
-
+import { useInView } from "../Data/useInView";
 const Features = [
-  { key: "location", img:"svg/location.svg"},
-  { key: "way" , img:"svg/bulb.svg"},
-  { key: "tech" , img:"svg/code.svg"},
-  { key: "garanty", img:"svg/handshake.svg" },
+  { key: "location", img: "svg/location.svg" },
+  { key: "way", img: "svg/bulb.svg" },
+  { key: "tech", img: "svg/code.svg" },
+  { key: "garanty", img: "svg/handshake.svg" },
 ];
-export const AboutMe = () => {
-  const {t} = useTranslation();
+const AboutMe = () => {
+  const { t } = useTranslation();
+  const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <section className="aboutme">
-      <h2>Kim jestem</h2>
-      <div className="container">
+    <section ref={ref} id="aboutme" className="aboutme">
+      <h2 className={isVisible ? "fade-in" : "hidden"}>{t("about.title")}</h2>
+      <div className={`container ` + (isVisible ? " fade-in" : "hidden")}>
         <div className="top">
-          <div className="img-wrapper"><img src="images/aboutme.jpeg"/></div>
+          <div className="img-wrapper">
+            <img
+              loading="lazy"
+              alt="Zdjęcie dewelopera"
+              src="images/aboutme.webp"
+            />
+          </div>
           <div className="content">
-            <h2 className="title">Name Surname</h2>
+            <h2 className="title">Andrzej Turzański</h2>
             <div className="hr" />
-            <p>
-              Ddad ajdiajwoidjnmg opifesom3ioh nfehjfo jfo iewjfj fjqi fjqp
-              joij{" "}
-            </p>
-            <span className="factura"><img src="svg/checkmark.svg"/><p>Wystawiam faktury VAT</p></span>
+            <p>{t("about.desc")}</p>
+            <span className="factura">
+              <img alt="checkmark" src="svg/checkmark.svg" />
+              <p>Wystawiam faktury VAT</p>
+            </span>
           </div>
         </div>
         <div className="bottom">
           {Features.map((i) => {
             return (
-              <div className="about-card">
-                <h3 className="title">{t("about."+i.key+".title")}</h3>
-                <img src={i.img}/>
-                <p> {t("about."+i.key+".desc")}</p>
-                
+              <div className="about-card" key={i.key}>
+                <h3 className="title">{t("about." + i.key + ".title")}</h3>
+                <img alt="feature-icon" src={i.img} />
+                <p> {t("about." + i.key + ".desc")}</p>
               </div>
             );
           })}
@@ -42,3 +47,4 @@ export const AboutMe = () => {
     </section>
   );
 };
+export default AboutMe;
