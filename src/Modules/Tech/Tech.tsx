@@ -37,7 +37,7 @@ const Tech = () => {
           </div>
          })}
         </div>
-        <i>{t("tech.warning")} <strong>Google PageSpeed Insights</strong></i>
+        <i>{t("tech.warning")} <strong><a href="https://pagespeed.web.dev/analysis/https-turzan-pl/arbuav3uvb?form_factor=desktop">Google PageSpeed Insights</a></strong></i>
         <p>{t("tech.after")}</p>
       </div>
     </section>

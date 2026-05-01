@@ -87,8 +87,11 @@
   position: relative;
   overflow: hidden;
   outline: none;
-  font-weight: 600;
+  font-weight: 500;
   border: none;
+  background-color: none;
+  background: none;
+  color: var(--full-front);
 }
 .contactform .select > button span {
   position: relative;

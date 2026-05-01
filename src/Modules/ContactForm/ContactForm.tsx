@@ -1,15 +1,41 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./contactform.css";
 import { useInView } from "../../Data/useInView";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
+
 export default function ContactForm() {
   const [active, setActive] = useState(0);
   const { ref, isVisible } = useInView<HTMLDivElement>();
   const { t } = useTranslation();
+  const formRef = useRef<HTMLFormElement>(null);
   const onButtonClick = (e: React.MouseEvent<HTMLButtonElement>, n: number) => {
     e.preventDefault();
     setActive(n);
   };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  if (!formRef.current) return;
+
+  emailjs
+    .sendForm(
+      "service_xw161gi",
+      "template_g799m8f",
+      formRef.current,
+      "-8ZmyWm7MTg61TyiD"
+    )
+    .then(
+      () => {
+        alert("Wiadomość wysłana!");
+        formRef.current?.reset();
+      },
+      (error:{ text: any }) => {
+        console.log(error);
+        alert("Błąd wysyłki");
+      }
+    );
+};
   return (
     <section ref={ref} id="contact" className="contactform">
       <div className={`container ` + (isVisible ? " fade-in" : "hidden")}>
@@ -19,7 +45,7 @@ export default function ContactForm() {
             <p>{t("contact.desc")}</p>
           </div>
           <div className="right">
-            <form>
+            <form ref={formRef} onSubmit={(e)=>handleSubmit(e)}>
               <div className="select">
                 <button
                   className={`${active == 0 ? "active" : ""}`}
@@ -41,13 +67,13 @@ export default function ContactForm() {
                 </button>
               </div>
               <div className="row">
-                <input placeholder={t("contact.name")}></input>{" "}
-                <input placeholder={t("contact.phone")}></input>
+                <input name="name" placeholder={t("contact.name")}></input>{" "}
+                <input type="tel" name="phone" placeholder={t("contact.phone")}></input>
               </div>
 
-              <input placeholder={t("contact.mail")}></input>
+              <input type="email" name="email" placeholder={t("contact.mail")}></input>
 
-              <textarea placeholder={t("contact.message")}></textarea>
+              <textarea name="message" placeholder={t("contact.message")}></textarea>
               <input
                 className="btn"
                 type="submit"
