@@ -3,6 +3,7 @@ import "./contactform.css";
 import { useInView } from "../../Data/useInView";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
+
 export default function ContactForm() {
   const [active, setActive] = useState(0);
   const { ref, isVisible } = useInView<HTMLDivElement>();
@@ -27,8 +28,9 @@ export default function ContactForm() {
     .then(
       () => {
         alert("Wiadomość wysłana!");
+        formRef.current?.reset();
       },
-      (error) => {
+      (error:{ text: any }) => {
         console.log(error);
         alert("Błąd wysyłki");
       }
