@@ -35,7 +35,7 @@ export const Header: React.FC = () => {
             {lang=="en"?"pl":"en"}
           </button>
 
-          <a href="#contact" className="btn primary small">
+          <a href="#contact" className="primary small contact-btn">
             {t("header.contact")}
           </a>
         </div>

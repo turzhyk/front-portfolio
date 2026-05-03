@@ -18,7 +18,7 @@ i18n.use(initReactI18next).init({
     },
     en: {
       translation: {
-        hav:"Navigation",
+        nav:"Navigation",
         header: {
           contact: "Contact",
         },
