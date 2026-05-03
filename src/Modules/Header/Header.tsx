@@ -1,28 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import { useTranslation } from "react-i18next";
 import i18n from "../../Data/i18nc";
+import { Link } from "react-router-dom";
 
 export const Header: React.FC = () => {
+  const [lang, setLang] = useState(localStorage.getItem("lang") || "en");
+  const { t } = useTranslation();
+  const handleLangButton = () => {
+    const newLang = lang === "pl" ? "en" : "pl";
 
-  const [lang,setLang] = useState(localStorage.getItem("land")||"pl");
-  const {t} = useTranslation();
-  const handleLangButton =()=>{
-    if(lang=="pl")
-    {
-      setLang("en");
-      localStorage.setItem("lang","en");
-    }
-    else{
-      setLang("pl");
-      localStorage.setItem("lang","pl");
-    }
-    i18n.changeLanguage(lang); 
-  }
+    setLang(newLang);
+    localStorage.setItem("lang", newLang);
+    i18n.changeLanguage(newLang);
+  };
+  useEffect(() => {
+    const savedLang = localStorage.getItem("lang") || "en";
+    i18n.changeLanguage(savedLang);
+  }, []);
   return (
     <header className="header">
       <div className="header-inner">
-        <div className="header-logo"><img src="svg/icon.svg" alt="logo"></img>Andrii Turzhanskyi</div>
+        <div className="header-logo">
+          <img src="/svg/icon.svg" alt="logo"></img>
+          <Link to="/web">Andrzej Turzański</Link>
+        </div>
 
         <div className="right">
           <button
@@ -30,10 +32,10 @@ export const Header: React.FC = () => {
             name="lang-btn"
             onClick={() => handleLangButton()}
           >
-            {lang}
+            {lang=="en"?"pl":"en"}
           </button>
 
-          <a href="#contact" className="btn primary small">
+          <a href="#contact" className="primary small contact-btn">
             {t("header.contact")}
           </a>
         </div>

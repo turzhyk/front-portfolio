@@ -14,7 +14,7 @@
 }
 .tech-content h3 {
   text-align: left;
-  color: black;
+  color: var(--full-front);
   margin-bottom: 0px;
 }
 .tech-content > div {

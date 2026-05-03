@@ -1,0 +1,28 @@
+.privacy-page {
+  margin: auto;
+  padding: 10rem 5rem;
+  border-bottom: var(--border-param);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.privacy-page h3 {
+  margin-top: 3rem;
+}
+.privacy-page .arrow-container {
+  width: 100%;
+  display: flex;
+}
+.privacy-page .arrow-back:link,
+.privacy-page .arrow-back:visited {
+  color: var(--accent3);
+  text-decoration: none;
+  font-size: xx-large;
+  text-align: left;
+}
+@media (max-width: 1000px) {
+  .privacy-page {
+    padding: 5rem 1rem;
+  }
+}

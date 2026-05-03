@@ -87,7 +87,7 @@
   transform: scale(1.1);
 }
 .bottom .about-card img {
-  filter: invert(1);
+  filter: var(--ifilter);
   width: 40px;
   flex-basis: 1;
   margin: 1rem 0 0.5rem 0;

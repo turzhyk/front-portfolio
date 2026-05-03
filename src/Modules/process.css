@@ -127,7 +127,7 @@ padding: 0;
   padding: 2rem;
 
   outline: var(--border-param);
-  background: white;
+  background: var(--bg-rich);
   min-height: 180px;
   z-index: -1;
   transition:

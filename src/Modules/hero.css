@@ -2,15 +2,16 @@
   padding: 120px 20px 80px;
   text-align: center;
   border-bottom: var(--border-param);
+  color: var(--text);
 }
 .hero-subtitle {
   font-size: 18px;
-  color: #666;
+   color: var(--text);
   margin-bottom: 15px;
 }
 .hero-subtitle2 {
   font-size: 15px;
-  color: #666;
+  color: var(--text);
   margin-bottom: 30px;
 }
 .actions {
@@ -20,6 +21,7 @@
 }
 
 .btn {
+  color: var(--bg-rich);
   padding: 20px 30px;
   border-radius: 1px;
   text-decoration: none;
@@ -30,34 +32,34 @@
   cursor: pointer;
 }
 .btn:hover {
-  color: black;
+  color: var(--full-front);
   transform: scale(1.02, 1.02);
-  outline: 2px solid black;
+  outline: 2px solid var(--full-front);
 }
 .btn::before {
   width: 100%;
   content: "";
   height: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg-rich);
   position: absolute;
   left: 0;
   transform: translateX(-100%);
   top: 0;
   transition-duration: 0.2s;
-  z-index: -1; /* 👈 ключевой момент */
+  z-index: -1;
 }
 .btn:hover::before {
   transform: translateX(0%);
 }
 
 .primary {
-  background: black;
-  color: white;
+  color: var(--bg-rich);
+  background-color: var(--full-front);
 }
 
 .secondary {
   border: 1px solid #ccc;
-  color: black;
+  color: var(--bg-rich);
 }
 
 .glow {

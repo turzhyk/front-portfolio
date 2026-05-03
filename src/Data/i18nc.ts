@@ -18,6 +18,7 @@ i18n.use(initReactI18next).init({
     },
     en: {
       translation: {
+        nav:"Navigation",
         header: {
           contact: "Contact",
         },
@@ -120,7 +121,7 @@ i18n.use(initReactI18next).init({
         },
         contact: {
           title: "Request a free quote",
-          desc: "Want to get started? Leave a message and I’ll get back to you within 2 hours.",
+          desc: "Want to get started? Leave a message and I’ll get back to you!",
           landing: "Landing Page",
           page: "Business Website",
           other: "Other",
@@ -134,6 +135,7 @@ i18n.use(initReactI18next).init({
     },
     pl: {
       translation: {
+        nav:"Navigacja",
         header: {
           contact: "Skontaktuj",
         },
@@ -234,7 +236,7 @@ i18n.use(initReactI18next).init({
         },
         contact: {
           title: "Zamów bezpłatną wycenę",
-          desc: "  Chcesz zacząć? Zostaw wiadomość, skontaktuję się z Tobą в ciągu 2 godzin.",
+          desc: "  Chcesz zacząć? Zostaw wiadomość, skontaktuję się z Tobą!",
           landing: "Landing Page",
           page: "Strona Firmowa",
           other: "Inne",

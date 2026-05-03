@@ -30,7 +30,7 @@ export default function ContactForm() {
         alert("Wiadomość wysłana!");
         formRef.current?.reset();
       },
-      (error:{ text: any }) => {
+      (error:{ text: string }) => {
         console.log(error);
         alert("Błąd wysyłki");
       }
@@ -39,13 +39,16 @@ export default function ContactForm() {
   return (
     <section ref={ref} id="contact" className="contactform">
       <div className={`container ` + (isVisible ? " fade-in" : "hidden")}>
+        
         <h2>{t("contact.title")}</h2>
         <div className="content">
           <div className="left">
             <p>{t("contact.desc")}</p>
           </div>
           <div className="right">
-            <form ref={formRef} onSubmit={(e)=>handleSubmit(e)}>
+            
+            <form ref={formRef} onSubmit={(e: React.FormEvent<HTMLFormElement>)=>handleSubmit(e)}>
+               <a className="rodo" href="/web/privacy">Privacy Policy (RODO)</a>
               <div className="select">
                 <button
                   className={`${active == 0 ? "active" : ""}`}
@@ -74,6 +77,7 @@ export default function ContactForm() {
               <input type="email" name="email" placeholder={t("contact.mail")}></input>
 
               <textarea name="message" placeholder={t("contact.message")}></textarea>
+             
               <input
                 className="btn"
                 type="submit"

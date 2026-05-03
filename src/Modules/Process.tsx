@@ -12,7 +12,7 @@ const steps = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et nisi vulputate, porttitor neque nec, feugiat libero. Etiam vulputate erat sagittis tempor fringilla. Aliquam nec nisi sed tellus gravida elementum. Nunc molestie, lectus quis sodales hendrerit, ipsum ipsum feugiat diam, in dignissim leo est ut turpis. Ut vehicula, nisi vitae ultricies consectetur, nulla purus elementum sapien, in ornare magna lorem eget lorem. ",
     ],
     color: "#dffbd2",
-    image: "images/watsup_scr.webp",
+    image: "/images/watsup_scr.webp",
     desc: "We discuss adndwad dw",
     alt:"screenshot czata whatsapp z klientem"
   },
