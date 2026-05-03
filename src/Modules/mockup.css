@@ -13,19 +13,20 @@
   position: absolute;
   max-width: 500px;
   left: -4rem;
-  z-index: 5;
+  z-index: 4;
 }
 
 .laptop-screen {
   position: absolute;
   overflow: hidden;
   background: black;
-  left: -10px;
-  width: 390px;
-  top: 55px;
-  height: 200px;
-  background: white;
-  background: radial-gradient(125% 125% at 50% 10%, #fff 40%, #63e 100%);
+  z-index: 5;
+  left: 5px;
+  width: 363px;
+  top: 70px;
+  height: 210px;
+  /* background: white; */
+  /* background: radial-gradient(125% 125% at 50% 10%, #fff 40%, #63e 100%); */
 }
 
 .laptop-screen video {

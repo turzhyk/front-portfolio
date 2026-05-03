@@ -14,7 +14,7 @@
   border-left: 1px solid var(--full-front);
   padding: 1rem 2rem;
   text-align: left;
-  background-color: #ffffff; /* Твой основной фон */
+  background-color: var(--bg-rich);
 
   /* Магия создания сетки */
   background-image: 
@@ -124,4 +124,9 @@
   .contactform .content {
     grid-template-columns: 100%;
   }
+}
+
+.contactform .rodo:link, .contactform .rodo:visited{
+  color: var(--text);
+  font-size: 12px;
 }

@@ -62,15 +62,15 @@
 .cases-project-leftcol .subtitle {
   font-size: 16px;
   font-weight: 600;
-  color: black;
+  color: var(--full-front);
   margin-bottom: 0.5rem;
 }
-.cases-project-leftcol>.footer {
+.cases-project-leftcol > .footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.cases-project-leftcol>.footer h4 {
+.cases-project-leftcol > .footer h4 {
   font-size: 40px;
   margin-bottom: 0;
   margin-top: 0px;
@@ -115,17 +115,15 @@
   .cases::before {
     display: none;
   }
-  .cases-project-leftcol>p {
+  .cases-project-leftcol > p {
     font-size: 1rem;
   }
   .cases-project .right {
     max-width: 100%px;
   }
-   
 }
-@media (max-width: 400px) {.cases-project-leftcol>.footer {
+@media (max-width: 400px) {
+  .cases-project-leftcol > .footer {
     flex-direction: column;
-    
-   }
+  }
 }
-

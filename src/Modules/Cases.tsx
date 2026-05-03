@@ -47,7 +47,7 @@ import { useTranslation } from "react-i18next";
             </div>
           </div>
           <div className="cases-project-right-col">
-              <LaptopMockup pcSrc={"videos/case1_pc.webm"} mobileSrc={"videos/case1_mobile.webm"} />
+              <LaptopMockup pcSrc={"/videos/case1_pc.webm"} mobileSrc={"/videos/case1_mobile.webm"} />
           </div>
         
       </div>
