@@ -23,9 +23,42 @@ export const Footer = () => {
           </li>
         </ul>
         <ul className="footer-column contact">
-          <li className="title"></li>
-          <li>andrewturzh@gmail.com</li>
-          <li>Poznań</li>
+          <li className="footer-title">{t("footer.contact")}</li>
+          <li>
+            <img
+              height={20}
+              width={20}
+              src="/svg/email.svg"
+              alt=""
+              loading="lazy"
+            />
+            andrewturzh@gmail.com
+          </li>
+          <li>
+            {" "}
+            <img
+              height={20}
+              width={20}
+              src="/svg/location2.svg"
+              alt=""
+              loading="lazy"
+            />
+            Poznań
+          </li>
+          <li className="socials">
+            <a href="https://linkedin.com/in/andrii-turzhanskyi-9a9118201" className="linkedin">
+              <img src="/svg/socials/linkedin.svg" width={40} height={40} alt="linkedin logo"/>
+            </a>
+            <a href="https://github.com/turzhyk" className="github">
+              <img src="/svg/socials/github.svg" width={40} height={40} alt="github logo"/>
+            </a>
+            {/* <a href="https://github.com/turzhyk" className="facebook">
+              <img src="/svg/socials/fb.svg" width={40} height={40} alt="facebook logo"/>
+            </a>
+            <a href="https://github.com/turzhyk" className="instagram">
+              <img src="/svg/socials/insta.svg" width={40} height={40} alt="instagram logo"/>
+            </a> */}
+          </li>
         </ul>
       </div>
       <hr />

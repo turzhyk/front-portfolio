@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./process.css";
-import { WorkflowConnector } from "./WorkflowConnector";
+
 import { useTranslation } from "react-i18next";
 import { useInView } from "../Data/useInView";
 
@@ -120,14 +120,15 @@ useEffect(() => {
               </button>
             ))}
           </div>
-          <div className="process-connector" style={{ width: "auto", alignSelf: "stretch" }}>
+          <div></div>
+          {/* <div className="process-connector" style={{ width: "auto", alignSelf: "stretch" }}>
             <WorkflowConnector
               activeIndex={active}
               colors={steps.map((i) => i.color)}
               stepRefs={stepRefs}
               cardRef={cardRef}
             />
-          </div>
+          </div> */}
           {/* RIGHT */}
           <div className="content">
             <div
@@ -138,7 +139,7 @@ useEffect(() => {
               <div className="card-content">
                 <p>  {t("process.step"+(active+1)+".desc")}</p>
                 <div className="card-img-wrapper">
-                  <img  loading="lazy" alt={steps[active].alt} src={steps[active].image} />
+                  <img   loading="lazy" alt={steps[active].alt} src={steps[active].image} />
                 </div>
               </div>
             </div>

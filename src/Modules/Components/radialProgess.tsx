@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function RadialProgress({
-  size = 150,
+  size = 120,
   stroke = 10,
   value = 75,
   delay = "0s",
+  color = "#5954E3"
 }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -70,7 +71,7 @@ export default function RadialProgress({
           cy={size / 2}
           className="glow"
           r={radius}
-          stroke="#5954E3"
+          stroke={color}
           strokeWidth={stroke}
           fill="none"
           strokeLinecap="round"

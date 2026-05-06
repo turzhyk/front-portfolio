@@ -11,7 +11,7 @@ const AboutMe = () => {
   const { t } = useTranslation();
   const { ref, isVisible } = useInView<HTMLDivElement>();
   return (
-    <section ref={ref} id="aboutme" className="aboutme">
+    <section ref={ref} id="about" className="aboutme">
       <h2 className={isVisible ? "fade-in" : "hidden"}>{t("about.title")}</h2>
       <div className={`container ` + (isVisible ? " fade-in" : "hidden")}>
         <div className="top">

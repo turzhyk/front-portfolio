@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 i18n.use(initReactI18next).init({
   lng: "pl", // язык по умолчанию
-  fallbackLng: "en",
+  fallbackLng: "pl",
 
   resources: {
     ru: {
@@ -19,6 +19,9 @@ i18n.use(initReactI18next).init({
     en: {
       translation: {
         nav:"Navigation",
+        footer:{
+           contact:"Contact",
+        },
         header: {
           contact: "Contact",
         },
@@ -135,7 +138,13 @@ i18n.use(initReactI18next).init({
     },
     pl: {
       translation: {
+        heroTitle:{
+          title:"Hero"
+        },
         nav:"Navigacja",
+        footer:{
+           contact:"Kontakt",
+        },
         header: {
           contact: "Skontaktuj",
         },
@@ -232,7 +241,7 @@ i18n.use(initReactI18next).init({
             desc: "Google premiuje szybkie strony, dlatego taka witryna trafia wyżej w wynikach wyszukiwania.",
           },
           after:
-            "Szybkość to pieniądze. Każda sekunda oczekiwania na załadowanie strony to utrata 20% potencjalnych klientów",
+            "Szybkość to <hi1>pieniądze</hi1>. Każda sekunda oczekiwania na załadowanie strony to utrata 20% potencjalnych <hi1>klientów</hi1>",
         },
         contact: {
           title: "Zamów bezpłatną wycenę",
