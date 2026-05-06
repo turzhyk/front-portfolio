@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import "./tech.css";
 import RadialProgress from "../Components/radialProgess";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { useInView } from "../../Data/useInView";
 const Features = [
   {
     key: "Wydajność",
+    color: "#5484e3"
   },
   {
     key: "Wydajność",
+    color: "#5469e3"
   },
   {
     key: "Wydajność",
+    color: "#5954e3"
   },
   {
     key: "Wydajność",
+    color: "#8154e3"
   },
 ];
 const Tech = () => {
@@ -25,7 +29,15 @@ const Tech = () => {
     <section ref={ref} className="tech" id="tech">
       <div className={`container ` + (isVisible ? " fade-in" : "hidden")}>
         <h2>{t("tech.title")}</h2>
-        <p className="subtitle">{t("tech.subtitle")}</p>
+        <p className="subtitle">
+          <Trans
+            i18nKey="tech.after"
+            components={{
+              hi1: <span className="subtitle-hi" />,
+            }}
+          />
+        </p>
+
         <div className="tech-content">
           {Features.map((item, i) => {
             return (
@@ -35,6 +47,7 @@ const Tech = () => {
                     value={100}
                     stroke={active == i ? 8 : 5}
                     delay={i / 2 + "s"}
+                    color={item.color}
                   />
                 </div>
                 <div className="right">
@@ -53,7 +66,7 @@ const Tech = () => {
             </a>
           </strong>
         </i>
-        <p>{t("tech.after")}</p>
+        <h3>{t("tech.subtitle")}</h3>
       </div>
     </section>
   );

@@ -35,7 +35,7 @@
   height: 40px;
 }
 
-.right {
+.header .right {
   display: flex;
   align-items: center;
   gap: 12px;

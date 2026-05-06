@@ -11,11 +11,12 @@
 /* GRID */
 .process-grid {
   display: grid;
-  grid-template-columns: 250px 70px 1fr;
+  grid-template-columns: 250px 1px  1fr;
   gap: 0px;
   align-items: stretch;
-  
+  height: 550px;
   position: relative;
+
 }
 .left-line{
   height: 90%;
@@ -53,8 +54,7 @@ padding: 0;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .step .title
@@ -79,7 +79,7 @@ padding: 0;
 }
 .step p{
   text-align: right;
-  padding: 1rem;
+  padding: 0rem 1rem;
   font-weight: 400;
   max-width: 80%;
   float: right;
@@ -128,7 +128,7 @@ padding: 0;
 
   outline: var(--border-param);
   background: var(--bg-rich);
-  min-height: 180px;
+  /* min-height: 180px; */
   z-index: -1;
   transition:
     opacity 0.2s ease,
@@ -138,14 +138,16 @@ padding: 0;
   text-align: left;
 }
 .card-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+ 
   gap: 1rem;
   width: 100%;
   padding: 0 1rem;
 }
 .card-img-wrapper img {
   width: 100%;
+  flex: 1;
+  width: 15rem;
   border-radius: 1rem;
 }
 .fade-in {

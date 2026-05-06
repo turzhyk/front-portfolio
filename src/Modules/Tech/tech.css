@@ -1,15 +1,15 @@
 .tech {
-  padding: 5rem 20px;
+  padding: 3rem 20px;
   border-bottom: var(--border-param);
   position: relative;
 }
 .tech h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .tech-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 1rem;
 }
 .tech-content h3 {
@@ -20,17 +20,17 @@
 .tech-content > div {
   min-height: 14rem;
   transition-duration: 0.4s;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
   outline-width: 0;
   outline-color: var(--bg);
 }
 .tech-content > div:nth-child(1) {
   border-right: var(--border-param);
-  border-bottom: var(--border-param);
 }
 .tech-content > div:nth-child(2) {
-  border-bottom: var(--border-param);
+   border-right: var(--border-param);
 }
 .tech-content > div:nth-child(3) {
   border-right: var(--border-param);
@@ -38,7 +38,7 @@
 .tech-content > div:hover {
   background-color: var(--bg-rich);
   outline: var(--border-param);
-    transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 .tech-content .left {
   display: flex;
@@ -46,30 +46,41 @@
   align-items: center;
 }
 .tech-content .right {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: baseline;
-  text-align: left;
+
+  text-align: center;
+  gap: 0;
+  font-size: 16px;
 }
-.tech .subtitle{
-  padding: 1rem 2rem;
-  background-color: var(--text-h);
-  color: var(--bg-rich);
-  width: 100%;
+.tech-content .right h3{
+  margin-bottom: 0;
+  font-size: 16px;
+  text-align: center;
 }
-.tech-content .text{
+.tech .subtitle {
+  padding: 2rem 2rem;
+  background-color: var(--border);
+  /* color: var(--bg-rich); */
+  color: var(--text-h);
+    width: 100%;
+}
+.subtitle-hi{
+  color: var(--accent3);
+  font-weight: 600;
+}
+.tech-content .text {
   display: flex;
   flex-direction: column;
-height: 100%;
-position: absolute;
-top: 32%;
-left: -32%;
-width: 100%;
-text-align: right;
+  height: 100%;
+  position: absolute;
+  top: 28%;
+  left: -28%;
+  width: 100%;
+  text-align: right;
 }
-.tech-content .text span:nth-child(1){
+.tech-content .text span:nth-child(1) {
   font-size: 30px;
 }
 .tech-content .glow {
@@ -88,7 +99,7 @@ text-align: right;
   }
 }
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .tech-content {
     grid-template-columns: 1fr;
   }

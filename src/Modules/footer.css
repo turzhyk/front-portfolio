@@ -70,6 +70,34 @@ footer hr{
   border: none;
   border-bottom: 1px solid var(--bg);
 }
+.footer-column.contact li{
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+}
+.footer-column .socials{
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+
+}
+.footer-column .socials > a{
+  overflow:hidden;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+  height: 50px;
+  width: 50px;
+}
+.footer-column .socials > a.facebook{
+  background-color:  #3b5998;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.footer-column .socials > a.instagram{
+  background-color: #e0468b;
+}
+
 @media (max-width: 1000px) 
 {
   footer .content {

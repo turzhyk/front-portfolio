@@ -11,7 +11,8 @@ export default function Home() {
   return (
     <>
       <main className="page">
-        <Header />
+       
+        <Header /> 
         <Hero />
         <Suspense fallback={null}>
           <Cases />
