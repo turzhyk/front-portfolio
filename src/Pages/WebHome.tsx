@@ -2,21 +2,20 @@ import { lazy, Suspense } from "react";
 import { Header } from "../Modules/Header/Header";
 import { Hero } from "../Modules/Hero";
 import { Footer } from "../Modules/Footer";
-const Cases = lazy(() => import("../Modules/Cases"));
+import Cases from "../Modules/Cases";
+import Tech from "../Modules/Tech/Tech";
 const AboutMe = lazy(() => import("../Modules/AboutMe"));
 const Process = lazy(() => import("../Modules/Process"));
-const Tech = lazy(() => import("../Modules/Tech/Tech"));
 const ContactForm = lazy(() => import("../Modules/ContactForm/ContactForm"));
 export default function Home() {
   return (
     <>
       <main className="page">
-       
-        <Header /> 
+        <Header />
         <Hero />
+        <Cases />
+        <Tech />
         <Suspense fallback={null}>
-          <Cases />
-          <Tech />
           <AboutMe />
           <Process />
           <ContactForm />
