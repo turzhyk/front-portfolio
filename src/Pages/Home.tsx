@@ -12,7 +12,7 @@ export default function Home() {
       <h1>Andrzej Turzański</h1>
       <h2>Software Engineer & Web Performance Specialist</h2>
       <div className="home-button-wrapper">
-        <Link to={"/"}>
+        <Link to={"/net"}>
           <span>
             Dla Rekruterów <br />/ Portfolio IT
           </span>

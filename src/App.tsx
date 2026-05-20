@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import WebHome from "./Pages/WebHome";
 import Privacy from "./Pages/WebPrivacy";
 import Home from "./Pages/Home";
+import NetHome from "./Pages/NetHome";
 // lazy-load тяжёлых секций
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Route path="" element={<Home/>}/>
       <Route path="web" element={<WebHome />} />
       <Route path="web/privacy" element={<Privacy />} />
+      <Route path="net" element={<NetHome/>}/>
     </Routes>
   );
 }
