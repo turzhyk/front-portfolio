@@ -58,7 +58,7 @@ const Tech = () => {
             );
           })}
         </div>
-        <i>
+        {/* <i>
           {t("tech.warning")}{" "}
           <strong>
             <a href="https://pagespeed.web.dev/analysis/https-turzan-pl/arbuav3uvb?form_factor=desktop">
@@ -66,7 +66,7 @@ const Tech = () => {
             </a>
           </strong>
         </i>
-        <h3>{t("tech.subtitle")}</h3>
+        <h3>{t("tech.subtitle")}</h3> */}
       </div>
     </section>
   );

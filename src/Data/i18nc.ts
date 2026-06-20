@@ -150,11 +150,11 @@ i18n.use(initReactI18next).init({
         },
         hero: {
           title:
-            "Tworzę <hi1>landing page</hi1> i <hi1>strony internetowe</hi1>, które generują <hi2>zapytania od klientów</hi2>",
+            "Tworzę strony internetowe, które <hi1>zamieniają</hi1> odwiedzających w <hi2>klientów</hi2>",
           subtitle:
-            "Szybkie wdrożenie, responsywność, gotowość do Google Maps i Google Ads",
+            "Dla lokalnych firm, które chcą mieć więcej zapytań z Google i telefonu",
           subtitle2: "Możliwość rozliczenia B2B (faktura VAT)",
-          cta: "Umów się na bezpłatną konsultację",
+          cta: "Chcę więcej klientów",
         },
         cases: {
           title: "Wybrane realizacje",
@@ -221,27 +221,28 @@ i18n.use(initReactI18next).init({
           },
         },
         tech: {
-          title: "Przewaga techniczna",
-          subtitle: "Twoja strona będzie szybsza niż 95% konkurencji",
+          title: "Przewaga",
+          subtitle: "Twoja strona będzie szybsza i będzie przyciągać więcej klientów niż 90% konkurencji",
           warning: "UWAGA! Liczby są rzeczywiste na podstawie metryk z ",
           case1: {
-            title: "Wydajność",
-            desc: "Strona ładuje się błyskawicznie, więc klient nie czeka i nie ucieka do konkurencji.",
+            title: "Szybkość",
+            desc: "Jeśli strona ładuje się wolno, klienci po prostu wychodzą i dzwonią do konkurencji.",
           },
           case2: {
-            title: "Dostępność",
-            desc: "Serwis jest wygodny dla każdego użytkownika, co realnie zwiększa zaufanie i lojalność.",
+            title: "Łatwy kontakt",
+            desc: "Klient szybko znajduje numer telefonu lub formularz i może się od razu skontaktować.",
           },
           case3: {
-            title: "Best Practices",
-            desc: "Kod jest nowoczesny, bezpieczny i napisany zgodnie ze standardami — bez zbędnych błędów.",
+            title: "Wiarygodność",
+            desc: "Nowoczesna strona sprawia, że firma wygląda profesjonalnie i budzi większe zaufanie.",
           },
           case4: {
-            title: "SEO",
-            desc: "Google premiuje szybkie strony, dlatego taka witryna trafia wyżej w wynikach wyszukiwania.",
+            title: "Widoczność w Google",
+            desc: "Twoja firma jest łatwiejsza do znalezienia, gdy klienci szukają usług w Twojej okolicy.",
           },
           after:
-            "Szybkość to <hi1>pieniądze</hi1>. Każda sekunda oczekiwania na załadowanie strony to utrata 20% potencjalnych <hi1>klientów</hi1>",
+
+            "Dobra strona nie jest wydatkiem — to narzędzie, które codziennie generuje klientów.",
         },
         contact: {
           title: "Zamów bezpłatną wycenę",
