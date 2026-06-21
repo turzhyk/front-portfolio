@@ -8,7 +8,7 @@
   --bg-a: #ebebeb87;
   --border-param: 1px solid rgb(201, 201, 201);
   --code-bg: #e5e5e5;
-  --accent: #aa3bff;
+  --accent: #a85ce1;
   --accent2: #1061a8;
   --accent3: #5954e3;
   --accent-bg: rgba(170, 59, 255, 0.1);
@@ -17,6 +17,7 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 --ifilter: invert(1);
+--filter:invert(0);
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -38,6 +39,12 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+}
+.icon{
+  color: black;
+}
+.icon2{
+  color: goldenrod
 }
 @font-face {
   font-family: "Jet Brains Mono";
@@ -99,13 +106,19 @@
     --accent-border: rgba(170, 59, 255, 0.5);
     --social-bg: rgba(244, 243, 236, 0.5);
    --ifilter: invert(0);
+   --filter:invert(1);
      --shadow:
     rgba(255, 255, 255, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
     --footer-bg:#3e3e3e;
     --footer-text:white;
   }
-
+  .icon{
+    color: white;
+  }
+  .icon2{
+    color:rgb(255, 191, 0);
+  }
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
@@ -117,7 +130,7 @@ a button a:visited {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
+  /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -127,7 +140,7 @@ a button a:visited {
 .page {
   max-width: 1000px;
   margin: 0 auto;
-  border-inline: 1px solid var(--border);
+  /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   padding-bottom: 4rem;
   position: relative;
@@ -160,7 +173,7 @@ h2 {
 
 h1 {
   font-size: 2rem;
-  color: var(--text);
+  color: var(--text-h);
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 20px;

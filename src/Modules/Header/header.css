@@ -4,12 +4,13 @@
   display: flex;
   justify-content: stretch;
   /* width: calc(65% - 3px); */
-  max-width: 998px;
-  width: 998px;
+  max-width: 1000px;
+  width: 1000px;
   margin: auto;
   position: fixed;
   background: linear-gradient(0deg,var(--bg-a) 0%, var(--bg) 100%);
-  border-bottom: var(--border-param);
+  border: var(--border-param);
+  border-top: none;
   backdrop-filter: blur(10px);
   z-index: 100;
   

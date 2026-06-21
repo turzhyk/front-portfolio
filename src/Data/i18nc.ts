@@ -221,7 +221,7 @@ i18n.use(initReactI18next).init({
           },
         },
         tech: {
-          title: "Przewaga",
+          title: "Dlaczego rezultat jest taki dobry",
           subtitle: "Twoja strona będzie szybsza i będzie przyciągać więcej klientów niż 90% konkurencji",
           warning: "UWAGA! Liczby są rzeczywiste na podstawie metryk z ",
           case1: {
