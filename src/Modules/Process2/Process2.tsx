@@ -213,8 +213,9 @@ export default function Process2() {
           <div className="right">
             <h3>Gotowe rozwiązanie „pod klucz”</h3>
             <p>
-              Otrzymujesz gotową stronę online — bez technicznych rzeczy po
-              Twojej stronie.
+              Otrzymujesz gotową stronę online — bez technicznych rzeczy po Twojej stronie.
+              Strona należy do Ciebie — masz dostęp i kontrolę nad
+              treścią.
             </p>
           </div>{" "}
           <div className="number">03</div>
@@ -242,8 +243,7 @@ export default function Process2() {
             <h3>Szybkie działanie</h3>
             <p>
               Strona ładuje się szybko, więc użytkownicy nie uciekają do
-              konkurencji. Strona należy do Ciebie — masz dostęp i kontrolę nad
-              treścią.
+              konkurencji. 
             </p>
           </div>{" "}
           <div className="number">04</div>

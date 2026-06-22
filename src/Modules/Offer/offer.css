@@ -40,13 +40,17 @@
 }
 .offer .option {
   padding: 1.5rem;
-  height: 600px;
+  /* height: 600px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .offer .option-top {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 250px;
+  /* height: 250px; */
+  flex:1;
 }
 .offer .option2 .populartag {
   position: absolute;
@@ -65,10 +69,11 @@
   margin: 0;
   flex: 1;
   padding: 1rem;
+  font-size: 14px;
 }
 .offer li {
-  margin-top: 0.5rem;
   margin: 0;
+  margin-top: 0.5rem;
 }
 .offer .option .slider {
   width: 90%;
@@ -84,20 +89,36 @@
   margin: 0;
 }
 .offer .option .footer{
-
+  height: 200px;
 }
 .offer .option .footer ul{
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.offer .option .footer li{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  
 }
 .offer .option .pricetag {
   font-weight: 700;
-  margin: 0;
+  font-size: 12px;
+  /* text-transform: uppercase; */
+  text-align: right;
+  margin-top: 0;
 }
 .offer .option .priceline {
-  display: flex;
-  justify-content: space-between;
+  
+  gap: 10px;
   align-items: end;
-  padding: 1rem 0rem;
+  /* padding: 1rem 0rem; */
+}
+.offer .option .price{
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .offer .option .divider{
   width: 90%;
@@ -111,5 +132,34 @@
   /* width: 100%; */
   font-weight: 700;
   padding: 1rem 1rem;
-  background-color: var(--accent2);
+  background-color: var(--accent3);
+  color: white;
+}
+.offer .icon1{
+  color: rgb(209, 109, 237);
+    color: rgb(234, 156, 40);
+}
+.offer .icon2{
+  color: rgb(234, 156, 40);
+}
+.offer .icon3{
+  color: rgb(45, 110, 241);
+    color: rgb(234, 156, 40);
+}
+.offer .icon4{
+  color: rgb(125, 195, 27);
+    color: rgb(234, 156, 40);
+}
+.offer .icon5{
+  color: rgb(125, 195, 27);
+    color: rgb(234, 156, 40);
+}
+.offer .disclaim {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.offer .footer .owner{
+  color: rgb(234, 156, 40);
+  font-weight: 600;
 }
