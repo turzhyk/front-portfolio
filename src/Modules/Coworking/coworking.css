@@ -18,6 +18,7 @@
 }
 .cowork svg{
     filter: var(--filter);
+    margin-bottom: 45px;
 }
 .cowork .step .icon{
   margin: auto;
