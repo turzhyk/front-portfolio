@@ -1,5 +1,5 @@
 :root {
-  --text: #595361;
+  --text: #3f3b45;
   --text-h: #08060d;
   --full-front: black;
   --border: #d0d0d0;
@@ -16,13 +16,13 @@
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
---ifilter: invert(1);
---filter:invert(0);
+  --ifilter: invert(1);
+  --filter: invert(0);
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  --footer-bg:#6b6375;
+  --footer-bg: #6b6375;
   --footer-text: white;
 
   /* font: 18px/145% var(--sans); */
@@ -40,11 +40,11 @@
     font-size: 16px;
   }
 }
-.icon{
+.icon {
   color: black;
 }
-.icon2{
-  color: goldenrod
+.icon2 {
+  color: rgb(151, 111, 11);
 }
 @font-face {
   font-family: "Jet Brains Mono";
@@ -105,19 +105,20 @@
     --accent-bg: rgba(170, 59, 255, 0.1);
     --accent-border: rgba(170, 59, 255, 0.5);
     --social-bg: rgba(244, 243, 236, 0.5);
-   --ifilter: invert(0);
-   --filter:invert(1);
-     --shadow:
-    rgba(255, 255, 255, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    --ifilter: invert(0);
+    --filter: invert(1);
+    --shadow:
+      rgba(255, 255, 255, 0.1) 0 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-    --footer-bg:#3e3e3e;
-    --footer-text:white;
+    --footer-bg: #3e3e3e;
+    --footer-text: white;
   }
-  .icon{
+  .icon {
     color: white;
   }
-  .icon2{
-    color:rgb(255, 191, 0);
+  .icon2 {
+    color: rgb(255, 191, 0);
   }
   #social .button-icon {
     filter: invert(1) brightness(2);
@@ -232,4 +233,12 @@ code {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.6s ease;
+}
+@media (max-width: 400px) {
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 15px;
+  }
 }

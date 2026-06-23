@@ -60,6 +60,7 @@
 .process2 .main-feature h1 {
   /* margin-bottom: 0px; */
   font-weight: 700;
+  margin-top: 0px;
 }
 .process2 .main-feature {
   padding: 1rem 0;
@@ -85,7 +86,7 @@ flex-direction: column;
   text-align: left;
   align-items: center;
   justify-content: left;
-  padding: 1rem 1rem;
+  padding: 1rem;
   border: var(--border-param);
   border-top: none;
   /* margin: 1rem 3rem; */
@@ -118,14 +119,13 @@ flex-direction: column;
   border-left: var(--border-param);
 }
 .process2 .feature .pic {
-  width: 150px;
-  min-width: 150px;
-  height: 150px;
-  min-height: 150px;
+  width: 120px;
+  min-width: 120px;
+  height: 120px;
+  min-height: 120px;
   /* margin: auto; */
-  border: var(--border-param);
-  border-radius: 50%;
-  flex-grow: 0;
+  /* border: var(--border-param); */
+
 }
 .process2 .feature svg {
   margin: 10px;
@@ -150,7 +150,7 @@ margin-right: 1rem;
   padding: 1rem 2rem;
   border: 2px solid var(--text);
   margin: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   margin-top: 3rem;
   cursor: pointer;
   transition-duration: 200ms;
@@ -169,7 +169,7 @@ margin-right: 1rem;
     padding: 1rem;
   }
   .process2 .feature{
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 0;
   }
   .process2 .feature .vert{
@@ -178,11 +178,23 @@ margin-right: 1rem;
  .process2 .feature .number{
   margin: 0;
   font-size: 40px;
+
  }
 }
 @media (max-width: 400px) {
   .process2{
     border-left: none;
     border-right: none;
+  }
+  .process2 .feature{
+    padding: 0.5rem;
+  }
+ 
+  .process2 .feature .number{display: none;}
+  .process2 .cta1{
+    margin-top: 0;
+  }
+  .process2 .featureset{
+    margin-bottom: 1rem;
   }
 }

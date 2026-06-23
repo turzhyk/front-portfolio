@@ -1,0 +1,9 @@
+.cases2 {
+  padding: 3rem 3rem;
+  border: var(--border-param);
+  border-top: 0;
+  position: relative;
+}
+.cases2 h2{
+  margin-top: 0px;
+}

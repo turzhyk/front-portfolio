@@ -1,0 +1,55 @@
+.cowork {
+  padding: 3rem 3rem;
+  border: var(--border-param);
+  position: relative;
+}
+.cowork h2{
+      margin-top: 0px;
+}
+.cowork .steps{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-top: 50px;
+}
+.cowork .step{
+  text-align: center;
+}
+.cowork svg{
+    filter: var(--filter);
+}
+.cowork .step .icon{
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  background-color: var(--border);
+   font-size: 50px;
+    font-family: "Jet Brains Mono";
+    font-weight: 700;
+    /* color: var(--border); */
+}
+.cowork .step h3{
+  font-size: 15px;
+  font-weight: 600;
+}
+@media (max-width: 1000px) {
+  .cowork{
+    border-left: none;
+    border-right: none;
+  padding: 1rem;
+  padding-top: 3rem;
+  }
+  .cowork .steps{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .cowork svg{
+    display: none;
+  
+  }
+}

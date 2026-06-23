@@ -8,6 +8,8 @@ import Pain from "../Modules/Pain/Pain";
 import Faq from "../Modules/FAQ/Faq";
 import Process2 from "../Modules/Process2/Process2";
 import Offer from "../Modules/Offer/Offer";
+import Coworking from "../Modules/Coworking/Coworking";
+import Exp from "../Modules/Exp/Exp";
 const AboutMe = lazy(() => import("../Modules/AboutMe"));
 const Process = lazy(() => import("../Modules/Process"));
 const ContactForm = lazy(() => import("../Modules/ContactForm/ContactForm"));
@@ -19,11 +21,13 @@ export default function Home() {
         <Hero />
         <Pain />
         <Process2/>
+        <Exp/>
         <Offer/>
+        <Coworking/><Cases /> <Faq/>
         <Tech />
-        <Faq/>
+       
         <Suspense fallback={null}>
-          <Cases />
+          
           <AboutMe />
           {/* <Process /> */}
           <ContactForm />

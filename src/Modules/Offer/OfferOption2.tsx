@@ -5,16 +5,15 @@ export const OfferOption2 = () => {
   return (
     <div className="option2 option">
       <h3>Pakiet Firma</h3>
-       <p className="populartag">Popularne!</p>
+       <p className="populartag">Najczęściej wybierany</p>
       <div className="option-top">
         <ul>
-          <li>Strona internetowa dla Twojej firmy</li>
-          <li>Formularz kontaktowy i szybki kontakt telefoniczny</li>
-          <li>Wersja mobilna (telefon i tablet)</li>
-          <li>Publikacja strony online</li>
-          <li>Podstawowa optymalizacja SEO</li>
-          <li>Polityka prywatności (RODO)</li>
-          <li>3 miesięcy wsparcia po uruchomieniu GRATIS, zatym 50zł/miesiąc</li>
+          <li><strong>Wszystko z pierwszego pakietu</strong></li>
+          <li>Sekcja opinii klientów</li>
+          <li>Galeria realizacji</li>
+          <li>Integracja Facebook / Instagram</li>
+          <li>Dodatkowe podstrony</li>
+          <li>3 miesięce wsparcia po uruchomieniu GRATIS</li>
         </ul>
         {/* <div className="slider">
           <input name="level" type="range" min={0} max={2} step={1} />
@@ -22,7 +21,7 @@ export const OfferOption2 = () => {
         </div> */}
 
         <div className="priceline">
-          <p className="price">od 1800zł</p>
+          <p className="price">od 2200zł</p>
           <p className="pricetag">Jednorazowa płatność</p>
         </div>
      
@@ -30,6 +29,26 @@ export const OfferOption2 = () => {
       <a>
         <div className="cte">Chcę taką stronę</div>
       </a>
+       <p className="deliverytime">
+        <svg
+          width="18"
+          height="18"
+          fill="#000000"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M6.108,20H4a1,1,0,0,0,0,2H20a1,1,0,0,0,0-2H17.892c-.247-2.774-1.071-7.61-3.826-9,2.564-1.423,3.453-4.81,3.764-7H20a1,1,0,0,0,0-2H4A1,1,0,0,0,4,4H6.17c.311,2.19,1.2,5.577,3.764,7C7.179,12.39,6.355,17.226,6.108,20ZM9,16.6c0-1.2,3-3.6,3-3.6s3,2.4,3,3.6V20H9Z"></path>
+          </g>
+        </svg>{" "}
+        Czas realizacji: zwykle 12-16 dni roboczych
+      </p>
       <div className="divider" />
       <div className="footer">
         <ul>

@@ -1,0 +1,80 @@
+.exp {
+  /* padding: 3rem 3rem; */
+  padding: 1rem;
+  border: var(--border-param);
+  border-top: 0;
+  position: relative;
+}
+.exp {
+  margin-top: 0px;
+}
+.exp .features {
+  display: flex;
+  justify-content: space-around;
+  gap: 0rem;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+}
+.exp .features  .feat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  align-items: center;
+}
+.exp .features > .feat:hover {
+  background-color: var(--bg-rich);
+}
+.exp .features h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.exp .features strong {
+  font-size: 50px;
+}
+.exp .feat1 strong {
+  color: var(--accent3);
+}
+.exp .feat2 strong {
+  color: var(--accent3);
+}
+.exp .feat3 strong {
+  color: var(--accent3);
+}
+.exp .vert1 {
+  height: 100px;
+  min-height: 60%;
+  border-left: var(--border-param);
+  margin: 0px;
+  padding: 0;
+  content: "";
+}
+@media (max-width: 400px) {
+  .exp {
+    padding: 1rem 1rem;
+    border-left: 0;
+    border-right: 0;
+  }
+  .exp .features {
+    padding: 0;
+    margin: 0;
+  }
+  .exp .features .feat {
+    padding: 1rem;
+  }
+  .exp .feat h3 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .exp .feat strong {
+    margin: 0;
+    font-size: 30px;
+  }
+  .exp .vert1 {
+    display: none;
+  }
+}

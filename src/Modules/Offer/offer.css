@@ -1,6 +1,7 @@
 .offer {
   padding: 50px 50px;
   position: relative;
+  --keyCol: rgb(170, 111, 22);
 }
 .offer h2 {
   margin-bottom: 50px;
@@ -54,8 +55,10 @@
 }
 .offer .option2 .populartag {
   position: absolute;
-  top: -50px;
-  left: calc(50% - 50px);
+  top: -40px;
+  left:0;
+  /* left: calc(50% - 50px); */
+  width: 100%;
   text-transform: uppercase;
   color: var(--accent2);
   font-weight: 600;
@@ -124,7 +127,7 @@
   width: 90%;
   margin: auto;
   border-top: var(--border-param);
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 .offer .option .cte{
@@ -137,22 +140,22 @@
 }
 .offer .icon1{
   color: rgb(209, 109, 237);
-    color: rgb(234, 156, 40);
+    color: var(--keyCol);
 }
 .offer .icon2{
-  color: rgb(234, 156, 40);
+   color: var(--keyCol);
 }
 .offer .icon3{
   color: rgb(45, 110, 241);
-    color: rgb(234, 156, 40);
+      color: var(--keyCol);
 }
 .offer .icon4{
   color: rgb(125, 195, 27);
-    color: rgb(234, 156, 40);
+     color: var(--keyCol);
 }
 .offer .icon5{
   color: rgb(125, 195, 27);
-    color: rgb(234, 156, 40);
+     color: var(--keyCol);
 }
 .offer .disclaim {
   font-size: 13px;
@@ -160,6 +163,37 @@
   margin-top: 30px;
 }
 .offer .footer .owner{
-  color: rgb(234, 156, 40);
+   color: var(--keyCol);
   font-weight: 600;
+}
+.offer .deliverytime{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.offer .deliverytime svg{
+  filter: var(--filter);
+}
+@media (prefers-color-scheme: dark) {
+  .offer{
+     --keyCol: rgb(234, 156, 40);
+  }
+}
+@media (max-width: 1000px) {
+  .offer{
+    padding: 1rem;
+  }
+  .offer .options{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .offer .option2{
+    width: auto;
+  }
+  .offer .option1{
+    width: auto;
+  }
 }

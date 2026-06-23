@@ -6,7 +6,7 @@ import { OfferOption2 } from "./OfferOption2";
 export default function Offer() {
   return (
     <section id="offer" className="offer">
-      <h2>Wybierz swoją realizację</h2>
+      <h2>Wybierz rozwiązanie dla swojej firmy</h2>
       <div className="options">
         <OfferOption1 />
       <OfferOption2/>
