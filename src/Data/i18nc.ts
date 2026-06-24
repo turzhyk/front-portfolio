@@ -81,7 +81,22 @@ i18n.use(initReactI18next).init({
               owner: "The website belongs to you",
             },
             disclaimer: "The price does not include domain and hosting costs.",
-          },
+          },offer2: {
+  h: "Business Package",
+  popularTag: "Most Popular",
+  features: [
+    "Everything included in the Business Card Package",
+    "Customer reviews section to build trust",
+    "Portfolio gallery and company photos",
+    "Facebook and Instagram integration",
+    "Additional pages (e.g. Services, Pricing, About Us)",
+    "3 months of FREE support after launch",
+  ],
+  price: "from PLN 2,200",
+  pricetag: "One-time payment",
+  cta: "I want a website like this",
+  deliveryTime: "Delivery time: usually 12–16 business days",
+},
         },
         cases: {
           title: "Selected projects",
