@@ -1,32 +1,32 @@
 import React, { useState } from "react";
 import "./offer.css";
+import { useTranslation } from "react-i18next";
 export const OfferOption1 = () => {
   const [level, setLevel] = useState(0);
+  const { t } = useTranslation();
   return (
     <div className="option1 option">
-      <h3>Pakiet Wizytówka</h3>
+      <h3>{t("offer.offer1.h")}</h3>
       <div className="option-top">
+        {" "}
         <ul>
-          <li>Strona gotowa do pozyskiwania klientów</li>
-          <li>Formularz kontaktowy i szybki kontakt telefoniczny</li>
-          <li>Wersja mobilna (telefon i tablet)</li>
-          <li>Publikacja strony online</li>
-          <li>Podstawowa optymalizacja SEO</li>
-          <li>Polityka prywatności (RODO)</li>
-          <li>1 miesiąc wsparcia po uruchomieniu GRATIS</li>
+          {" "}
+          <li>{t("offer.offer1.features.0")}</li>{" "}
+          <li>{t("offer.offer1.features.1")}</li>{" "}
+          <li>{t("offer.offer1.features.2")}</li>{" "}
+          <li>{t("offer.offer1.features.3")}</li>{" "}
+          <li>{t("offer.offer1.features.4")}</li>{" "}
+          <li>{t("offer.offer1.features.5")}</li>{" "}
+          <li>{t("offer.offer1.features.6")}</li>{" "}
         </ul>
-        {/* <div className="slider">
-          <input name="level" type="range" min={0} max={2} step={1} />
-          <label htmlFor="level">Wybierz poziom</label>
-        </div> */}
-
         <div className="priceline">
-          <p className="price">od 1250zł</p>
-          <p className="pricetag">Jednorazowa płatność</p>
+          {" "}
+          <p className="price">{t("offer.offer1.price")}</p>{" "}
+          <p className="pricetag">{t("offer.offer1.pricetag")}</p>{" "}
         </div>
       </div>
-      <a>
-        <div className="cte">Chcę taką stronę</div>
+      <a href="#contact">
+        <div className="cte">{t("offer.offer1.cta")}</div>
       </a>
       <p className="deliverytime">
         <svg
@@ -46,7 +46,7 @@ export const OfferOption1 = () => {
             <path d="M6.108,20H4a1,1,0,0,0,0,2H20a1,1,0,0,0,0-2H17.892c-.247-2.774-1.071-7.61-3.826-9,2.564-1.423,3.453-4.81,3.764-7H20a1,1,0,0,0,0-2H4A1,1,0,0,0,4,4H6.17c.311,2.19,1.2,5.577,3.764,7C7.179,12.39,6.355,17.226,6.108,20ZM9,16.6c0-1.2,3-3.6,3-3.6s3,2.4,3,3.6V20H9Z"></path>
           </g>
         </svg>{" "}
-        Czas realizacji: zwykle 7-14 dni roboczych
+        {t("offer.offer1.deliveryTime")}
       </p>
       <div className="divider" />
       <div className="footer">
@@ -67,7 +67,7 @@ export const OfferOption1 = () => {
                 stroke-linecap="round"
               />
             </svg>
-            Dostęp do statystyk odwiedzin
+            {t("offer.offer1.footer.stats")}
           </li>
           <li>
             <svg
@@ -92,7 +92,7 @@ export const OfferOption1 = () => {
                 stroke-linecap="round"
               />
             </svg>
-            Pełny dostęp do strony
+          {t("offer.offer1.footer.access")}
           </li>
           <li>
             <svg
@@ -132,7 +132,7 @@ export const OfferOption1 = () => {
                 stroke-width="3"
               />
             </svg>
-            Pomoc w konfiguracji własnej domeny
+            {t("offer.offer1.footer.domain")}
           </li>
           <li>
             <svg
@@ -156,7 +156,7 @@ export const OfferOption1 = () => {
                 stroke-linecap="round"
               />
             </svg>
-            Faktura VAT
+          {t("offer.offer1.footer.invoice")}
           </li>
           <li className="owner">
             <svg
@@ -182,11 +182,11 @@ export const OfferOption1 = () => {
                 className="icon5"
               />
             </svg>
-            Strona należy do Ciebie
+           {t("offer.offer1.footer.owner")}
           </li>
         </ul>
         <p className="disclaim">
-          Cena strony nie obejmuje kosztów domeny i hostingu.
+        {t("offer.offer1.disclaimer")}
         </p>
       </div>
     </div>

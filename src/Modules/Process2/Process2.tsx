@@ -1,13 +1,15 @@
 import React from "react";
 import "./process2.css";
+import { useTranslation } from "react-i18next";
 export default function Process2() {
+   const { t } = useTranslation();
   return (
     <section id="process2" className="process2">
-      <h2>Patrz, co otrzymasz</h2>
+      <h2>{t("product.h2")}</h2>
       <div className="main-feature">
-        <h1>Strona, która pracuje na Twoją firmę </h1>
+        <h1>{t("product.h3")}</h1>
         <div className="divider" />
-        <p>Nie tylko „ładna strona”, ale narzędzie do zdobywania klientów.</p>
+        <p>{t("product.h4")}</p>
       </div>
       <div className="featureset">
         <div className="feature">
@@ -81,10 +83,9 @@ export default function Process2() {
 
           <div className="vert" />
           <div className="right">
-            <h3>Wygoda dla klientów z telefonu</h3>
+            <h3>{t("product.p1.h")}</h3>
             <p>
-              Twoi klienci szybko znajdą numer telefonu, ofertę i mogą się z
-              Tobą skontaktować bez szukania.
+             {t("product.p1.p")}
             </p>
           </div>
         </div>
@@ -192,10 +193,9 @@ export default function Process2() {
           </div>
           <div className="vert" />
           <div className="right">
-            <h3>Więcej zapytań z Google</h3>
+            <h3>{t("product.p2.h")}</h3>
             <p>
-              Strona jest przygotowana tak, żeby Twoja firma była łatwiejsza do
-              znalezienia w internecie.
+             {t("product.p2.p")}
             </p>
           </div>{" "}
         </div>
@@ -220,11 +220,9 @@ export default function Process2() {
           </div>
           <div className="vert" />
           <div className="right">
-            <h3>Gotowe rozwiązanie „pod klucz”</h3>
+            <h3>{t("product.p3.h")}</h3>
             <p>
-              Otrzymujesz gotową stronę online — bez technicznych rzeczy po
-              Twojej stronie. Strona należy do Ciebie — masz dostęp i kontrolę
-              nad treścią.
+              {t("product.p3.p")}
             </p>
           </div>{" "}
         </div>
@@ -252,10 +250,9 @@ export default function Process2() {
           </div>
           <div className="vert" />
           <div className="right">
-            <h3>Szybkie działanie</h3>
+            <h3> {t("product.p4.h")}</h3>
             <p>
-              Strona ładuje się szybko, więc użytkownicy nie uciekają do
-              konkurencji.
+               {t("product.p4.p")}
             </p>
           </div>{" "}
         </div>

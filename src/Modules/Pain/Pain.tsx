@@ -1,61 +1,60 @@
 import React from "react";
 import "./pain.css";
+import { useTranslation } from "react-i18next";
 export default function Pain() {
+    const { t } = useTranslation();
   return (
     <section className="pain" id="pain">
       <div className="wide">
         <div className="problem">
           <div>
-            <h1>Czy Twoja strona</h1>
-            <h1>traci klientów?</h1>
+            <h1>{t("pain.t1")}</h1>
+            <h1>{t("pain.t2")}</h1>
           </div>
           <div className="quests">
-            <p className="quest">wolno się ładuje</p>
-            <p className="quest">źle działa na telefonie</p>
-            <p className="quest">nie ma zapytań z Google</p>
-            <p className="quest">trudno znaleźć numer telefonu</p>
+            <p className="quest">{t("pain.q1")}</p>
+            <p className="quest">{t("pain.q2")}</p>
+            <p className="quest">{t("pain.q3")}</p>
+            <p className="quest">{t("pain.q4")}</p>
+
           </div>
         </div>
 
         <div className="action">
-          <h2>Właśnie to naprawiam</h2>
+          <h2>{t("pain.h2")}</h2>
           {/* <p>
             Bez technicznego żargonu. Skupiamy się na klientach, nie na stronie.
           </p> */}
           <div className="options">
             <div className="option">
-              <h3>Opcja 1</h3>
+              <h3>{t('pain.option')} 1</h3>
               <div className="option-middle">
                 <p className="option-title">
                   <strong>
-                    Masz już stronę, ale nie działa tak jak powinna
+                   {t("pain.option1.h")}
                   </strong>
                 </p>
                 <p className="desc">
-                  Poprawiamy istniejące strony, żeby były szybsze, czytelne na
-                  telefonie i łatwiejsze w kontakcie.
+                  {t("pain.option1.action")}
                 </p>
               </div>
               <div className="effect">
-                Efekt: więcej zapytań od klientów bez zmiany Twojej oferty.
+                 {t("pain.option1.effect")}
               </div>
               {/* <a className="cte1" href="#contact">Pokaż, co można poprawić</a> */}
             </div>
             <div className="option">
-              <h3>Opcja 2</h3>
+               <h3>{t('pain.option')} 2</h3>
 
               <div className="option-middle">
-                {" "}
                 <p className="option-title">
-                  <strong>Nie masz strony internetowej</strong>
+                  <strong>{t("pain.option2.h")}</strong>
                 </p>
-                <p className="desc">
-                  Tworzę stronę od zera i konfiguruję ją tak, żeby klienci mogli
-                  łatwo znaleźć Twoją firmę i się z Tobą skontaktować.
-                </p>
+                <p className="desc">    {t("pain.option2.action")}
+                 </p>
               </div>
               <div className="effect">
-                Gotowe rozwiązanie: strona + kontakt + publikacja online.
+                {t("pain.option2.effect")}
               </div>
               {/* <a className="cte1" href="#contact">Chcę stronę dla mojej firmy</a> */}
             </div>

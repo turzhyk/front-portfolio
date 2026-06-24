@@ -10,6 +10,7 @@ import Process2 from "../Modules/Process2/Process2";
 import Offer from "../Modules/Offer/Offer";
 import Coworking from "../Modules/Coworking/Coworking";
 import Exp from "../Modules/Exp/Exp";
+import Cases2 from "../Modules/Cases2/Cases2";
 const AboutMe = lazy(() => import("../Modules/AboutMe"));
 const Process = lazy(() => import("../Modules/Process"));
 const ContactForm = lazy(() => import("../Modules/ContactForm/ContactForm"));
@@ -22,8 +23,9 @@ export default function Home() {
         <Pain />
         <Process2/>
         <Exp/>
+        <Cases2/>
         <Offer/>
-        <Coworking/><Cases /> <Faq/>
+        <Coworking/> <Faq/>
         <Tech />
        
         <Suspense fallback={null}>

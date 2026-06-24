@@ -1,35 +1,38 @@
 import React, { useState } from "react";
 import "./offer.css";
+import { useTranslation } from "react-i18next";
 export const OfferOption2 = () => {
   const [level, setLevel] = useState(0);
+  const { t } = useTranslation();
   return (
     <div className="option2 option">
-      <h3>Pakiet Firma</h3>
-       <p className="populartag">Najczęściej wybierany</p>
+      <h3>{t("offer.offer2.h")}</h3>{" "}
+      <p className="populartag"> {t("offer.offer2.popularTag")} </p>{" "}
       <div className="option-top">
+        {" "}
         <ul>
-          <li><strong>Wszystko z pierwszego pakietu</strong></li>
-          <li>Sekcja opinii klientów</li>
-          <li>Galeria realizacji</li>
-          <li>Integracja Facebook / Instagram</li>
-          <li>Dodatkowe podstrony</li>
-          <li>3 miesięce wsparcia po uruchomieniu GRATIS</li>
-        </ul>
-        {/* <div className="slider">
-          <input name="level" type="range" min={0} max={2} step={1} />
-          <label htmlFor="level">Wybierz poziom</label>
-        </div> */}
-
+          {" "}
+          <li>
+            {" "}
+            <strong>{t("offer.offer2.features.0")}</strong>{" "}
+          </li>{" "}
+          <li>{t("offer.offer2.features.1")}</li>{" "}
+          <li>{t("offer.offer2.features.2")}</li>{" "}
+          <li>{t("offer.offer2.features.3")}</li>{" "}
+          <li>{t("offer.offer2.features.4")}</li>{" "}
+          <li>{t("offer.offer2.features.5")}</li>{" "}
+        </ul>{" "}
         <div className="priceline">
-          <p className="price">od 2200zł</p>
-          <p className="pricetag">Jednorazowa płatność</p>
-        </div>
-     
-      </div>
-      <a>
-        <div className="cte">Chcę taką stronę</div>
+          {" "}
+          <p className="price">{t("offer.offer2.price")}</p>{" "}
+          <p className="pricetag">{t("offer.offer2.pricetag")}</p>{" "}
+        </div>{" "}
+      </div>{" "}
+      <a href="#contact">
+        {" "}
+        <div className="cte">{t("offer.offer2.cta")}</div>{" "}
       </a>
-       <p className="deliverytime">
+      <p className="deliverytime">
         <svg
           width="18"
           height="18"
@@ -47,7 +50,7 @@ export const OfferOption2 = () => {
             <path d="M6.108,20H4a1,1,0,0,0,0,2H20a1,1,0,0,0,0-2H17.892c-.247-2.774-1.071-7.61-3.826-9,2.564-1.423,3.453-4.81,3.764-7H20a1,1,0,0,0,0-2H4A1,1,0,0,0,4,4H6.17c.311,2.19,1.2,5.577,3.764,7C7.179,12.39,6.355,17.226,6.108,20ZM9,16.6c0-1.2,3-3.6,3-3.6s3,2.4,3,3.6V20H9Z"></path>
           </g>
         </svg>{" "}
-        Czas realizacji: zwykle 12-16 dni roboczych
+        {t("offer.offer2.deliveryTime")}
       </p>
       <div className="divider" />
       <div className="footer">
@@ -68,7 +71,7 @@ export const OfferOption2 = () => {
                 stroke-linecap="round"
               />
             </svg>
-            Dostęp do statystyk odwiedzin
+            {t("offer.offer1.footer.stats")}
           </li>
           <li>
             <svg
@@ -93,17 +96,47 @@ export const OfferOption2 = () => {
                 stroke-linecap="round"
               />
             </svg>
-            Pełny dostęp do strony
+            {t("offer.offer1.footer.access")}
           </li>
           <li>
-           <svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="4" className="icon4"/>
-<line x1="20" y1="4" x2="20" y2="36" stroke="currentColor"  stroke-width="4" className="icon4"/>
-<path d="M34 11.77C23.6334 18.5893 17.7103 18.2823 7 11.77" stroke="currentColor" className="icon4"  stroke-width="3"/>
-<path d="M7 27.77C17.3666 20.9507 23.2897 21.2578 34 27.77" stroke="currentColor" className="icon4"  stroke-width="3"/>
-</svg>
-
-            Pomoc w konfiguracji własnej domeny
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="20"
+                cy="20"
+                r="15"
+                stroke="currentColor"
+                stroke-width="4"
+                className="icon4"
+              />
+              <line
+                x1="20"
+                y1="4"
+                x2="20"
+                y2="36"
+                stroke="currentColor"
+                stroke-width="4"
+                className="icon4"
+              />
+              <path
+                d="M34 11.77C23.6334 18.5893 17.7103 18.2823 7 11.77"
+                stroke="currentColor"
+                className="icon4"
+                stroke-width="3"
+              />
+              <path
+                d="M7 27.77C17.3666 20.9507 23.2897 21.2578 34 27.77"
+                stroke="currentColor"
+                className="icon4"
+                stroke-width="3"
+              />
+            </svg>
+            {t("offer.offer1.footer.domain")}
           </li>
           <li>
             <svg
@@ -127,7 +160,7 @@ export const OfferOption2 = () => {
                 stroke-linecap="round"
               />
             </svg>
-            Faktura VAT
+            {t("offer.offer1.footer.invoice")}
           </li>
           <li className="owner">
             <svg
@@ -153,10 +186,10 @@ export const OfferOption2 = () => {
                 className="icon5"
               />
             </svg>
-            Strona należy do Ciebie
+            {t("offer.offer1.footer.owner")}
           </li>
         </ul>
-           <p className="disclaim">Cena strony nie obejmuje kosztów domeny i hostingu.</p>
+        <p className="disclaim">{t("offer.offer1.disclaimer")}</p>
       </div>
     </div>
   );

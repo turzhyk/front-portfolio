@@ -2,8 +2,10 @@ import React from "react";
 import "./offer.css";
 import { OfferOption1 } from "./OfferOption1";
 import { OfferOption2 } from "./OfferOption2";
+import { useTranslation } from "react-i18next";
 
 export default function Offer() {
+  const { t } = useTranslation();
   return (
     <section id="offer" className="offer">
       <h2>Wybierz rozwiązanie dla swojej firmy</h2>

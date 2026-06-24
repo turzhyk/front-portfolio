@@ -7,7 +7,7 @@ const questions = [
     open:true,
     title: "Ile kosztuje stworzenie strony internetowej?",
     answer:
-      "Jeśli zależy Ci przede wszystkim na zdobywaniu nowych klientów, przygotuję dla Ciebie prosty, estetyczny i skuteczny landing page. Cena takiej strony wynosi zwykle od 800 do 1200 zł.",
+      "Jeśli zależy Ci przede wszystkim na zdobywaniu nowych klientów, przygotuję dla Ciebie prosty, estetyczny i skuteczny landing page. Cena takiej strony wynosi zwykle od 1250 do 2700 zł.",
   },
   {
        open:false,
