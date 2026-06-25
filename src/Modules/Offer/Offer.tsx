@@ -8,7 +8,7 @@ export default function Offer() {
   const { t } = useTranslation();
   return (
     <section id="offer" className="offer">
-      <h2>Wybierz rozwiązanie dla swojej firmy</h2>
+      <h2>{t("offer.h")}</h2>
       <div className="options">
         <OfferOption1 />
       <OfferOption2/>

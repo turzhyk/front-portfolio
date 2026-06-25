@@ -6,7 +6,7 @@ export default function Cases2() {
   const { t } = useTranslation();
   return (
     <section className="cases2" id="cases2">
-      <h2>Przykładowe realizacje</h2>
+      <h2>{t("cases2.h")}</h2>
       <div className="content">
         <div className="case">
           <div className="pic">

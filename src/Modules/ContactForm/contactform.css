@@ -1,6 +1,7 @@
 .contactform {
   padding: 5rem 20px;
-  border-bottom: var(--border-param);
+  border: var(--border-param);
+  border-top: none;
   position: relative;
 }
 .contactform .content {

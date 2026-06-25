@@ -57,7 +57,62 @@ i18n.use(initReactI18next).init({
               "A complete solution: website, contact setup, and online launch.",
           },
         },
+        product: {
+          h2: "See what you get",
+          h3: "A website that works for your business",
+          h4: "Not just a “nice-looking website,” but a tool for attracting customers.",
+          p1: {
+            h: "Convenient for mobile users",
+            p: "Your customers can quickly find your phone number, services, and contact you without any hassle.",
+          },
+          p2: {
+            h: "More inquiries from Google",
+            p: "The website is optimized to make your business easier to find online.",
+          },
+          p4: {
+            h: "Fast performance",
+            p: "The website loads quickly, so visitors don’t leave for your competitors.",
+          },
+          p3: {
+            h: "A complete turnkey solution",
+            p: "You receive a fully finished website ready to go online — with no technical work required on your side. The website belongs to you, and you have full access and control over its content.",
+          },
+          cte: "Let's talk about your project",
+        },
+        exp: {
+          projects: "completed web projects",
+          time: "years of industry experience",
+          duration: "average project delivery time",
+          durnum: "7–13 days",
+        },
+        cases2: {
+          h: "Example Projects",
+          price: "price",
+          time: "delivery time",
+
+          case1: {
+            h: "Website for a Massage Studio",
+            h2: "Helps clients:",
+            li1: "call quickly",
+            li2: "send an inquiry",
+            li3: "find the location",
+            price: "€420",
+            time: "3 weeks",
+          },
+
+          case2: {
+            h: "Auto Repair Shop in Poznań",
+            li1: "quick phone contact",
+            li2: "service request form",
+            li3: "location map",
+            li4: "mobile-friendly version",
+            price: "€560",
+            time: "3 weeks",
+          },
+        },
         offer: {
+          h: "Choose the right solution for your business",
+
           offer1: {
             h: "Business Card Website Package",
             features: [
@@ -81,22 +136,23 @@ i18n.use(initReactI18next).init({
               owner: "The website belongs to you",
             },
             disclaimer: "The price does not include domain and hosting costs.",
-          },offer2: {
-  h: "Business Package",
-  popularTag: "Most Popular",
-  features: [
-    "Everything included in the Business Card Package",
-    "Customer reviews section to build trust",
-    "Portfolio gallery and company photos",
-    "Facebook and Instagram integration",
-    "Additional pages (e.g. Services, Pricing, About Us)",
-    "3 months of FREE support after launch",
-  ],
-  price: "from PLN 2,200",
-  pricetag: "One-time payment",
-  cta: "I want a website like this",
-  deliveryTime: "Delivery time: usually 12–16 business days",
-},
+          },
+          offer2: {
+            h: "Business Package",
+            popularTag: "Most Popular",
+            features: [
+              "Everything included in the Business Card Package",
+              "Customer reviews section to build trust",
+              "Portfolio gallery and company photos",
+              "Facebook and Instagram integration",
+              "Additional pages (e.g. Services, Pricing, About Us)",
+              "3 months of FREE support after launch",
+            ],
+            price: "from PLN 2,200",
+            pricetag: "One-time payment",
+            cta: "I want a website like this",
+            deliveryTime: "Delivery time: usually 12–16 business days",
+          },
         },
         cases: {
           title: "Selected projects",
@@ -118,6 +174,13 @@ i18n.use(initReactI18next).init({
               "Increased number of course registrations thanks to easy access to key information and quick contact options, resulting in a more stable flow of inquiries and fewer abandoned applications.",
             time: "weeks",
           },
+        },
+        cowork: {
+          h: "How we'll work together",
+          s1: "Free consultation",
+          s2: "Website creation",
+          s3: "Feedback & revisions",
+          s4: "Launch and go live",
         },
         process: {
           title: "Work process",
@@ -275,6 +338,7 @@ i18n.use(initReactI18next).init({
           },
         },
         offer: {
+          h: "Wybierz rozwiązanie dla swojej firmy",
           offer1: {
             h: "Pakiet Wizytówka",
             features: [
@@ -336,6 +400,7 @@ i18n.use(initReactI18next).init({
             h: "Gotowe rozwiązanie „pod klucz”",
             p: "Otrzymujesz gotową stronę online — bez technicznych rzeczy po Twojej stronie. Strona należy do Ciebie — masz dostęp i kontrolę nad treścią.",
           },
+          cte: "Porozmawiajmy o Twoim projekcie",
         },
         cases: {
           title: "Wybrane realizacje",
@@ -357,6 +422,13 @@ i18n.use(initReactI18next).init({
               "Zwiększenie liczby zapisów na kursy dzięki łatwemu dostępowi do najważniejszych informacji i możliwości szybkiego kontaktu, co przełożyło się na stabilniejszy napływ zapytań oraz mniejszą liczbę porzuconych zgłoszeń.",
             time: "weeks",
           },
+        },
+        cowork: {
+          h: "Jak wygląda współpraca?",
+          s1: "Bezpłatna rozmowa",
+          s2: "Projekt strony",
+          s3: "Poprawki",
+          s4: "Publikacja online",
         },
         process: {
           title: "Proces współpracy",

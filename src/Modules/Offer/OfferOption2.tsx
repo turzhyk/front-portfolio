@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+
 import "./offer.css";
 import { useTranslation } from "react-i18next";
 export const OfferOption2 = () => {
-  const [level, setLevel] = useState(0);
+
   const { t } = useTranslation();
   return (
     <div className="option2 option">

@@ -220,5 +220,21 @@ grid-template-columns: 1fr 1fr;
   }
   .process2 .featureset{
     margin-bottom: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .process2 .feature:nth-child(1){
+    border-radius: 10px 10px 0 0 ;
+  }
+  .process2 .feature:nth-child(2){
+    border-radius: 0 ;
+    border-left: var(--border-param);
+  }
+  .process2 .feature:nth-child(3){
+    border-radius: 0 ;
+    border-bottom:none;
+  }
+  .process2 .feature:nth-child(4){
+    border-radius: 0 0 10px 10px ;
+   border-left: var(--border-param);
   }
 }

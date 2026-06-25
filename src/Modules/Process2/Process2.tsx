@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export default function Process2() {
    const { t } = useTranslation();
   return (
-    <section id="process2" className="process2">
+    <section id="result" className="process2">
       <h2>{t("product.h2")}</h2>
       <div className="main-feature">
         <h1>{t("product.h3")}</h1>
@@ -258,7 +258,7 @@ export default function Process2() {
         </div>
       </div>
       <a>
-        <div className="cta1">Porozmawiajmy o Twoim projekcie</div>
+        <div className="cta1">{t("product.cte")}</div>
       </a>
     </section>
   );

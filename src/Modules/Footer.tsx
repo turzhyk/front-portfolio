@@ -10,17 +10,21 @@ export const Footer = () => {
         <ul className="footer-column">
           <li className="footer-title">{t("nav")}</li>
           <li>
-            <a href="#cases">{t("cases.title")}</a>
+            <a href="#result">{t("product.h2")}</a>
           </li>
           <li>
-            <a href="#tech">{t("tech.title")}</a>
+            <a href="#cases2">{t("cases2.h")}</a>
+          </li>
+           <li>
+            <a href="#offer">{t("offer.h")}</a>
+          </li>
+          <li>
+            <a href="#cowork">{t("cowork.h")}</a>
           </li>
           <li>
             <a href="#aboutme">{t("about.title")}</a>
           </li>
-          <li>
-            <a href="#process">{t("process.title")}</a>
-          </li>
+         
         </ul>
         <ul className="footer-column contact">
           <li className="footer-title">{t("footer.contact")}</li>
