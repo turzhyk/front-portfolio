@@ -18,9 +18,9 @@ i18n.use(initReactI18next).init({
     },
     en: {
       translation: {
-        nav:"Navigation",
-        footer:{
-           contact:"Contact",
+        nav: "Navigation",
+        footer: {
+          contact: "Contact",
         },
         header: {
           contact: "Contact",
@@ -32,6 +32,127 @@ i18n.use(initReactI18next).init({
             "Fast delivery, responsive design, ready for Google Maps and Google Ads",
           subtitle2: "B2B invoicing available (VAT invoice)",
           cta: "Book a free consultation",
+        },
+        pain: {
+          t1: "Is your website",
+          t2: "costing you customers?",
+          q1: "loads too slowly",
+          q2: "doesn't work properly on mobile",
+          q3: "isn't generating leads from Google",
+          q4: "makes it hard for customers to contact you",
+          h2: "That's what I help fix",
+          option: "Option",
+          option1: {
+            h: "You already have a website, but it's not delivering results",
+            action:
+              "I optimize existing websites to make them faster, mobile-friendly, and easier for customers to use.",
+            effect:
+              "The result: more inquiries and more potential customers without changing your services.",
+          },
+          option2: {
+            h: "You don't have a website yet",
+            action:
+              "I create a professional website from scratch and set it up so customers can easily find your business and get in touch.",
+            effect:
+              "A complete solution: website, contact setup, and online launch.",
+          },
+        },
+        product: {
+          h2: "See what you get",
+          h3: "A website that works for your business",
+          h4: "Not just a “nice-looking website,” but a tool for attracting customers.",
+          p1: {
+            h: "Convenient for mobile users",
+            p: "Your customers can quickly find your phone number, services, and contact you without any hassle.",
+          },
+          p2: {
+            h: "More inquiries from Google",
+            p: "The website is optimized to make your business easier to find online.",
+          },
+          p4: {
+            h: "Fast performance",
+            p: "The website loads quickly, so visitors don’t leave for your competitors.",
+          },
+          p3: {
+            h: "A complete turnkey solution",
+            p: "You receive a fully finished website ready to go online — with no technical work required on your side. The website belongs to you, and you have full access and control over its content.",
+          },
+          cte: "Let's talk about your project",
+        },
+        exp: {
+          projects: "completed web projects",
+          time: "years of industry experience",
+          duration: "average project delivery time",
+          durnum: "7–13 days",
+        },
+        cases2: {
+          h: "Example Projects",
+          price: "price",
+          time: "delivery time",
+
+          case1: {
+            h: "Website for a Massage Studio",
+            h2: "Helps clients:",
+            li1: "call quickly",
+            li2: "send an inquiry",
+            li3: "find the location",
+            price: "€420",
+            time: "3 weeks",
+          },
+
+          case2: {
+            h: "Auto Repair Shop in Poznań",
+            li1: "quick phone contact",
+            li2: "service request form",
+            li3: "location map",
+            li4: "mobile-friendly version",
+            price: "€560",
+            time: "3 weeks",
+          },
+        },
+        offer: {
+          h: "Choose the right solution for your business",
+
+          offer1: {
+            h: "Business Card Website Package",
+            features: [
+              "Website ready to attract new customers",
+              "Contact form and quick phone contact",
+              "Mobile-friendly version (phone and tablet)",
+              "Website published online",
+              "Basic SEO optimization",
+              "Privacy Policy (GDPR compliant)",
+              "1 month of FREE support after launch",
+            ],
+            price: "from 1250 PLN",
+            pricetag: "One-time payment",
+            cta: "I want a website like this",
+            deliveryTime: "Delivery time: usually 7–14 business days",
+            footer: {
+              stats: "Access to visitor statistics",
+              access: "Full ownership and access to the website",
+              domain: "Help with custom domain setup",
+              invoice: "VAT invoice available",
+              owner: "The website belongs to you",
+            },
+            disclaimer: "The price does not include domain and hosting costs.",
+          },
+          offer2: {
+            h: "Business Package",
+            popularTag: "Most Popular",
+            features: [
+              "Everything included in the Business Card Package",
+              "Customer reviews section to build trust",
+              "Portfolio gallery and company photos",
+              "Facebook and Instagram integration",
+              "Additional pages (e.g. Services, Pricing, About Us)",
+              "3 months of FREE support after launch",
+            ],
+            price: "from PLN 2,200",
+            pricetag: "One-time payment",
+            cta: "I want a website like this",
+            deliveryTime: "Delivery time: usually 12–16 business days",
+          },
         },
         cases: {
           title: "Selected projects",
@@ -53,6 +174,13 @@ i18n.use(initReactI18next).init({
               "Increased number of course registrations thanks to easy access to key information and quick contact options, resulting in a more stable flow of inquiries and fewer abandoned applications.",
             time: "weeks",
           },
+        },
+        cowork: {
+          h: "How we'll work together",
+          s1: "Free consultation",
+          s2: "Website creation",
+          s3: "Feedback & revisions",
+          s4: "Launch and go live",
         },
         process: {
           title: "Work process",
@@ -138,23 +266,141 @@ i18n.use(initReactI18next).init({
     },
     pl: {
       translation: {
-        heroTitle:{
-          title:"Hero"
+        heroTitle: {
+          title: "Hero",
         },
-        nav:"Navigacja",
-        footer:{
-           contact:"Kontakt",
+        nav: "Navigacja",
+        footer: {
+          contact: "Kontakt",
         },
         header: {
           contact: "Skontaktuj",
         },
         hero: {
           title:
-            "Tworzę <hi1>landing page</hi1> i <hi1>strony internetowe</hi1>, które generują <hi2>zapytania od klientów</hi2>",
+            "Więcej <hi2>klientów</hi2> z internetu <hi1>bez</hi1> skomplikowanego marketingu",
           subtitle:
-            "Szybkie wdrożenie, responsywność, gotowość do Google Maps i Google Ads",
+            "Dla lokalnych firm, które chcą mieć więcej zapytań z Google i telefonu",
           subtitle2: "Możliwość rozliczenia B2B (faktura VAT)",
-          cta: "Umów się na bezpłatną konsultację",
+          cta: "Chcę więcej klientów",
+        },
+        pain: {
+          t1: "Czy Twoja strona",
+          t2: "traci klientów?",
+          q1: "wolno się ładuje",
+          q2: "źle działa na telefonie",
+          q3: "nie ma zapytań z Google",
+          q4: "trudno znaleźć numer telefonu",
+          h2: "Właśnie to naprawiam",
+          option: "Opcja",
+          option1: {
+            h: " Masz już stronę, ale nie działa tak jak powinna",
+            action:
+              " Poprawiamy istniejące strony, żeby były szybsze, czytelne na telefonie i łatwiejsze w kontakcie.",
+            effect:
+              "  Efekt: więcej zapytań od klientów bez zmiany Twojej oferty.",
+          },
+          option2: {
+            h: " Nie masz strony internetowej",
+            action:
+              " Tworzę stronę od zera i konfiguruję ją tak, żeby klienci mogli łatwo znaleźć Twoją firmę i się z Tobą skontaktować.",
+            effect:
+              " Gotowe rozwiązanie: strona + kontakt + publikacja online.",
+          },
+        },
+        exp: {
+          projects: "projektów internetowych",
+          time: "lata doświadczenia",
+          duration: "typowy czas realizacji",
+          durnum: "7-13 dni",
+        },
+        cases2: {
+          h: "Przykładowe realizacj",
+          price: "cena",
+          time: "czas realizacji",
+          case1: {
+            h: "Strona dla salonu masażu",
+            h2: "Pomaga klientom:",
+            li1: "szybko zadzwonić",
+            li2: "wysłac zapytanie",
+            li3: "znaleźć lokalizację",
+            price: "1800zł",
+            time: "3 tygodni",
+          },
+          case2: {
+            h: "Serwis samochodowy w Poznaniu",
+            li1: "szybki kontakt telefoniczny",
+            li2: "formularz zgłoszeniowy",
+            li3: "mapa dojazdu",
+            li4: "wersja mobilna",
+            price: "2400zł",
+            time: "3 tygodni",
+          },
+        },
+        offer: {
+          h: "Wybierz rozwiązanie dla swojej firmy",
+          offer1: {
+            h: "Pakiet Wizytówka",
+            features: [
+              "Strona gotowa do pozyskiwania klientów",
+              "Formularz kontaktowy i szybki kontakt telefoniczny",
+              "Wersja mobilna (telefon i tablet)",
+              "Publikacja strony online",
+              "Podstawowa optymalizacja SEO",
+              "Polityka prywatności (RODO)",
+              "1 miesiąc wsparcia po uruchomieniu GRATIS",
+            ],
+            price: "od 1250 zł",
+            pricetag: "Jednorazowa płatność",
+            cta: "Chcę taką stronę",
+            deliveryTime: "Czas realizacji: zwykle 7–14 dni roboczych",
+            footer: {
+              stats: "Dostęp do statystyk odwiedzin",
+              access: "Pełny dostęp do strony",
+              domain: "Pomoc w konfiguracji własnej domeny",
+              invoice: "Faktura VAT",
+              owner: "Strona należy do Ciebie",
+            },
+            disclaimer: "Cena strony nie obejmuje kosztów domeny i hostingu.",
+          },
+          offer2: {
+            h: "Pakiet Firma",
+            popularTag: "Najczęściej wybierany",
+            features: [
+              "Wszystko z pakietu Wizytówka",
+              "Sekcja opinii klientów budująca zaufanie",
+              "Galeria realizacji i zdjęć firmy",
+              "Integracja z Facebookiem i Instagramem",
+              "Dodatkowe podstrony (np. Oferta, Cennik, O nas)",
+              "3 miesiące wsparcia po uruchomieniu GRATIS",
+            ],
+            price: "od 2200 zł",
+            pricetag: "Jednorazowa płatność",
+            cta: "Chcę taką stronę",
+            deliveryTime: "Czas realizacji: zwykle 12–16 dni roboczych",
+          },
+        },
+        product: {
+          h2: "Patrz, co otrzymasz",
+          h3: "Strona, która pracuje na Twoją firmę ",
+          h4: "Nie tylko „ładna strona”, ale narzędzie do zdobywania klientów.",
+          p1: {
+            h: "Wygoda dla klientów z telefonu",
+            p: " Twoi klienci szybko znajdą numer telefonu, ofertę i mogą się z Tobą skontaktować bez szukania.",
+          },
+          p2: {
+            h: "Więcej zapytań z Google",
+            p: " Strona jest przygotowana tak, żeby Twoja firma była łatwiejsza do znalezienia w internecie.",
+          },
+          p4: {
+            h: "Szybkie działanie",
+            p: "Strona ładuje się szybko, więc użytkownicy nie uciekają do konkurencji.",
+          },
+          p3: {
+            h: "Gotowe rozwiązanie „pod klucz”",
+            p: "Otrzymujesz gotową stronę online — bez technicznych rzeczy po Twojej stronie. Strona należy do Ciebie — masz dostęp i kontrolę nad treścią.",
+          },
+          cte: "Porozmawiajmy o Twoim projekcie",
         },
         cases: {
           title: "Wybrane realizacje",
@@ -176,6 +422,13 @@ i18n.use(initReactI18next).init({
               "Zwiększenie liczby zapisów na kursy dzięki łatwemu dostępowi do najważniejszych informacji i możliwości szybkiego kontaktu, co przełożyło się na stabilniejszy napływ zapytań oraz mniejszą liczbę porzuconych zgłoszeń.",
             time: "weeks",
           },
+        },
+        cowork: {
+          h: "Jak wygląda współpraca?",
+          s1: "Bezpłatna rozmowa",
+          s2: "Projekt strony",
+          s3: "Poprawki",
+          s4: "Publikacja online",
         },
         process: {
           title: "Proces współpracy",
@@ -221,27 +474,28 @@ i18n.use(initReactI18next).init({
           },
         },
         tech: {
-          title: "Przewaga techniczna",
-          subtitle: "Twoja strona będzie szybsza niż 95% konkurencji",
+          title: "Dlaczego rezultat jest taki dobry",
+          subtitle:
+            "Twoja strona będzie szybsza i będzie przyciągać więcej klientów niż 90% konkurencji",
           warning: "UWAGA! Liczby są rzeczywiste na podstawie metryk z ",
           case1: {
-            title: "Wydajność",
-            desc: "Strona ładuje się błyskawicznie, więc klient nie czeka i nie ucieka do konkurencji.",
+            title: "Szybkość",
+            desc: "Jeśli strona ładuje się wolno, klienci po prostu wychodzą i dzwonią do konkurencji.",
           },
           case2: {
-            title: "Dostępność",
-            desc: "Serwis jest wygodny dla każdego użytkownika, co realnie zwiększa zaufanie i lojalność.",
+            title: "Łatwy kontakt",
+            desc: "Klient szybko znajduje numer telefonu lub formularz i może się od razu skontaktować.",
           },
           case3: {
-            title: "Best Practices",
-            desc: "Kod jest nowoczesny, bezpieczny i napisany zgodnie ze standardami — bez zbędnych błędów.",
+            title: "Wiarygodność",
+            desc: "Nowoczesna strona sprawia, że firma wygląda profesjonalnie i budzi większe zaufanie.",
           },
           case4: {
-            title: "SEO",
-            desc: "Google premiuje szybkie strony, dlatego taka witryna trafia wyżej w wynikach wyszukiwania.",
+            title: "Widoczność w Google",
+            desc: "Twoja firma jest łatwiejsza do znalezienia, gdy klienci szukają usług w Twojej okolicy.",
           },
           after:
-            "Szybkość to <hi1>pieniądze</hi1>. Każda sekunda oczekiwania na załadowanie strony to utrata 20% potencjalnych <hi1>klientów</hi1>",
+            "Dobra strona nie jest wydatkiem — to narzędzie, które codziennie generuje klientów.",
         },
         contact: {
           title: "Zamów bezpłatną wycenę",

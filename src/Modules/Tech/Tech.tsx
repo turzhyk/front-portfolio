@@ -29,14 +29,7 @@ const Tech = () => {
     <section ref={ref} className="tech" id="tech">
       <div className={`container ` + (isVisible ? " fade-in" : "hidden")}>
         <h2>{t("tech.title")}</h2>
-        <p className="subtitle">
-          <Trans
-            i18nKey="tech.after"
-            components={{
-              hi1: <span className="subtitle-hi" />,
-            }}
-          />
-        </p>
+      
 
         <div className="tech-content">
           {Features.map((item, i) => {
@@ -58,7 +51,15 @@ const Tech = () => {
             );
           })}
         </div>
-        <i>
+          <p className="subtitle">
+          <Trans
+            i18nKey="tech.after"
+            components={{
+              hi1: <span className="subtitle-hi" />,
+            }}
+          />
+        </p>
+        {/* <i>
           {t("tech.warning")}{" "}
           <strong>
             <a href="https://pagespeed.web.dev/analysis/https-turzan-pl/arbuav3uvb?form_factor=desktop">
@@ -66,7 +67,7 @@ const Tech = () => {
             </a>
           </strong>
         </i>
-        <h3>{t("tech.subtitle")}</h3>
+        <h3>{t("tech.subtitle")}</h3> */}
       </div>
     </section>
   );

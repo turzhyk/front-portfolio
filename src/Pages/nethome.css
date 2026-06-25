@@ -1,0 +1,78 @@
+.nethome.home-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+  flex-direction: column;
+  color: var(--text);
+}
+.nethome.home-wrapper h1,
+.nethome.home-wrapper h2 {
+  color: var(--text);
+}
+
+.nethome .projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: 500px;
+}
+.nethome .project {
+  width: 100%;
+  border: var(--border-param);
+  padding: 1rem;
+}
+.nethome *:link,
+.nethome *:visited {
+  text-decoration: none;
+}
+.nethome .project-header {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.nethome .project h3 {
+  flex: 1;
+  text-align: left;
+  font-weight: 400;
+  line-height: 0px;
+}
+.nethome .apibox {
+  background-color: var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: "Jet Brains Mono";
+  font-size: 22px;
+}
+.nethome .project .techstack{
+      display: flex;
+      gap: 10px;
+margin: 10px 0px;
+}
+.project .tech{
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      background-color: var(--bg-rich);
+}
+.nethome .project .footer{
+      margin: -1rem;
+      margin-top: 1.5rem;
+      background-color: var(--text-h);
+      padding: 1.5rem;
+}
+.nethome .project .footer a{
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+}
+.nethome .project .footer *:link, .nethome .project .footer *:visited{
+       color: var(--bg);
+       font-size: 16px;
+}
+.nethome .project .footer img{
+      filter: var(--ifilter);
+}

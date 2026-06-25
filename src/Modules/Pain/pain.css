@@ -1,0 +1,151 @@
+.pain {
+  border-bottom: var(--border-param);
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+}
+.pain h2{
+  margin-bottom: 3rem;
+}
+.pain h1 {
+  /* letter-spacing: 10%; */
+ text-align: left;
+  font-size: 50px;
+  width: 100%;
+}
+.pain .problem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pain .quests{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ max-width: 400px;
+ gap: 0;
+margin-top: 2rem;
+}
+.pain .quest{
+  padding: 2rem;
+  margin: 0;
+  transition-duration: 200ms;
+}
+.pain .quest:hover{
+  background-color: var(--border);
+}
+.pain .quest:first-child{
+  border-right: var(--border-param);
+  border-bottom: var(--border-param);
+}
+.pain .quest:nth-child(2){
+  border-bottom: var(--border-param);
+}
+.pain .quest:nth-child(3){
+  border-right: var(--border-param);
+}
+.pain .action {
+  /* border-top: var(--border-param); */
+  padding: 5rem 0 0rem;
+}
+.pain .options {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+  width: 100%;
+  /* margin-bottom: 3rem; */
+}
+.pain .option {
+  border: var(--border-param);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.pain .option h3 {
+  background-color: var(--bg);
+  display: block;
+  width: 10rem;
+  margin: auto;
+  margin-top: -25px;
+}
+.pain .option .desc {
+  text-align: left;
+}
+.pain .option-title {
+  margin-top: 0.5rem;
+  /* text-decoration: underline; */
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.pain .option .effect {
+  border-radius: 4px;
+  /* background-color: rgb(45, 127, 235); */
+  background-color: var(--accent);
+  padding: 1rem 1.5rem;
+  color:white;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+.pain .option-middle {
+  flex: 1;
+}
+.pain .option .cte1 {
+  border: 2px solid var(--text-h);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  transition-duration: 200ms;
+}
+.pain .option .cte1:link,
+.pain .option .cte1:visited,
+.pain .option .cte1 {
+  text-decoration: none;
+  color: var(--text-h);
+  display: inline;
+}
+.pain .option .cte1:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 1000px) {
+  .pain .options {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .pain .problem .quest{
+    padding: 1rem;
+  }
+  .pain .problem{
+    flex-direction: column;
+  }
+  .pain  h1 {
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+  .pain .action{
+    padding:0;
+    margin-top: 1rem;
+  }
+  .pain{
+    padding: 0rem;
+  }
+  .pain .option-title {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .pain {
+    padding-top: 2rem;
+  }
+  .pain h1{
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+  }
+  .pain h2{
+    margin-top: 3rem;
+  }
+}

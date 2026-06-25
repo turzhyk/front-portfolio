@@ -52,6 +52,9 @@
 .home-button-wrapper a:hover:after{
      transform: translateY(0);
 }
+.home-button-wrapper a:hover code{
+  background: none;
+}
 .home-button-wrapper span{
     z-index: 10;
     margin: auto;

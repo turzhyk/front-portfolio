@@ -1,7 +1,8 @@
 .aboutme {
   padding: 5rem 20px;
-  border-bottom: var(--border-param);
+  border: var(--border-param);
   position: relative;
+  border-top: none;
 }
 .aboutme::before {
   content: "";
@@ -115,6 +116,11 @@
   .bottom .about-card p {
     color: var(--text);
     flex: 1;
+  }
+  .aboutme{
+    border-right: none;
+    border-left: none;
+    padding: 1rem;
   }
 }
 @media (max-width: 400px) {
