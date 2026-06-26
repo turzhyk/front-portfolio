@@ -1,0 +1,80 @@
+.democta {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  
+  /* overflow: hidden; */
+  background-color: rgba(239, 239, 239, 0.698);
+  width: 300px;
+
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.307);
+  position: fixed;
+  transition-duration: 200ms;
+  /* transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.175); */
+  transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(20px);
+  text-align: left;
+  z-index: 100;
+}
+.democta.hidden {
+  transform: translateX(-300px);
+}
+.democta > div {
+  padding: 1rem;
+  padding-left: 2rem;
+  height: 100%;
+}
+.democta p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.democta a,
+.democta a:link,
+.democta a:visited {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #4a46bf;
+}
+.democta .contact {
+  display: block;
+  color: white;
+  padding: 1rem;
+  background-color: #5954e3;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #4a46bf;
+}
+.democta strong {
+  color: black;
+}
+.democta button {
+  /* height: 100%; */
+  cursor: pointer;
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  /* border-left: 1px solid gray; */
+  /* border-bottom: 1px solid gray; */
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  right: -50px;
+  bottom: 0;
+  border-radius: 0px 5px 5px 0;
+  /* transition-duration: 100ms; */
+}
+.democta.hidden button{
+  height: 50px;
+}
+@media screen and (max-width: 400px) {
+  .democta > div {
+    padding: 1rem;
+  }
+}
