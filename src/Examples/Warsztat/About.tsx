@@ -45,7 +45,7 @@ export default function About() {
         <div className={styles.divider} />
         <div className={styles.right}>
           <div>
-            {" "}
+           
             <h2>Gdzie nas znajdiesz?</h2>
             <ul>
               <li>
@@ -54,20 +54,33 @@ export default function About() {
                   height="30px"
                   cls={styles.accent_icon}
                 />
-                ul. Przemysłowa 12<br/>
+                ul. Przemysłowa 12
+                <br />
                 60-123 Poznań
               </li>
               <li>
+                <a className={styles.maps_btn}>
                 <CheckmarkThinSvg
                   width="30px"
                   height="30px"
                   cls={styles.accent_icon}
                 />
-                Zobacz trasę na mapie
+                Zobacz trasę na mapie</a>
               </li>
             </ul>
           </div>
-          <div></div>
+          <div>
+           
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2872.2038793069987!2d16.920884412588805!3d52.44234397192433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470443520619846b%3A0xc0b47065da8e1dd3!2zV2lub2dyYWR5LCA2MC0xMDEg0J_QvtC30L3QsNC90Yw!5e1!3m2!1sru!2spl!4v1782673424560!5m2!1sru!2spl"
+              width="300"
+              height="200"
+              
+  
+              loading="lazy"
+             
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>

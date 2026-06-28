@@ -18,6 +18,7 @@
 }
 .democta.hidden {
   transform: translateX(-300px);
+  box-shadow: none;
 }
 .democta > div {
   padding: 1rem;

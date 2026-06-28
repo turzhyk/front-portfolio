@@ -4,6 +4,7 @@ import { WarrantySvg } from "./SVG/WarrantySvg";
 import { ClockSvg } from "./SVG/ClockSvg";
 import { LikeSvg } from "./SVG/LikeSvg";
 import { PhoneFillSvg } from "./SVG/PhoneFillSvg";
+import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
 export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
@@ -17,6 +18,7 @@ export default function Hero() {
           <button className={styles.cta_call}> <PhoneFillSvg width="30px" height="30px" cls={styles.white_icon} /> Zadzwoń 123 456 789</button>
           <a className={styles.cta_reserve}>Umów wizytę</a>
         </div>
+        <div className={styles.post_cta}><CheckmarkThinSvg width="30" height="30" cls={styles.accent_icon}/> ponad 10 lat doświadczenia</div>
         <div className={styles.features}>
           <div className={styles.feature}>
             <WarrantySvg width="50px" height="50px" cls={styles.accent_icon} />

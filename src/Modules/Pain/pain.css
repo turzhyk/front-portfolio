@@ -29,6 +29,8 @@ margin-top: 2rem;
   padding: 2rem;
   margin: 0;
   transition-duration: 200ms;
+  display:  flex;
+  align-items: center;
 }
 .pain .quest:hover{
   background-color: var(--border);
@@ -82,7 +84,7 @@ margin-top: 2rem;
 .pain .option .effect {
   border-radius: 4px;
   /* background-color: rgb(45, 127, 235); */
-  background-color: var(--accent);
+  background-color: var(--accent2);
   padding: 1rem 1.5rem;
   color:white;
   font-weight: 600;

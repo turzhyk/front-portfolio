@@ -53,6 +53,19 @@
   font-size: 20px;
   margin: 0;
 }
+.cases2 a, .cases2 a:link, .cases2 a:visited{
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: var(--accent2);
+  color: var(--text-h);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 0.5rem;
+}
+.cases2 a img{
+  filter: var(--filter);
+}
 @media (max-width: 1000px) {
   .cases2 .case {
     flex-direction: column;

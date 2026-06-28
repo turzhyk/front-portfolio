@@ -7,6 +7,8 @@ import Uslugi from "./Uslugi";
 import About from "./About";
 import DemoCta from "../DemoCta";
 import Galery from "./Galery";
+import Footer from "./Footer";
+import { Team } from "./Team";
 export default function Warsztat() {
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -38,6 +40,8 @@ export default function Warsztat() {
       <Uslugi/>
       <About/>
       <Galery/>
+      <Team/>
+      <Footer/>
     </div>
   );
 }

@@ -84,6 +84,7 @@
   font-size: 18px;
   position: fixed;
   top: 0;
+  z-index: 10;
 }
 .header a,
 .header a:link,
@@ -109,16 +110,24 @@ head a:visited {
 .header .right {
   display: flex;
   text-align: left;
+  align-items: center;
+  gap: 1rem;
 }
 .header .right p {
   margin: 0;
+  color: var(--p-light2);
+
 }
 .header .right .phone {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--p-light);
+ 
 }
 .header .right .cta {
   font-weight: 700;
   color: var(--p-light2);
-  margin-top: 5px;
+  
   font-size: 14px;
 }
 .header nav ul {
@@ -156,17 +165,28 @@ head a:visited {
 /* -----------------HERO------------------ */
 
 .hero {
+  position: relative;
   width: 100%;
   height: 600px;
   border-bottom: 7px solid var(--accent);
   background-color: var(--bg-dark);
   padding-top: 100px;
+
+  background:
+    linear-gradient(90deg, rgba(19, 19, 19, 1) 27%, rgba(19, 19, 19, 0) 100%),
+    url("/images/demo/warsztat_hero.webp");
+  background-position: right;
+  z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 .hero .content {
   max-width: 1200px;
   padding: 2rem;
   text-align: left;
   margin: auto;
+  z-index: 5;
 }
 .hero h1 {
   color: var(--p-light);
@@ -206,10 +226,21 @@ head a:visited {
   border: 2px solid var(--p-light2);
   color: var(--p-light);
 }
+.hero .cta_reserve:hover {
+  border-width: 4px;
+  box-sizing: content-box;
+}
+.hero .post_cta{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+font-weight: 600;  
+margin-top: 10px;
+}
 .hero .features {
   display: flex;
   gap: 2rem;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .hero .feature {
   display: flex;
@@ -244,7 +275,7 @@ head a:visited {
   background-color: white;
   border-radius: var(--radius);
   border: 1px solid rgb(196, 196, 196);
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   /* flex-grow: 1; */
 }
 .uslugi .item h3 {
@@ -255,9 +286,17 @@ head a:visited {
 }
 .uslugi .item p {
   margin-top: 10px;
+  flex: 1;
 }
 .uslugi .item svg {
   height: 100px;
+}
+.uslugi .item .price{
+  padding: 0.5rem 1rem;
+  background-color: rgb(238, 238, 238);
+  border-radius: 20px;
+  margin: auto;
+  color: var(--accent);
 }
 /* ---------------ABOUT------------------ */
 .about {
@@ -281,6 +320,25 @@ head a:visited {
 }
 .about .left {
   color: var(--p-light);
+}
+.about .right{
+  display: flex;
+  justify-content: space-between;
+}
+.about iframe{
+  border: none;
+}
+.about .right a.maps_btn{
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+   text-align: left;
+  margin-bottom: 5px;
+  display: flex;
+  gap: 1rem;
+  justify-content: baseline;
+  align-items: center;
+  cursor: pointer;
 }
 .about h2 {
   color: var(--p-light);
@@ -334,24 +392,154 @@ head a:visited {
   justify-content: left;
   gap: 1rem;
   margin: auto;
+  overflow-x: auto;
+  text-align: left;
 }
 .galery .item {
   border-radius: var(--radius);
   border: 1px solid rgb(47, 47, 47);
-background-color:  rgb(30, 30, 30);
+  background-color: rgb(30, 30, 30);
   width: 400px;
+  min-width: 300px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .galery .item h3 {
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
   padding-left: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.galery .item p {
+  color: var(--p-light2);
+  text-align: left;
+  margin: 1rem;
+  margin-top: 0;
+  flex:1;
 }
 .galery .item .pic {
   width: 100%;
   height: 200px;
-  background-color: aliceblue;
+  background-color: rgb(75, 75, 75);
+  overflow: hidden;
+}
+.galery .item .pic img {
+  object-fit: scale-down;
+  margin-top: -50px;
+  transition-duration: 400ms;
+}
+.galery .item:hover .pic img {
+  transform: scale(1.1);
+  
+}
+.galery .item .delivery_time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+/* ---------------TEAM------------------ */
+.team{
+  width: 1200px;
+  max-width: 1200px;
+  padding: 2rem;
+}
+.team h2 {
+  color: black;
+  position: relative;
+  margin-bottom: 60px;
+}
+.team h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+
+  width: 80px;
+  height: 2px;
+  background: var(--accent);
+
+  transform: translateX(-50%);
+}
+/* ---------------FOOTER------------------ */
+
+.footer{
+  padding: 2rem;
+  background-color: var(--bg-dark);
+  width: 100%;
+}
+.footer .content{
+  max-width: 1200px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: auto;
+  color: var(--p-light2);
+  
+}
+.footer .desc{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  max-width: 300px;
+  gap: 1rem;
+}
+.footer p{
+  text-align: left;
+  color: var(--p-light);
+  margin: 0;
+}
+.footer .media{
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+
+}
+.footer .media>a {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid rgb(88, 88, 88);
+}
+.footer h3{
+  color: var(--p-light);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer  li{
+  list-style: none;
+  text-align: left;
+  margin-bottom: 12px;
+  color: var(--p-light);
+  cursor: pointer;
+  font-size: 16px;
+}
+.footer  ul{
+  padding: 0;
+}
+.footer .vert{
+  width: 1px;
+  content: "";
+  height: 150px;
+margin-top: 2rem;
+  border-left: 1px solid gray;
+}
+.footer .contact li{
+display: flex;
+align-items: center;
+gap: 10px;
+max-width: 200px;
+}
+.footer .contact svg{
+  min-width: 24px;
+  height: 24px;
 }
 @media screen and (max-width: 1200px) {
   .header .mid {
@@ -398,6 +586,15 @@ background-color:  rgb(30, 30, 30);
     margin-top: 20px;
     width: 100%;
   }
+  .uslugi .wrapper{
+    gap: 0.5rem;
+  }
+    .uslugi .item:first-child {
+      margin-left: 1rem;
+    }
+    .uslugi .item:last-child{
+      margin-right: 1rem;
+    }
   .uslugi .item {
     padding: 1rem;
     width: 500px;
@@ -418,5 +615,15 @@ background-color:  rgb(30, 30, 30);
   }
   .about h2 {
     text-align: center;
+  }
+
+  .galery .item:first-child{
+    margin-left: 1rem;
+  }
+  .galery .item:last-child{
+    margin-right: 1rem;
+  }
+  .galery h2{
+    margin-bottom: 2rem;
   }
 }

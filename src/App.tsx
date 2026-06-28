@@ -13,7 +13,7 @@ function App() {
       <Route path="web" element={<WebHome />} />
       <Route path="web/privacy" element={<Privacy />} />
       <Route path="net" element={<NetHome/>}/>
-      <Route path="examples/warsztat" element={<Warsztat/>}/>
+      <Route path="demo/warsztat" element={<Warsztat/>}/>
     </Routes>
   );
 }
