@@ -78,6 +78,7 @@ export default function Galery() {
           </div>
         </div>
       </div>
+      <a className={styles.cta}>Umów wizytę</a>
     </section>
   );
 }
