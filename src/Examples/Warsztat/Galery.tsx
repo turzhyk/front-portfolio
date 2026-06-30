@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./warsztat.module.css";
 import { CalendarSvg } from "./SVG/CalendarSvg";
+import { useInView } from "./useInView";
 export default function Galery() {
+  const { ref, isVisible } = useInView();
   return (
-    <section id="galery" className={styles.galery}>
+    <section ref={ref} id="galery" className={styles.galery+" "+(isVisible?styles.visible:"")}>
       <h2>Ostatnie naprawy</h2>
       <div className={styles.content}>
         <div className={styles.item}>

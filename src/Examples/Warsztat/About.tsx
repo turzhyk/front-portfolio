@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./warsztat.module.css";
 import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
+import { useInView } from "./useInView";
 export default function About() {
+    const { ref, isVisible } = useInView();
   return (
-    <section className={styles.about} id="about">
+    <section ref={ref} className={styles.about+" "+(isVisible?styles.visible:"")} id="about">
       <div className={styles.content}>
         <div className={styles.left}>
           <h2> Dlaczego warto nam zaufać?</h2>

@@ -12,8 +12,9 @@ export default function Header({ activeBlock }: { activeBlock: string }) {
             <li className={activeBlock=="uslugi"?styles.active:""}><a href="#uslugi">Usługi</a></li>
             <li className={activeBlock=="about"?styles.active:""}>O nas</li>
             <li className={activeBlock=="galery"?styles.active:""}>Galeria</li>
-            <li>Opinia</li>
-            <li>Kontakt</li>
+            <li className={activeBlock=="team"?styles.active:""}>Zespół</li>
+            <li className={activeBlock=="opinion"?styles.active:""}>Opinia</li>
+            <li className={activeBlock=="faq"?styles.active:""}>FAQ</li>
           </ul>
         </nav>
         <div className={styles.right}>

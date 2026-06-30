@@ -10,6 +10,7 @@ import Galery from "./Galery";
 import Footer from "./Footer";
 import { Team } from "./Team";
 import Faq from "./Faq";
+import Opinion from "./Opinion";
 export default function Warsztat() {
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -42,6 +43,7 @@ export default function Warsztat() {
       <About/>
       <Galery/>
       <Team/>
+      <Opinion/>
       <Faq/>
       <Footer/>
     </div>

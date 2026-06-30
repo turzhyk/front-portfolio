@@ -4,6 +4,8 @@ import { PhoneSvg } from "./SVG/PhoneSvg";
 import { Clock2Svg } from "./SVG/Clock2Svg";
 import { LocationSvg } from "./SVG/LocationSvg";
 import { MailSvg } from "./SVG/MailSvg";
+import { FacebookThinSvg } from "./SVG/FacebookThinSvg";
+import { InstagramSvg } from "./SVG/InstagramSvg";
 
 export default function Footer() {
   return (
@@ -18,7 +20,8 @@ export default function Footer() {
             z gwarancją.
           </p>
           <div className={styles.media}>
-            <a>F</a>
+            <a><FacebookThinSvg size={22} thickness={0} cls={styles.media}/></a>
+            <a><InstagramSvg size={22} thickness={0} cls={styles.media}/></a>
           </div>
         </div>
         <nav className={styles.nav}>

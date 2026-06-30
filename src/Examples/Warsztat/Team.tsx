@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./warsztat.module.css";
 import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
+import { useInView } from "./useInView";
 export const Team = () => {
+  const { ref, isVisible } = useInView();
   return (
-    <section id={"team"} className={styles.team}>
+    <section ref={ref} id={"team"} className={styles.team+" "+(isVisible?styles.visible:"") }>
       <h2>Poznaj nasz zespół</h2>
       <p>Doświdczenie, pasja i uczciwość - to nasza recepta na solidny serwis.<br/>Każde auto traktujemy tak, jakby było nazse.</p>
       <div className={styles.content}>
