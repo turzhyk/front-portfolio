@@ -60,7 +60,7 @@ export default function Footer() {
           </ul>
         </nav>
         <div className={styles.vert} />
-        <div className={styles.contact}>
+        <div className={styles.contact_}>
           <h3>Kontakt</h3>
           <ul>
             <li>

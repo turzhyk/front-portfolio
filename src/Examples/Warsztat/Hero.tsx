@@ -30,7 +30,7 @@ export default function Hero() {
           </div>
           <div className={styles.feature}>
             <LikeSvg width="50px" height="50px" cls={styles.accent_icon} />
-            <p>Dodiki specjaliści</p>
+            <p>Doświadczeni specjaliści</p>
           </div>
         </div>
       </div>

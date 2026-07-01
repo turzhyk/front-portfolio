@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import { Team } from "./Team";
 import Faq from "./Faq";
 import Opinion from "./Opinion";
+import Contact from "./Contact";
 export default function Warsztat() {
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -45,6 +46,7 @@ export default function Warsztat() {
       <Team/>
       <Opinion/>
       <Faq/>
+      <Contact/>
       <Footer/>
     </div>
   );

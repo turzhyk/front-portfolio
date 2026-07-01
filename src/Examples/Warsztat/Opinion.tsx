@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./warsztat.module.css";
 import { StarSvg } from "./SVG/StarSvg";
 import { QuoteSvg } from "./SVG/QuoteSvg";
+import { CarSvg } from "./SVG/CarSvg";
 
 export const OpinionItem = ({
   name,
@@ -31,6 +32,8 @@ export const OpinionItem = ({
         </div>
         <QuoteSvg size={60} cls={styles.quote} thickness={0} />
       </div>
+      <p>{text}</p>
+      <div className={styles.foot}><span><CarSvg size={25} thickness={2} cls=""/>{car}</span><strong>{time}</strong></div>
     </div>
   );
 };
@@ -75,9 +78,9 @@ export default function Opinion() {
         </div>
       </div>
       <div className={styles.content}>
-        <OpinionItem name="Michał" text="ads" car="BMW" time="2 tygonia temu" />
-        <OpinionItem name="Michał" text="ads" car="BMW" time="2 tygonia temu" />
-        <OpinionItem name="Michał" text="ads" car="BMW" time="2 tygonia temu" />
+        <OpinionItem name="Michał" text="Świetny serwis! Szybka diagnoza usterki i profesjonalna naprawa. Auto działa jak nowe. Na pewno wrócę!" car="BMW 320d" time="2 tygonie temu" />
+        <OpinionItem name="Anna K." text="ads" car="BMW" time="2 tygonia temu" />
+        <OpinionItem name="Michał" text="ads" car="VW Passat 2.0 TDI" time="1 miesiąć temu" />
       </div>
     </section>
   );
