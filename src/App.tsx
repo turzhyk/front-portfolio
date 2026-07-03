@@ -4,6 +4,7 @@ import Privacy from "./Pages/WebPrivacy";
 import Home from "./Pages/Home";
 import NetHome from "./Pages/NetHome";
 import Warsztat from "./Examples/Warsztat/Warsztat";
+import Masaz from "./Examples/Warsztat copy/Masaz";
 // lazy-load тяжёлых секций
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="web/privacy" element={<Privacy />} />
       <Route path="net" element={<NetHome/>}/>
       <Route path="demo/warsztat" element={<Warsztat/>}/>
+      <Route path="demo/masaz" element={<Masaz/>}/>
     </Routes>
   );
 }

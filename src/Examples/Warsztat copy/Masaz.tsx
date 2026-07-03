@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import "./warsztat.css";
-import styles from "./warsztat.module.css";
+import styles from "./styles.module.css";
 import Hero from "./Hero";
 import Header from "./Header";
 import Uslugi from "./Uslugi";
@@ -13,7 +13,7 @@ import Faq from "./Faq";
 import Opinion from "./Opinion";
 import Contact from "./Contact";
 import { Helmet } from "react-helmet-async";
-export default function Warsztat() {
+export default function Masaz() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export default function Warsztat() {
           content="Kompleksowa naprawa i obsługa pojazdów w poznaniu"
         />
       </Helmet>
-      <div className={styles.ex1}>
+      <div className={styles.ex2}>
         <Header activeBlock={activeSection} />
         <DemoCta />
         <Hero />
