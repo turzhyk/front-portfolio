@@ -4,7 +4,7 @@ import Privacy from "./Pages/WebPrivacy";
 import Home from "./Pages/Home";
 import NetHome from "./Pages/NetHome";
 import Warsztat from "./Examples/Warsztat/Warsztat";
-import Masaz from "./Examples/Warsztat copy/Masaz";
+import Masaz from "./Examples/Masaz/Masaz";
 // lazy-load тяжёлых секций
 
 function App() {

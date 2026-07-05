@@ -79,8 +79,8 @@ export default function Opinion() {
       </div>
       <div className={styles.content}>
         <OpinionItem name="Michał" text="Świetny serwis! Szybka diagnoza usterki i profesjonalna naprawa. Auto działa jak nowe. Na pewno wrócę!" car="BMW 320d" time="2 tygonie temu" />
-        <OpinionItem name="Anna K." text="ads" car="BMW" time="2 tygonia temu" />
-        <OpinionItem name="Michał" text="ads" car="VW Passat 2.0 TDI" time="1 miesiąć temu" />
+        <OpinionItem name="Anna K." text="Bardzo profesjonalna obsługa i świetny kontakt. Samochód został naprawiony jeszcze tego samego dnia, a przed rozpoczęciem prac dostałam dokładną wycenę. Wszystko przebiegło sprawnie i bez żadnych niespodzianek. Zdecydowanie polecam!" car="BMW 320d" time="2 tygonia temu" />
+        <OpinionItem name="piotr" text="Trafiłem z problemem, którego dwa inne warsztaty nie potrafiły zdiagnozować. Tutaj znaleziono usterkę w ciągu godziny i wszystko zostało naprawione w rozsądnej cenie. Miła obsługa, fachowa wiedza i pełen profesjonalizm." car="VW Passat 2.0 TDI" time="1 miesiąć temu" />
       </div>
     </section>
   );

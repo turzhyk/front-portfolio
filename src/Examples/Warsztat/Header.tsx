@@ -18,13 +18,13 @@ export default function Header({ activeBlock }: { activeBlock: string }) {
             <li className={activeBlock=="contact"?styles.active:""}><a href="#contact">Kontakt</a></li>
           </ul>
         </nav>
-        <div className={styles.right}>
+        <a href="tel:123-456-789" className={styles.right}>
          <PhoneSvg width="35" height="35" thickness={2} cls={styles.accent_icon}/>
           <div>
             <p className={styles.phone}>123 456 789</p>
             <p className={styles.cta}>Zadzwoń teraz</p>
           </div>
-        </div>
+        </a>
       </div>
     </header>
   );

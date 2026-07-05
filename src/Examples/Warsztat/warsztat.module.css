@@ -139,6 +139,7 @@ head a:visited {
   position: relative;
   cursor: pointer;
   transition-duration: 100ms;
+  font-size: 16px;
 }
 .header nav ul li:hover {
   color: var(--p-light2);
@@ -563,6 +564,10 @@ head a:visited {
   margin-bottom: 0;
   color: var(--bg-dark);
 }
+.team .item svg{
+  max-width: 22px;
+  min-width: 22px;
+}
 .team .content .item .position {
   color: var(--accent);
   font-size: 14px;
@@ -824,51 +829,50 @@ head a:visited {
   position: relative;
   margin-bottom: 4rem;
 }
-.contact h2{
+.contact h2 {
   z-index: 5;
   position: relative;
   line-height: 60px;
   padding: 0 2rem;
   background-color: var(--p-light);
-display: inline-block;
+  display: inline-block;
 }
-.contact .line{
-position: absolute;
-width: 100%;
-content: "";
-top: 0;
-left: 0;
-height: 60px;
-z-index: 0;
- background: repeating-linear-gradient(
+.contact .line {
+  position: absolute;
+  width: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 60px;
+  z-index: 0;
+  background: repeating-linear-gradient(
     -45deg,
     var(--p-light) 0 20px,
     #d7d7d7 20px 40px
   );
 }
-.contact .line2{
-width: 100%;
-content: "";
-height: 60px;
-z-index: 0;
- background: repeating-linear-gradient(
+.contact .line2 {
+  width: 100%;
+  content: "";
+  height: 60px;
+  z-index: 0;
+  background: repeating-linear-gradient(
     -45deg,
     var(--p-light) 0 20px,
     #d7d7d7 20px 40px
   );
-margin-top: 20px;
+  margin-top: 20px;
 }
-.contact form{
-margin-bottom: 100px;
+.contact form {
+  margin-bottom: 100px;
 }
-.contact .top{
+.contact .top {
   display: grid;
-grid-template-columns: 1fr 1.5fr;
-gap: 1rem;
-margin-top: 2rem;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1rem;
+  margin-top: 2rem;
 }
-.contact input[type="submit"]
-{
+.contact input[type="submit"] {
   float: right;
   padding: 1.5rem 3rem;
   color: var(--p-light);
@@ -877,7 +881,7 @@ margin-top: 2rem;
   border: none;
   font-size: 16px;
 }
-.contact .left{
+.contact .left {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -889,7 +893,7 @@ margin-top: 2rem;
   padding: 12px;
   position: relative;
   border-bottom-color: var(--accent);
-  color:var(--bg-dark);
+  color: var(--bg-dark);
 }
 
 .contact .field legend {
@@ -904,21 +908,21 @@ margin-top: 2rem;
   outline: none;
   font-size: 16px;
   text-align: center;
-  background:none;
+  background: none;
 }
-.contact .right{
+.contact .right {
   position: relative;
 }
-.contact .right .textarea_label{
-position: absolute;
-font-weight: 600;
-color: var(--bg-dark);
-padding: 0 10px;
-top: -15px;
-left: 15px;
-background-color: var(--p-light);
+.contact .right .textarea_label {
+  position: absolute;
+  font-weight: 600;
+  color: var(--bg-dark);
+  padding: 0 10px;
+  top: -15px;
+  left: 15px;
+  background-color: var(--p-light);
 }
-.contact textarea{
+.contact textarea {
   margin-top: 10px;
   width: 100%;
   border-radius: var(--radius);
@@ -927,11 +931,11 @@ background-color: var(--p-light);
   padding: 1rem;
   font-size: 18px;
   border-bottom-color: var(--accent);
-  font-family: 'lato';
+  font-family: "lato";
 }
 .contact .example {
- color: gray;
- text-align: left;
+  color: gray;
+  text-align: left;
 }
 /* ---------------FOOTER------------------ */
 
@@ -1014,11 +1018,17 @@ background-color: var(--p-light);
   margin-top: 2rem;
   border-left: 1px solid gray;
 }
-.footer .contact_ li {
+.footer .contact_ li, .footer .contact_ li a {
   display: flex;
   align-items: center;
   gap: 10px;
   max-width: 200px;
+  text-decoration: none;
+  color: var(--p-light2);
+}
+.footer .contact_ li a:visited{
+  text-decoration: none;
+  color: var(--p-light2);
 }
 .footer .contact_ svg {
   min-width: 24px;
@@ -1040,14 +1050,8 @@ background-color: var(--p-light);
     padding: 1rem;
     padding-top: 120px;
   }
-  .hero .cta_list {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .hero .features {
-    gap: 0;
-    justify-content: space-between;
-  }
+
+ 
   .hero .feature {
     flex-direction: column;
     gap: 0;
@@ -1114,10 +1118,6 @@ background-color: var(--p-light);
     margin-bottom: 2rem;
   }
 
-  .team .content {
-    flex-direction: column;
-    width: 100%;
-  }
   .team {
     width: 100%;
   }
@@ -1149,48 +1149,71 @@ background-color: var(--p-light);
   }
   .opinion .top .mid {
     align-items: center;
-  gap: 10px;
+    gap: 10px;
   }
   .opinion .content .item:nth-child(1) {
     margin-left: 1rem;
   }
-  .opinion .contact .item:last-child{
+  .opinion .contact .item:last-child {
     margin-right: 1rem;
   }
-  .faq{
+  .faq {
     width: 100%;
     padding: 1rem;
   }
-  .faq >div{
+  .faq > div {
     width: 100%;
     grid-template-columns: 1fr;
   }
-  .faq .faq_item:nth-child(2){
-   border-top: 1px solid gray;
+  .faq .faq_item:nth-child(2) {
+    border-top: 1px solid gray;
   }
-  .contact{
+  .contact {
     width: 100%;
-
   }
-  .contact .top{
+  .contact .top {
     grid-template-columns: 1fr;
     padding: 1rem;
     margin-top: 0;
   }
-  .contact input[type="submit"]{
+  .contact input[type="submit"] {
     margin-right: 1rem;
   }
-  .footer{
+  .footer {
     width: 100%;
   }
-  .footer .content{
-    flex-direction: column; width: 100%;
+  .footer .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
   }
-  .footer .vert{
+  .footer .vert {
     display: none;
     transform: rotate(90deg);
   }
-  .footer .desc{
+  
+}
+
+@media screen and (max-width: 800px) {
+   .hero .features {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .hero .cta_list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .team .content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer .desc {
     align-items: center;
     margin: auto;
   }
