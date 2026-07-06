@@ -44,7 +44,7 @@
   color: black;
 }
 .icon2 {
-  color: rgb(151, 111, 11);
+  color: black;
 }
 @font-face {
   font-family: "Jet Brains Mono";
@@ -118,7 +118,7 @@
     color: white;
   }
   .icon2 {
-    color: rgb(255, 191, 0);
+    color: rgb(255, 255, 255);
   }
   #social .button-icon {
     filter: invert(1) brightness(2);
@@ -132,7 +132,7 @@ a button a:visited {
   margin: 0 auto;
   text-align: center;
   /* border-inline: 1px solid var(--border); */
-  min-height: 100svh;
+  /* min-height: 100svh; */
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -142,10 +142,10 @@ a button a:visited {
   max-width: 1000px;
   margin: 0 auto;
   /* border-inline: 1px solid var(--border); */
-  min-height: 100svh;
+  /* min-height: 100svh; */
   padding-bottom: 4rem;
   position: relative;
-  overflow: visible;
+  /* overflow: visible; */
 }
 .page::selection {
   background-color: #cf8fff;
@@ -235,10 +235,10 @@ code {
   transition: all 0.6s ease;
 }
 @media (max-width: 400px) {
-  h2 {
+  /* h2 {
     font-size: 20px;
   }
   h3 {
     font-size: 15px;
-  }
+  } */
 }

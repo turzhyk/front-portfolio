@@ -36,13 +36,13 @@
   font-size: 50px;
 }
 .exp .feat1 strong {
-  color: var(--accent3);
+  color: var(--accent2);
 }
 .exp .feat2 strong {
-  color: var(--accent3);
+  color: var(--accent2);
 }
 .exp .feat3 strong {
-  color: var(--accent3);
+  color: var(--accent2);
 }
 .exp .vert1 {
   height: 100px;
