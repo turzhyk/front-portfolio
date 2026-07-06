@@ -13,6 +13,7 @@ import Faq from "./Faq";
 import Opinion from "./Opinion";
 import Contact from "./Contact";
 import { Helmet } from "react-helmet-async";
+import Pain from "./Pain";
 export default function Masaz() {
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -55,6 +56,7 @@ export default function Masaz() {
         <Header activeBlock={activeSection} />
         <DemoCta />
         <Hero />
+        <Pain/>
         <Uslugi />
         <About />
         <Galery />

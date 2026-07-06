@@ -57,14 +57,15 @@
   text-decoration: none;
   padding: 1rem 2rem;
   background-color: var(--accent2);
-  color: var(--text-h);
+  color: var(--bg-rich);
   display: flex;
   align-items: center;
   width: fit-content;
   gap: 0.5rem;
 }
+
 .cases2 a img{
-  filter: var(--filter);
+  filter: var(--ifilter);
 }
 @media (max-width: 1000px) {
   .cases2 .case {

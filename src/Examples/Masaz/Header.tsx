@@ -33,14 +33,13 @@ export default function Header({ activeBlock }: { activeBlock: string }) {
           </nav>
           <div className={styles.right}>
             <PhoneSvg
-              width="35"
-              height="35"
-              thickness={2}
-              cls={styles.accent_icon}
+             size={35}
+              thickness={1}
+              cls={styles.white_icon}
             />
             <div>
-              <p className={styles.phone}>123 456 789</p>
-              <p className={styles.cta}>Zadzwoń teraz</p>
+              <p className={styles.phone}></p>
+              <p className={styles.cta}>Umów wizytę</p>
             </div>
           </div>
         </div>

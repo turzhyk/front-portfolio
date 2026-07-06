@@ -50,16 +50,19 @@ export default function Footer() {
           <h3>Usługi</h3>
           <ul>
             <li>
-              <a>Strona głowna</a>
+              <a>Diagnostyka</a>
             </li>
             <li>
-              <a>Usługi</a>
+              <a>Naprawy mechaniczne</a>
             </li>
             <li>
-              <a>O nas</a>
+              <a>Hamulce</a>
             </li>
             <li>
-              <a>Galeria</a>
+              <a>Wymiana oleju</a>
+            </li>
+            <li>
+              <a>Inne</a>
             </li>
           </ul>
         </nav>

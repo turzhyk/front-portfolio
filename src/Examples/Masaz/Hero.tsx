@@ -6,6 +6,7 @@ import { LikeSvg } from "./SVG/LikeSvg";
 import { PhoneFillSvg } from "./SVG/PhoneFillSvg";
 import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
 import { CloverSvg } from "./SVG/CloverSvg";
+import { PhoneSvg } from "./SVG/PhoneSvg";
 export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
@@ -26,16 +27,16 @@ export default function Hero() {
           </li>
         </ul>
         <div className={styles.cta_list}>
-          <button className={styles.cta_call}>
+          
+          <a className={styles.cta_reserve}>Umów wizytę</a><button className={styles.cta_call}>
             {" "}
-            <PhoneFillSvg
-              width="30px"
-              height="30px"
-              cls={styles.white_icon}
+            <PhoneSvg
+              size={30}
+              thickness={2}
+              cls={styles.accent_icon}
             />{" "}
-            Zadzwoń 123 456 789
+            Zadzwoń
           </button>
-          <a className={styles.cta_reserve}>Umów wizytę</a>
         </div>
 
         {/* <div className={styles.features}>

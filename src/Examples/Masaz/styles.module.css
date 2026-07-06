@@ -69,8 +69,79 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "ElmsSans";
+  src: url("/fonts/ElmsSans/ElmsSans-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ElmsSans";
+  src: url("/fonts/ElmsSans/ElmsSans-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ElmsSans";
+  src: url("/fonts/ElmsSans/ElmsSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ElmsSans";
+  src: url("/fonts/ElmsSans/ElmsSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ElmsSans";
+  src: url("/fonts/ElmsSans/ElmsSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ElmsSans";
+  src: url("/fonts/ElmsSans/ElmsSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ElmsSans";
+  src: url("/fonts/ElmsSans/ElmsSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ElmsSans";
+  src: url("/fonts/ElmsSans/ElmsSans-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ElmsSans";
+  src: url("/fonts/ElmsSans/ElmsSans-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 .ex2 {
-   font-family: 'Lucida Grande';
+   font-family: "ElmsSans";
   border: none;
   background: none;
   background-image: none;
@@ -82,7 +153,7 @@
   align-items: center;
   width: 100%;
  
-  --radius: 7px;
+  --radius: 5px;
   --accent: #60775e;
   --bg-dark: rgb(19, 19, 19);
   --bg: #e3e9e2;
@@ -92,10 +163,11 @@
   --p-light2: rgb(172, 172, 172);
 
 }
-.ex2 .ex2 h2 {
+.ex2  h2 {
   font-size: 28px;
   font-weight: 600;
   font-family: "Aleo";
+  z-index: 5;
 }
 .ex2 h1 {
   font-family: "Aleo";
@@ -154,7 +226,7 @@ head a:visited {
   /* display: none; */
 }
 .header .mid {
-  flex: 1;
+  /* flex: 1; */
   margin: auto;
 }
 .header .right {
@@ -162,23 +234,26 @@ head a:visited {
   text-align: left;
   align-items: center;
   gap: 1rem;
+  background-color: var(--accent);
+  border-radius: var(--radius);
+  padding: 0.7rem 2rem;
 }
 .header .right p {
   margin: 0;
-  
 }
 .header .right .phone {
   font-weight: 500;
   font-size: 18px;
-  color: var(--p);
+  color: var(--p-light);
+  
 }
 .header .right strong{
 }
 .header .right .cta {
   font-weight: 700;
-  color: var(--p);
+  color: var(--p-light);
 
-  font-size: 12px;
+  font-size: 16px;
 }
 .header nav ul {
   display: flex;
@@ -190,7 +265,7 @@ head a:visited {
   list-style: none;
   position: relative;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
   transition-duration: 100ms;
 }
 .header nav ul li:hover {
@@ -279,7 +354,7 @@ transform: rotate(20deg);
 }
 .hero .cta_list > * {
   padding: 1rem 2rem;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   border-radius: var(--radius);
   display: flex;
@@ -291,13 +366,14 @@ transform: rotate(20deg);
   margin-bottom: 40px;
 }
 .hero .cta_call {
+  border: 2px solid var(--accent);
+  color: var(--p);
+  background: none;
+}
+.hero .cta_reserve {
   background-color: var(--accent);
   color: var(--p-light);
   border: none;
-}
-.hero .cta_reserve {
-  border: 2px solid var(--p);
-  color: var(--p);
 }
 .hero .cta_call:hover {
   box-shadow: 0px 2px 20px rgba(255, 255, 255, 0.807);
@@ -329,6 +405,24 @@ transform: rotate(20deg);
   max-width: 100px;
   font-size: 18px;
   color: var(--p-light);
+}
+/* -----------------PAIN----------------- */
+.pain{
+  width: 1000px;
+  max-width: 1000px;
+  margin-top: 100px;
+}
+.pain .subtitle{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+align-items: center;
+}
+.pain .subtitle .line{
+  width: 100px;
+  height: 2px;
+  background-color: var(--accent);
+  content: "";
 }
 /* -----------------USLUGI----------------- */
 .uslugi {
