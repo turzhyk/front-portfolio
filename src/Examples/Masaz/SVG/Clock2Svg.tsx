@@ -1,18 +1,14 @@
+import type { SvgProps } from "./SvgProps";
+
 export const Clock2Svg = ({
-  width,
-  height,
+size,
   cls,
   thickness,
-}: {
-  width: string;
-  height: string;
-  cls: string;
-  thickness: number;
-}) => {
+}: SvgProps) => {
   return (
     <svg
-      width={width}
-      height={height}
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

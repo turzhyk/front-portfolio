@@ -20,7 +20,7 @@ export default function Cases2() {
               <li>{t("cases2.case1.li2")}</li>
               <li>{t("cases2.case1.li3")}</li>
             </ul>
-            
+            <a target="_blank" rel="noopener noreferrer" href="/demo/masaz">Zobać demo<img src="/svg/external_link.svg" alt="" width={20}/></a>
           </div>
           <div className="vert" />
           <div className="right">
@@ -46,7 +46,7 @@ export default function Cases2() {
               <li>{t("cases2.case2.li3")}</li>
               <li>{t("cases2.case2.li4")}</li>
             </ul>
-            <a target="_blank" rel="noopener noreferrer" href="/demo/warsztat"><img src="/svg/external_link.svg" alt="" width={20}/>Zobać demo</a>
+            <a target="_blank" rel="noopener noreferrer" href="/demo/warsztat">Zobać demo<img src="/svg/external_link.svg" alt="" width={20}/></a>
           </div>
           <div className="vert" />
           <div className="right">

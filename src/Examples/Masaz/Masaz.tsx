@@ -58,13 +58,13 @@ export default function Masaz() {
         <Hero />
         <Pain/>
         <Uslugi />
-        <About />
+        {/* <About />
         <Galery />
         <Team />
         <Opinion />
         <Faq />
         <Contact />
-        <Footer />
+        <Footer /> */}
       </div>
     </>
   );

@@ -1,47 +1,56 @@
-import styles from "./styles.module.css"; 
+import styles from "./styles.module.css";
 import { EnigneSvg } from "./SVG/EnigneSvg";
 import { WrenchSvg } from "./SVG/WrenchSvg";
 import { BrakesSvg } from "./SVG/BrakesSvg";
 import { OilIcon } from "./SVG/OilIcon";
 import { SnowflakeSvg } from "./SVG/SnowflakeSvg";
+import { Clock2Svg } from "./SVG/Clock2Svg";
+import { LogoSvg } from "./SVG/LogoSvg";
+
+
+export const UslugiItem = ({
+  title,
+  price,
+  time,
+  icon,
+}: {
+  title: string;
+  price: number;
+  time: string;
+  icon: React.ReactNode;
+}) => {
+  return (
+    <div className={styles.item}>
+     {icon}
+      <h3>{title}</h3>
+      
+      <div className={styles.footer1}> <div className={styles.price}>
+        <strong>{price}zł</strong>
+      </div>
+      <div className={styles.time}><Clock2Svg size={20} cls={styles.accent_icon} thickness={2} />
+        <strong>{time}</strong>
+      </div></div>
+     <a className={styles.cta}>Chcę</a>
+    </div>
+  );
+};
 
 export default function Uslugi() {
   return (
     <section id="uslugi" className={styles.uslugi}>
       <h2>Zakres naszych usług</h2>
+       <div className={styles.subtitle}>
+        <div className={styles.line} />
+        <LogoSvg size={50} thickness={3} cls={styles.accent_icon} />
+        <div className={styles.line} />
+      </div>
       <div className={styles.wrapper}>
-        <div className={styles.item}>
-
-          <EnigneSvg width="100px" height="100px" cls={styles.accent_icon} />
-          <h3>Diagnostyka komputerowa</h3>
-          <p>Szybka i dokładna diagnostyka usterek</p>
-          <div className={styles.price}>od <strong>150zł</strong></div>
-        </div>
-        <div className={styles.item}>
-          <WrenchSvg width="80px" height="80px" cls={styles.accent_icon} />
-          <h3>Naprawy mechaniczne</h3>
-          <p>Kompletsowe naprawy silnika i usterek</p>
-          <div className={styles.price}>od <strong>500zł</strong></div>
-        </div>
-        <div className={styles.item}>
-          <BrakesSvg width="80px" height="80px" cls={styles.accent_icon} />
-          <h3>Hamulce</h3>
-          <p>Wymiana klocków, tarcz i płynu hamulcowego</p>
-          <div className={styles.price}>od <strong>450zł</strong></div>
-        </div>
-        <div className={styles.item}>
-          <OilIcon thickness={4.5} width="100px" height="100px" cls={styles.accent_icon} />
-          <h3>Wymiana oleju</h3>
-          <p>Profesjonalna wymiana oleju i filtrów</p>
-          <div className={styles.price}>od <strong>120zł</strong></div>
-        </div>
-        <div className={styles.item}>
-          <SnowflakeSvg thickness={1.2} width="100px" height="100px" cls={styles.accent_icon} />
-          <h3>Klimatyzacja</h3>
-          <p>Serwis, odgrzybianie i napełnianie klimatyzacji
-          </p>
-          <div className={styles.price}>od <strong>360zł</strong></div>
-        </div>
+       
+        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
+        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
+        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
+        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
+        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
       </div>
     </section>
   );

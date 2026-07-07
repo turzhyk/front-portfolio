@@ -14,15 +14,15 @@ export default function Hero() {
         <h1>Pozbądź się bólu pleców i napięcia mięśni</h1>
         <ul>
           <li>
-            <CloverSvg size={27} thickness={0} cls={styles.icon} />
+            <CloverSvg size={35} thickness={0} cls={styles.icon} />
             Masaż leczniczy
           </li>
           <li>
-            <CloverSvg size={27} thickness={0} cls={styles.icon} />
+            <CloverSvg size={35} thickness={0} cls={styles.icon} />
            relaksacyjny
           </li>
           <li>
-            <CloverSvg size={27} thickness={0} cls={styles.icon} />
+            <CloverSvg size={35} thickness={0} cls={styles.icon} />
             sportowy
           </li>
         </ul>

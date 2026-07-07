@@ -29,9 +29,9 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.democta a,
-.democta a:link,
-.democta a:visited {
+.democta a.home,
+.democta a.home:link,
+.democta a.home:visited {
   text-decoration: none;
   color: inherit;
   text-align: center;
