@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import { StarSvg } from "./SVG/StarSvg";
 import { QuoteSvg } from "./SVG/QuoteSvg";
 import { CarSvg } from "./SVG/CarSvg";
+import { LeafSvg } from "./SVG/LeafSvg";
 
 export const OpinionItem = ({
   name,
@@ -30,7 +31,7 @@ export const OpinionItem = ({
             <StarSvg size={20} cls={styles.accent_icon} thickness={0} />
           </div>
         </div>
-        <QuoteSvg size={60} cls={styles.quote} thickness={0} />
+        <QuoteSvg size={50} cls={styles.quote} thickness={0} />
       </div>
       <p>{text}</p>
       <div className={styles.foot}><span><CarSvg size={25} thickness={2} cls=""/>{car}</span><strong>{time}</strong></div>
@@ -41,12 +42,13 @@ export const OpinionItem = ({
 export default function Opinion() {
   return (
     <section id="opinion" className={styles.opinion}>
-      <h2>Co o nas mówią klienci</h2>
+      <h2>Co o mnie mówią klienci</h2>
       <p>
         Zaufanie naszych klientów to dla nas największa motywacja do naszego
         działania
       </p>
       <div className={styles.top}>
+         <LeafSvg size={160} thickness={6} cls={styles.leaf}/>
         <div className={styles.left}>
           <h3>
             <strong>4.9</strong>/5

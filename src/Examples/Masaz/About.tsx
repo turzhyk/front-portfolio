@@ -1,90 +1,34 @@
-import React from "react";
+import { LaptopMinimalCheck, Leaf, Star } from "lucide-react";
 import styles from "./styles.module.css";
+import { CalendarSvg } from "./SVG/CalendarSvg";
 import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
 import { useInView } from "./useInView";
 export default function About() {
-    const { ref, isVisible } = useInView();
+  const { ref, isVisible } = useInView();
   return (
-    <section ref={ref} className={styles.about+" "+(isVisible?styles.visible:"")} id="about">
+    <section
+      ref={ref}
+      className={styles.about + " " + (isVisible ? styles.visible : "")}
+      id="about"
+    >
       <div className={styles.content}>
         <div className={styles.left}>
-          <h2> Dlaczego warto nam zaufać?</h2>
+          <h2> Dlaczego klienci wybierają właśnie mnie?</h2>{" "}
           <ul>
-            <li>
-              <CheckmarkThinSvg
-                width="30px"
-                height="30px"
-                cls={styles.accent_icon}
-              />
-              Ponad 10 lat doświadczenia
-            </li>
-            <li>
-              <CheckmarkThinSvg
-                width="30px"
-                height="30px"
-                cls={styles.accent_icon}
-              />
-              Nowoczesny sprzęt diagnostyczny
-            </li>
-            <li>
-              <CheckmarkThinSvg
-                width="30px"
-                height="30px"
-                cls={styles.accent_icon}
-              />
-              Uczciwe ceny bez uktrytych kosztów
-            </li>
-            <li>
-              <CheckmarkThinSvg
-                width="30px"
-                height="30px"
-                cls={styles.accent_icon}
-              />
-              Gwarancja na wykonane usługi
-            </li>
+            <li><Star size={30} strokeWidth={2} color="currentColor"/> Indywidualne podejście</li>
+            <li><CheckmarkThinSvg width="30" height="30" cls={styles.accent_icon}/>Kameralny gabinet</li>
+            <li><Leaf size={30} strokeWidth={2} color="currentColor"/> Naturalne olejki</li>
+            <li><LaptopMinimalCheck size={30} strokeWidth={2} color="currentColor"/> Możliwość rezerwacji online</li>
           </ul>
+          <a><CalendarSvg thickness={1.2} width="40" height="40" cls={styles.x}/>Umów wizytę</a>
+          <p className={styles.after_cta}>Zrób pierwszy krok do liepszego samopoczucia</p>
         </div>
-        <div className={styles.divider} />
+
         <div className={styles.right}>
-          <div>
-           
-            <h2>Gdzie nas znajdiesz?</h2>
-            <ul>
-              <li>
-                <CheckmarkThinSvg
-                  width="30px"
-                  height="30px"
-                  cls={styles.accent_icon}
-                />
-                ul. Przemysłowa 12
-                <br />
-                60-123 Poznań
-              </li>
-              <li>
-                <a className={styles.maps_btn}>
-                <CheckmarkThinSvg
-                  width="30px"
-                  height="30px"
-                  cls={styles.accent_icon}
-                />
-                Zobacz trasę na mapie</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-           
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2872.2038793069987!2d16.920884412588805!3d52.44234397192433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470443520619846b%3A0xc0b47065da8e1dd3!2zV2lub2dyYWR5LCA2MC0xMDEg0J_QvtC30L3QsNC90Yw!5e1!3m2!1sru!2spl!4v1782673424560!5m2!1sru!2spl"
-              width="300"
-              height="200"
-              
-  
-              loading="lazy"
-             
-            ></iframe>
-          </div>
+          <img src="/images/demo/masaz_about_2.webp" alt="gabinet" height={600}/>
         </div>
       </div>
+      <div className={styles.wrapper}></div>
     </section>
   );
 }

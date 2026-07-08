@@ -23,14 +23,14 @@ export const UslugiItem = ({
     <div className={styles.item}>
      {icon}
       <h3>{title}</h3>
-      
+      <p>Pozwala rozluźnić mięśnie i zmniejszyć poziom stresu.</p>
       <div className={styles.footer1}> <div className={styles.price}>
         <strong>{price}zł</strong>
       </div>
       <div className={styles.time}><Clock2Svg size={20} cls={styles.accent_icon} thickness={2} />
         <strong>{time}</strong>
       </div></div>
-     <a className={styles.cta}>Chcę</a>
+     <a className={styles.cta}>Umów wizytę</a>
     </div>
   );
 };

@@ -1,11 +1,16 @@
-import React from "react";
 import styles from "./styles.module.css";
 import { FaqElement } from "./FaqElement";
+import { LogoSvg } from "./SVG/LogoSvg";
 export default function Faq() {
   return (
     <section id="faq" className={styles.faq}>
-      <h2>Odpowiadamy na pytania</h2>
-      <div>
+      <h2>Odpowiadam na pytania</h2>
+      <div className={styles.subtitle}>
+        <div className={styles.line} />
+        <LogoSvg size={50} thickness={3} cls={styles.accent_icon} />
+        <div className={styles.line} />
+      </div>
+      <div className={styles.wrapper}>
         <FaqElement
           title="Czy muszę umawiać się na wizytę?"
           text="Tak, zachęcamy do wcześniejszego umówienia terminu telefonicznie lub przez formularz kontaktowy. W nagłych przypadkach postaramy się pomóc jak najszybciej."
