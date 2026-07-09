@@ -1,29 +1,27 @@
-import React from "react";
 import styles from "./styles.module.css";
 import { StarSvg } from "./SVG/StarSvg";
 import { QuoteSvg } from "./SVG/QuoteSvg";
-import { CarSvg } from "./SVG/CarSvg";
 import { LeafSvg } from "./SVG/LeafSvg";
 
 export const OpinionItem = ({
   name,
   text,
   time,
-  car,
+  pic
 }: {
   name: string;
   text: string;
   time: string;
-  car: string;
+  pic:string;
 }) => {
   return (
     <div className={styles.item}>
       <div className={styles.head}>
-        <div className={styles.pic}></div>
+        <div className={styles.pic}>{pic}</div>
         <div className={styles.name}>
           {name}
           <div className={styles.stars}>
-            {" "}
+         
             <StarSvg size={20} cls={styles.accent_icon} thickness={0} />
             <StarSvg size={20} cls={styles.accent_icon} thickness={0} />
             <StarSvg size={20} cls={styles.accent_icon} thickness={0} />
@@ -34,7 +32,7 @@ export const OpinionItem = ({
         <QuoteSvg size={50} cls={styles.quote} thickness={0} />
       </div>
       <p>{text}</p>
-      <div className={styles.foot}><span><CarSvg size={25} thickness={2} cls=""/>{car}</span><strong>{time}</strong></div>
+      <div className={styles.foot}><span></span><strong>{time}</strong></div>
     </div>
   );
 };
@@ -80,9 +78,9 @@ export default function Opinion() {
         </div>
       </div>
       <div className={styles.content}>
-        <OpinionItem name="Michał" text="Świetny serwis! Szybka diagnoza usterki i profesjonalna naprawa. Auto działa jak nowe. Na pewno wrócę!" car="BMW 320d" time="2 tygonie temu" />
-        <OpinionItem name="Anna K." text="ads" car="BMW" time="2 tygonia temu" />
-        <OpinionItem name="Michał" text="ads" car="VW Passat 2.0 TDI" time="1 miesiąć temu" />
+        <OpinionItem pic="AK" name="Anna K." text="Bardzo przyjemna atmosfera i pełen profesjonalizm. Po masażu plecy przestały mnie boleć, a napięcie praktycznie zniknęło. Na pewno jeszcze wrócę."  time="3 tygonia temu" />
+        <OpinionItem pic="MW" name="Michał W." text="Skorzystałem z masażu po treningu i to był świetny wybór. Mięśnie szybciej doszły do siebie, a następnego dnia czułem się znacznie lepiej. Polecam." time="2 tygonia temu" />
+        <OpinionItem pic="KS" name="Katarzyna S." text="To była moja pierwsza wizyta i jestem bardzo zadowolona. Masaż był dokładnie taki, jakiego potrzebowałam – relaksujący, ale jednocześnie skuteczny. Miła obsługa i komfortowe miejsce."  time="1 miesiąć temu" />
       </div>
     </section>
   );

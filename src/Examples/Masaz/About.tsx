@@ -4,7 +4,7 @@ import { CalendarSvg } from "./SVG/CalendarSvg";
 import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
 import { useInView } from "./useInView";
 export default function About() {
-  const { ref, isVisible } = useInView();
+  const { ref, isVisible } = useInView(0.7);
   return (
     <section
       ref={ref}
@@ -20,7 +20,7 @@ export default function About() {
             <li><Leaf size={30} strokeWidth={2} color="currentColor"/> Naturalne olejki</li>
             <li><LaptopMinimalCheck size={30} strokeWidth={2} color="currentColor"/> Możliwość rezerwacji online</li>
           </ul>
-          <a><CalendarSvg thickness={1.2} width="40" height="40" cls={styles.x}/>Umów wizytę</a>
+          <a href="#contact"><CalendarSvg thickness={1.2} width="40" height="40" cls={styles.x}/><span>Umów wizytę</span></a>
           <p className={styles.after_cta}>Zrób pierwszy krok do liepszego samopoczucia</p>
         </div>
 

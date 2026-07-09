@@ -10,11 +10,13 @@ import { LogoSvg } from "./SVG/LogoSvg";
 
 export const UslugiItem = ({
   title,
+  desc,
   price,
   time,
   icon,
 }: {
   title: string;
+  desc:string;
   price: number;
   time: string;
   icon: React.ReactNode;
@@ -23,14 +25,14 @@ export const UslugiItem = ({
     <div className={styles.item}>
      {icon}
       <h3>{title}</h3>
-      <p>Pozwala rozluźnić mięśnie i zmniejszyć poziom stresu.</p>
+      <p>{desc}</p>
       <div className={styles.footer1}> <div className={styles.price}>
         <strong>{price}zł</strong>
       </div>
       <div className={styles.time}><Clock2Svg size={20} cls={styles.accent_icon} thickness={2} />
         <strong>{time}</strong>
       </div></div>
-     <a className={styles.cta}>Umów wizytę</a>
+     <a href="#contact" className={styles.cta}>Umów wizytę</a>
     </div>
   );
 };
@@ -46,11 +48,12 @@ export default function Uslugi() {
       </div>
       <div className={styles.wrapper}>
        
-        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
-        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
-        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
-        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
-        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny"/>
+        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny" desc="Pozwala rozluźnić mięśnie i zmniejszyć poziom stresu."/>
+        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Leczniczy" desc="Pomaga zmniejszyć ból mięśni i stawów oraz wspiera proces regeneracji organizmu."/>
+        <UslugiItem icon={<></>} time="1 godzina" price={250} title="Sportowy" desc="Przyspiesza regenerację po wysiłku fizycznym, poprawia elastyczność mięśni i zmniejsza ryzyko kontuzji."/>
+        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Klasyczny" desc="Poprawia krążenie, redukuje napięcie mięśniowe i wspiera ogólne samopoczucie."/>
+        <UslugiItem icon={<></>} time="1 godzina" price={250} title="Gorącymi kamieniami" desc="Łączy ciepło kamieni z masażem, zapewniając głęboki relaks i rozluźnienie całego ciała."/>
+    
       </div>
     </section>
   );

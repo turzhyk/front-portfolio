@@ -12,42 +12,31 @@ export default function Faq() {
       </div>
       <div className={styles.wrapper}>
         <FaqElement
-          title="Czy muszę umawiać się na wizytę?"
-          text="Tak, zachęcamy do wcześniejszego umówienia terminu telefonicznie lub przez formularz kontaktowy. W nagłych przypadkach postaramy się pomóc jak najszybciej."
+          title="Czy muszę się wcześniej umówić?"
+          text="Tak, wszystkie wizyty odbywają się po wcześniejszej rezerwacji. Dzięki temu możemy zapewnić dogodny termin i odpowiednią ilość czasu dla każdego klienta."
         />
         <FaqElement
-          title="Jak długo trwa naprawa samochodu?"
-          text="Czas naprawy zależy od rodzaju usterki i dostępności części. Po diagnozie poinformujemy Cię o przewidywanym terminie realizacji."
+          title="Jak długo trwa masaż?"
+          text="Standardowa sesja trwa od 60 do 90 minut, w zależności od wybranego rodzaju masażu i indywidualnych potrzeb."
         />
         <FaqElement
-          title="Czy przed naprawą otrzymam wycenę?"
-          text="Oczywiście. Zawsze przedstawiamy orientacyjny koszt naprawy przed rozpoczęciem prac. Nie wykonujemy dodatkowych usług bez zgody klienta."
+          title="Jak przygotować się do masażu?"
+          text="Wystarczy założyć wygodne ubranie i przyjść kilka minut przed wizytą. Przed rozpoczęciem masażu omówimy Twoje oczekiwania oraz ewentualne dolegliwości."
         />
         <FaqElement
-          title="Jakie marki samochodów obsługujecie?"
-          text="Serwisujemy większość marek samochodów osobowych i dostawczych – zarówno europejskich, jak i azjatyckich."
+          title="Czy masaż jest bolesny?"
+          text="Większość masaży jest przyjemna i relaksująca. W przypadku masażu leczniczego lub sportowego możesz odczuwać większy nacisk, jednak intensywność zawsze dostosowujemy do Twojego komfortu."
         />
         <FaqElement
-          title="Czy używacie oryginalnych części?"
-          text="Korzystamy zarówno z oryginalnych części, jak i wysokiej jakości zamienników. Wybór zawsze konsultujemy z klientem."
+          title="Czy są przeciwwskazania do masażu?"
+          text="Tak. W przypadku gorączki, stanów zapalnych, chorób zakaźnych lub świeżych urazów masaż może nie być wskazany. Jeśli masz wątpliwości, skonsultuj się z terapeutą przed wizytą."
         />
         <FaqElement
-          title="Czy mogę zapłacić kartą?"
-          text="Tak, akceptujemy płatności kartą, gotówką oraz przelewem."
+          title="Jak często warto korzystać z masażu?"
+          text="To zależy od celu. Dla relaksu wiele osób wybiera masaż raz w miesiącu, natomiast przy napięciach mięśniowych lub aktywności sportowej częstotliwość może być większa."
         />
-        <FaqElement
-          title="Czy udzielacie gwarancji na wykonane usługi?"
-          text="Tak, wszystkie wykonane naprawy objęte są gwarancją zgodnie z obowiązującymi warunkami serwisu."
-        />
-        <FaqElement
-          title="Co zrobić, jeśli nie wiem, co dokładnie jest nie tak z samochodem?"
-          text="To żaden problem. Przeprowadzimy diagnostykę, znajdziemy przyczynę usterki i przedstawimy najlepsze rozwiązanie wraz z wyceną."
-        />
-        {/* <FaqElement
-          title=""
-          text=""
-        /> */}
-      </div>{" "}
+   
+      </div>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import { Calendar } from "lucide-react";
 import styles from "./styles.module.css";
 
 import { PhoneSvg } from "./SVG/PhoneSvg";
@@ -31,17 +32,13 @@ export default function Header({ activeBlock }: { activeBlock: string }) {
               </li>
             </ul>
           </nav>
-          <div className={styles.right}>
-            <PhoneSvg
-             size={35}
-              thickness={1}
-              cls={styles.white_icon}
-            />
+          <a href="#contact" className={styles.right}>
+           <Calendar size={30} strokeWidth={1.5} color="currentColor"/>
             <div>
               <p className={styles.phone}></p>
               <p className={styles.cta}>Umów wizytę</p>
             </div>
-          </div>
+          </a>
         </div>
       </header>
     </div>
