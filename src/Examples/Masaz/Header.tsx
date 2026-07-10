@@ -15,17 +15,18 @@ export default function Header({ activeBlock }: { activeBlock: string }) {
               <li className={activeBlock == "hero" ? styles.active : ""}>
                 <a href="#hero">Głowna</a>
               </li>
-              <li className={activeBlock == "uslugi" ? styles.active : ""}>
-                <a href="#uslugi">Usługi</a>
+            
+              <li  className={activeBlock == "uslugi" ? styles.active : ""}>
+                <a href="#galery">Usługi</a>
               </li>
-              <li className={activeBlock == "about" ? styles.active : ""}>
-                <a href="#about">O nas</a>
-              </li>
-              <li  className={activeBlock == "galery" ? styles.active : ""}>
-                <a href="#galery">Galeria</a>
+              <li className={activeBlock == "aboutme" ? styles.active : ""}>
+                <a href="#opinion">O mnie</a>
               </li>
               <li className={activeBlock == "opinion" ? styles.active : ""}>
                 <a href="#opinion">Opinia</a>
+              </li>
+              <li className={activeBlock == "opinion" ? styles.active : ""}>
+                <a href="#opinion">Pytania</a>
               </li>
               <li className={activeBlock == "contact" ? styles.active : ""}>
                 <a href="#contact">Kontakt</a>
