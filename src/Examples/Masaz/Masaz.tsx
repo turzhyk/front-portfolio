@@ -57,15 +57,16 @@ export default function Masaz() {
         <DemoCta />
         <Hero />
         <Brag/>
-        <Pain/><About/>
+        <Pain/>
+        <About/>
         <Uslugi />
         <Process/>
         <AboutMe/>
         <Opinion/>
-        <Faq/>
+        {/* <Faq/> */}
 
-        <Contact/>
-        <Footer/>
+        {/* <Contact/> */}
+        {/* <Footer/> */}
       </div>
     </>
   );

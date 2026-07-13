@@ -1,9 +1,12 @@
 import styles from "./styles.module.css";
 import { FaqElement } from "./FaqElement";
 import { LogoSvg } from "./SVG/LogoSvg";
+import { useInView } from "./useInView";
+import clsx from "clsx";
 export default function Faq() {
+   const { ref, isVisible } = useInView(0.2);
   return (
-    <section id="faq" className={styles.faq}>
+    <section ref={ref} id="faq" className={clsx(styles.faq, isVisible && styles.visible)}>
       <h2>Odpowiadam na pytania</h2>
       <div className={styles.subtitle}>
         <div className={styles.line} />

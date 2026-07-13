@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import Calendar from "./Calendar";
 export default function Contact() {
   return (
     <section id="contact" className={styles.contact}>
@@ -8,29 +9,35 @@ export default function Contact() {
       <form>
         <div className={styles.top}>
           <div className={styles.left}>
-            <fieldset className={styles.field}>
-              <legend>Twoje imię</legend>
-              <input type="text" placeholder="np. Maciej"/>
-            </fieldset>
-            <fieldset className={styles.field}>
-              <legend>Twój numer telefonu</legend>
-              <input type="tel" placeholder="np. 066 123 456"/>
-            </fieldset>
-            {/* 
-          <fieldset className={styles.field}>
-            <legend>Twój e-mail</legend>
-            <input type="email" />
-          </fieldset> */}
-            <fieldset className={styles.field}>
-              <legend>Model twojego samochodu</legend>
-              <input type="text" placeholder="np. Toyota Yaris 2011"/>
-            </fieldset>
+           <div className={styles.field}>
+  <label htmlFor="name">Twoje imię</label>
+  <input
+    id="name"
+    type="text"
+    placeholder="np. Maciej"
+  />
+</div>
+
+<div className={styles.field}>
+  <label htmlFor="phone">Twój numer telefonu</label>
+  <input
+    id="phone"
+    type="tel"
+    placeholder="np. 066 123 456"
+  />
+</div>
+
+<div className={styles.field}>
+  <label htmlFor="carModel">Model twojego samochodu</label>
+  <input
+    id="carModel"
+    type="text"
+    placeholder="np. Toyota Yaris 2011"
+  />
+</div>
           </div>
           <div className={styles.right}>
-            <p className={styles.textarea_label}>Opisz swój probem</p>
-
-            <textarea id="message" className={styles.textarea} rows={6} placeholder="np. Samochód gaśnie / stuki przy hamowaniu / świeci kontrolka silnika" />
-            <p className={styles.example}></p>
+            <Calendar/>
           </div>
         </div>
         <input type="submit" value={"Umów wizytę"}/>

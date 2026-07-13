@@ -26,7 +26,7 @@ export default function Header({ activeBlock }: { activeBlock: string }) {
                 <a href="#opinion">Opinia</a>
               </li>
               <li className={activeBlock == "opinion" ? styles.active : ""}>
-                <a href="#opinion">Pytania</a>
+                <a href="#opinion">Pytania </a>
               </li>
               <li className={activeBlock == "contact" ? styles.active : ""}>
                 <a href="#contact">Kontakt</a>

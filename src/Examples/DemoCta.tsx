@@ -22,7 +22,7 @@ export default function DemoCta() {
         <p>Projekt demonstracyjny</p><p>Wyobraź sobie, że to strona Twojej firmy.</p>
         <p>Podoba Ci się taki styl?</p>
         {/* <strong>Chesz podobną stronę dla swojej firmy?</strong> */}
-        <a href="/web" className={styles.contact}>Chcę podobną stronę</a>
+        <a href="/web" className={styles.contact} style={{color:"white"}}>Chcę podobną stronę</a>
         <p>albo</p> <a className={styles.home} href="/web">Wróć do głównej</a>
       </div>
       <button onClick={()=>setHidden(!hidden)}>{hidden?">":"<"}</button>

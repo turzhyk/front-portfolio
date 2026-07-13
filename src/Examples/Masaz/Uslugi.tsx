@@ -48,11 +48,11 @@ export default function Uslugi() {
       </div>
       <div className={styles.wrapper}>
        
-        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Relaksacyjny" desc="Pozwala rozluźnić mięśnie i zmniejszyć poziom stresu."/>
-        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Leczniczy" desc="Pomaga zmniejszyć ból mięśni i stawów oraz wspiera proces regeneracji organizmu."/>
-        <UslugiItem icon={<></>} time="1 godzina" price={250} title="Sportowy" desc="Przyspiesza regenerację po wysiłku fizycznym, poprawia elastyczność mięśni i zmniejsza ryzyko kontuzji."/>
-        <UslugiItem icon={<></>} time="1 godzina" price={200} title="Klasyczny" desc="Poprawia krążenie, redukuje napięcie mięśniowe i wspiera ogólne samopoczucie."/>
-        <UslugiItem icon={<></>} time="1 godzina" price={250} title="Gorącymi kamieniami" desc="Łączy ciepło kamieni z masażem, zapewniając głęboki relaks i rozluźnienie całego ciała."/>
+        <UslugiItem icon={<img width={100} alt="" loading="lazy" src="/images/demo/masaz_relax.png"/>} time="1 godzina" price={200} title="Relaksacyjny" desc="Pozwala rozluźnić mięśnie i zmniejszyć poziom stresu."/>
+        <UslugiItem icon={<img width={100} alt="" loading="lazy" src="/images/demo/masaz_doc.png"/>} time="1 godzina" price={200} title="Leczniczy" desc="Pomaga zmniejszyć ból mięśni i stawów oraz wspiera proces regeneracji organizmu."/>
+        <UslugiItem icon={<img width={100} alt="" loading="lazy" src="/images/demo/masaz_sport.png"/>} time="1 godzina" price={250} title="Sportowy" desc="Przyspiesza regenerację po wysiłku fizycznym, poprawia elastyczność mięśni i zmniejsza ryzyko kontuzji."/>
+        <UslugiItem icon={<img width={100} alt="" loading="lazy" src="/images/demo/masaz_classic.png"/>} time="1 godzina" price={200} title="Klasyczny" desc="Poprawia krążenie, redukuje napięcie mięśniowe i wspiera ogólne samopoczucie."/>
+        <UslugiItem icon={<img width={100} alt="" loading="lazy" src="/images/demo/masaz_hot.png"/>} time="1 godzina" price={250} title="Gorącymi kamieniami" desc="Łączy ciepło kamieni z masażem, zapewniając głęboki relaks i rozluźnienie całego ciała."/>
     
       </div>
     </section>

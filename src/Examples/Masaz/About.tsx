@@ -4,7 +4,7 @@ import { CalendarSvg } from "./SVG/CalendarSvg";
 import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
 import { useInView } from "./useInView";
 export default function About() {
-  const { ref, isVisible } = useInView(0.7);
+  const { ref, isVisible } = useInView(0.5);
   return (
     <section
       ref={ref}
