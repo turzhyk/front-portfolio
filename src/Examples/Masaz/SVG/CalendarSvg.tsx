@@ -19,10 +19,10 @@ export const CalendarSvg = ({
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    stroke-width={thickness}
+    strokeWidth={thickness}
     className={cls}
-    stroke-linecap="round"
-    stroke-linejoin="round" >
+    strokeLinecap="round"
+    strokeLinejoin="round" >
 
     <rect x="3" y="5" width="18" height="16" rx="2"/>
 

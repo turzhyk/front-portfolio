@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
-// import "./warsztat.css";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import Hero from "./Hero";
 import Header from "./Header";
 import Uslugi from "./Uslugi";
 import About from "./About";
 import DemoCta from "../DemoCta";
-import Galery from "./Galery";
 import Footer from "./Footer";
-import { Team } from "./Team";
 import Faq from "./Faq";
-import Opinion from "./Opinion";
 import Contact from "./Contact";
 import { Helmet } from "react-helmet-async";
 import Pain from "./Pain";
+import Brag from "./Brag";
+import Process from "./Process";
+import AboutMe from "./AboutMe";
+import Opinion from "./Opinion";
 export default function Masaz() {
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -41,30 +41,32 @@ export default function Masaz() {
     <>
       <Helmet>
         <title>
-          🛠️ Profesjonalna naprawa twojego samochodu | Serwis POZNAŃ | DEMO
+          Profesjonalna pielęgnacja Twojego ciała | MASAŻ POZNAŃ | DEMO
         </title>
         <meta
           name="description"
-          content="Kompleksowa naprawa i obsługa pojazdów osobowych. Szybko, uczciwie i z gwarancją w Poznaniu"
+          content="Indywidualne masaże i chwile relaksu stworzone z troską o Twoje samopoczucie. Komfort, spokój i pełne zaangażowanie."
         />
         <meta
           property="og:title"
-          content="Kompleksowa naprawa i obsługa pojazdów w poznaniu"
+          content="Profesjonalna pielęgnacja Twojego ciała"
         />
       </Helmet>
       <div className={styles.ex2}>
         <Header activeBlock={activeSection} />
         <DemoCta />
         <Hero />
+        <Brag/>
         <Pain/>
+        <About/>
         <Uslugi />
-        <About />
-        <Galery />
-        <Team />
-        <Opinion />
-        <Faq />
-        <Contact />
-        <Footer />
+        <Process/>
+        <AboutMe/>
+        <Opinion/>
+        <Faq/>
+
+        <Contact/>
+        <Footer/>
       </div>
     </>
   );

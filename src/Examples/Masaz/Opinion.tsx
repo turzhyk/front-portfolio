@@ -1,28 +1,32 @@
-import React from "react";
 import styles from "./styles.module.css";
 import { StarSvg } from "./SVG/StarSvg";
 import { QuoteSvg } from "./SVG/QuoteSvg";
-import { CarSvg } from "./SVG/CarSvg";
+import { LeafSvg } from "./SVG/LeafSvg";
+import { useInView } from "./useInView";
+import clsx from "clsx";
 
 export const OpinionItem = ({
   name,
   text,
   time,
-  car,
+  pic,
+  animationDelay
 }: {
   name: string;
   text: string;
   time: string;
-  car: string;
+  pic:string;
+  animationDelay?:string;
 }) => {
+  
   return (
-    <div className={styles.item}>
+    <div className={styles.item} style={{transitionDelay:animationDelay}}>
       <div className={styles.head}>
-        <div className={styles.pic}></div>
+        <div className={styles.pic}>{pic}</div>
         <div className={styles.name}>
           {name}
           <div className={styles.stars}>
-            {" "}
+         
             <StarSvg size={20} cls={styles.accent_icon} thickness={0} />
             <StarSvg size={20} cls={styles.accent_icon} thickness={0} />
             <StarSvg size={20} cls={styles.accent_icon} thickness={0} />
@@ -30,23 +34,25 @@ export const OpinionItem = ({
             <StarSvg size={20} cls={styles.accent_icon} thickness={0} />
           </div>
         </div>
-        <QuoteSvg size={60} cls={styles.quote} thickness={0} />
+        <QuoteSvg size={50} cls={styles.quote} thickness={0} />
       </div>
       <p>{text}</p>
-      <div className={styles.foot}><span><CarSvg size={25} thickness={2} cls=""/>{car}</span><strong>{time}</strong></div>
+      <div className={styles.foot}><span></span><strong>{time}</strong></div>
     </div>
   );
 };
 
 export default function Opinion() {
+  const { ref, isVisible } = useInView(0.4);
   return (
-    <section id="opinion" className={styles.opinion}>
-      <h2>Co o nas mówią klienci</h2>
+    <section ref={ref} id="opinion" className={clsx(styles.opinion, isVisible && styles.visible)}>
+      <h2>Co o mnie mówią klienci</h2>
       <p>
         Zaufanie naszych klientów to dla nas największa motywacja do naszego
         działania
       </p>
       <div className={styles.top}>
+         <LeafSvg size={160} thickness={6} cls={styles.leaf}/>
         <div className={styles.left}>
           <h3>
             <strong>4.9</strong>/5
@@ -78,9 +84,9 @@ export default function Opinion() {
         </div>
       </div>
       <div className={styles.content}>
-        <OpinionItem name="Michał" text="Świetny serwis! Szybka diagnoza usterki i profesjonalna naprawa. Auto działa jak nowe. Na pewno wrócę!" car="BMW 320d" time="2 tygonie temu" />
-        <OpinionItem name="Anna K." text="ads" car="BMW" time="2 tygonia temu" />
-        <OpinionItem name="Michał" text="ads" car="VW Passat 2.0 TDI" time="1 miesiąć temu" />
+        <OpinionItem animationDelay="0" pic="AK" name="Anna K." text="Bardzo przyjemna atmosfera i pełen profesjonalizm. Po masażu plecy przestały mnie boleć, a napięcie praktycznie zniknęło. Na pewno jeszcze wrócę."  time="3 tygonia temu" />
+        <OpinionItem  animationDelay="100ms" pic="MW" name="Michał W." text="Skorzystałem z masażu po treningu i to był świetny wybór. Mięśnie szybciej doszły do siebie, a następnego dnia czułem się znacznie lepiej. Polecam." time="2 tygonia temu" />
+        <OpinionItem  animationDelay="200ms"  pic="KS" name="Katarzyna S." text="To była moja pierwsza wizyta i jestem bardzo zadowolona. Masaż był dokładnie taki, jakiego potrzebowałam – relaksujący, ale jednocześnie skuteczny. Miła obsługa i komfortowe miejsce."  time="1 miesiąć temu" />
       </div>
     </section>
   );

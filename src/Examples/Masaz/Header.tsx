@@ -1,6 +1,5 @@
+import { Calendar } from "lucide-react";
 import styles from "./styles.module.css";
-
-import { PhoneSvg } from "./SVG/PhoneSvg";
 export default function Header({ activeBlock }: { activeBlock: string }) {
   return (
     <div className={styles.header_holder}>
@@ -14,34 +13,31 @@ export default function Header({ activeBlock }: { activeBlock: string }) {
               <li className={activeBlock == "hero" ? styles.active : ""}>
                 <a href="#hero">Głowna</a>
               </li>
-              <li className={activeBlock == "uslugi" ? styles.active : ""}>
+            
+              <li  className={activeBlock == "uslugi" ? styles.active : ""}>
                 <a href="#uslugi">Usługi</a>
               </li>
-              <li className={activeBlock == "about" ? styles.active : ""}>
-                <a href="#about">O nas</a>
-              </li>
-              <li  className={activeBlock == "galery" ? styles.active : ""}>
-                <a href="#galery">Galeria</a>
+              <li className={activeBlock == "aboutme" ? styles.active : ""}>
+                <a href="#aboutme">O mnie</a>
               </li>
               <li className={activeBlock == "opinion" ? styles.active : ""}>
                 <a href="#opinion">Opinia</a>
+              </li>
+              <li className={activeBlock == "faq" ? styles.active : ""}>
+                <a href="#faq">Pytania </a>
               </li>
               <li className={activeBlock == "contact" ? styles.active : ""}>
                 <a href="#contact">Kontakt</a>
               </li>
             </ul>
           </nav>
-          <div className={styles.right}>
-            <PhoneSvg
-             size={35}
-              thickness={1}
-              cls={styles.white_icon}
-            />
+          <a href="#contact" className={styles.right}>
+           <Calendar size={30} strokeWidth={1.5} color="currentColor"/>
             <div>
               <p className={styles.phone}></p>
               <p className={styles.cta}>Umów wizytę</p>
             </div>
-          </div>
+          </a>
         </div>
       </header>
     </div>

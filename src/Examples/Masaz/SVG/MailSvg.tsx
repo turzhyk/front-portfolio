@@ -15,7 +15,7 @@ export const MailSvg = ({ size, cls, thickness }: SvgProps) => {
       <path
         d="M2 6L12.5 13L22 6M2 19L8.5 13M16.5 13L22 19"
         stroke="currentColor"
-        stroke-linecap="round"
+        strokeLinecap="round"
       />
     </svg>
   );

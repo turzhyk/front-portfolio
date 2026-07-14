@@ -340,7 +340,7 @@ i18n.use(initReactI18next).init({
         offer: {
           h: "Wybierz rozwiązanie dla swojej firmy",
           offer1: {
-            h: "Pakiet Wizytówka",
+            h: "Pakiet Start",
             features: [
               "Strona gotowa do pozyskiwania klientów",
               "Formularz kontaktowy i szybki kontakt telefoniczny",
@@ -367,14 +367,14 @@ i18n.use(initReactI18next).init({
             h: "Pakiet Firma",
             popularTag: "Najczęściej wybierany",
             features: [
-              "Wszystko z pakietu Wizytówka",
+              "Wszystko z pakietu Start",
               "Sekcja opinii klientów budująca zaufanie",
               "Galeria realizacji i zdjęć firmy",
               "Integracja z Facebookiem i Instagramem",
               "Dodatkowe podstrony (np. Oferta, Cennik, O nas)",
               "3 miesiące wsparcia po uruchomieniu GRATIS",
             ],
-            price: "od 2200 zł",
+            price: "najczęściej 2200-2900 zł",
             pricetag: "Jednorazowa płatność",
             cta: "Chcę taką stronę",
             deliveryTime: "Czas realizacji: zwykle 12–16 dni roboczych",

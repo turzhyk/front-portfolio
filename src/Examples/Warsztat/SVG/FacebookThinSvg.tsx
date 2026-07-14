@@ -1,6 +1,6 @@
 import type { SvgProps } from "./SvgProps";
 
-export const FacebookThinSvg = ({ size, cls, thickness }: SvgProps) => {
+export const FacebookThinSvg = ({ size, cls }: SvgProps) => {
   return (
     <svg
       fill="currentColor"

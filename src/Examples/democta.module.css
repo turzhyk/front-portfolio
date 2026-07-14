@@ -29,15 +29,15 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.democta a,
-.democta a:link,
-.democta a:visited {
+.democta a.home,
+.democta a.home:link,
+.democta a.home:visited {
   text-decoration: none;
   color: inherit;
   text-align: center;
   display: block;
   font-weight: 700;
-  color: #4a46bf;
+  /* color: #4a46bf; */
 }
 .democta .contact {
   display: block;

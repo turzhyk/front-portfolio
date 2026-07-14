@@ -1,10 +1,5 @@
-import React from "react";
+
 import styles from "./styles.module.css";
-import { WarrantySvg } from "./SVG/WarrantySvg";
-import { ClockSvg } from "./SVG/ClockSvg";
-import { LikeSvg } from "./SVG/LikeSvg";
-import { PhoneFillSvg } from "./SVG/PhoneFillSvg";
-import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
 import { CloverSvg } from "./SVG/CloverSvg";
 import { PhoneSvg } from "./SVG/PhoneSvg";
 export default function Hero() {
@@ -14,15 +9,15 @@ export default function Hero() {
         <h1>Pozbądź się bólu pleców i napięcia mięśni</h1>
         <ul>
           <li>
-            <CloverSvg size={27} thickness={0} cls={styles.icon} />
+            <CloverSvg size={35} thickness={0} cls={styles.icon} />
             Masaż leczniczy
           </li>
           <li>
-            <CloverSvg size={27} thickness={0} cls={styles.icon} />
+            <CloverSvg size={35} thickness={0} cls={styles.icon} />
            relaksacyjny
           </li>
           <li>
-            <CloverSvg size={27} thickness={0} cls={styles.icon} />
+            <CloverSvg size={35} thickness={0} cls={styles.icon} />
             sportowy
           </li>
         </ul>
@@ -35,7 +30,7 @@ export default function Hero() {
               thickness={2}
               cls={styles.accent_icon}
             />{" "}
-            Zadzwoń
+            Zadzwoń  066 123 456
           </button>
         </div>
 
@@ -65,7 +60,7 @@ export default function Hero() {
           <path
             d="M36.8104 5.75C31.2014 5.55 0 7 0 7V3C0 3 92.0994 2 92.9007 2C93.9023 2 104.419 5.25 92.9007 4.75C81.3822 4.25 66.8588 6.25 58.3451 6.5C49.8314 6.75 43.8217 6 36.8104 5.75Z"
             fill="currentColor"
-            fill-opacity="0.6"
+            fillOpacity="0.6"
           />
           <path
             d="M35.25 7C24.45 7 7.62939e-06 5 7.62939e-06 4.57692V0H100.25V5.38462C96.0833 4.66667 85.45 3.23077 76.25 3.23077C64.75 3.23077 48.75 7 35.25 7Z"
