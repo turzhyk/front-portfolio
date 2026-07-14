@@ -1,6 +1,6 @@
 import type { SvgProps } from "./SvgProps";
 
-export const StarSvg = ({ size, cls, thickness }: SvgProps) => {
+export const StarSvg = ({ size, cls }: SvgProps) => {
   return (
     <svg
     

@@ -13,10 +13,9 @@ export default function Footer() {
       <div className={styles.content}>
         <div className={styles.desc}>
           <img src="/images/demo/masaz_logo1.webp" width={200} alt="logo" />
-          <p>Profesjonalny serwis twojego samochodu</p>
+          <p>Twój masaż, moja pasja</p>
           <p>
-            Kompleksowa naprawa i obsługa pojazdów osobowych. Szybko, uczciwie i
-            z gwarancją.
+           Kameralne miejsce, indywidualne podejście i profesjonalne techniki masażu dopasowane do Twoich potrzeb.
           </p>
           <div className={styles.media}>
             <a><FacebookThinSvg size={22} thickness={0} cls={styles.media}/></a>
@@ -27,38 +26,24 @@ export default function Footer() {
           <h3>Navigacja</h3>
           <ul>
             <li>
-              <a>Strona głowna</a>
+              <a href="#hero">Strona głowna</a>
             </li>
             <li>
-              <a>Usługi</a>
+              <a href="#uslugi">Usługi</a>
             </li>
             <li>
-              <a>O nas</a>
+              <a href="#aboutme">O mnie</a>
             </li>
             <li>
-              <a>Galeria</a>
+              <a href="#opinion">Opinia</a>
+            </li>
+            <li>
+              <a href="#faq">Pytania</a>
             </li>
           </ul>
         </nav>
-        <div className={styles.vert} />
-        <nav className={styles.nav}>
-          <h3>Usługi</h3>
-          <ul>
-            <li>
-              <a>Strona głowna</a>
-            </li>
-            <li>
-              <a>Usługi</a>
-            </li>
-            <li>
-              <a>O nas</a>
-            </li>
-            <li>
-              <a>Galeria</a>
-            </li>
-          </ul>
-        </nav>
-        <div className={styles.vert} />
+     
+        {/* <div className={styles.vert} /> */}
         <div className={styles.contact_}>
           <h3>Kontakt</h3>
           <ul>
@@ -69,7 +54,7 @@ export default function Footer() {
                 
                 cls={styles.accent_icon}
               />
-              123 456 789
+              066 123 456
             </li>
             <li>
               <Clock2Svg
@@ -77,7 +62,7 @@ export default function Footer() {
                  size={25}
                 cls={styles.accent_icon}
               />
-              Pn-Pt: 8:00-16:00
+              Pn-Pt: 13:00-21:00
             </li>
             <li>
               <LocationSvg
@@ -90,7 +75,7 @@ export default function Footer() {
             </li>
             <li>
               <MailSvg thickness={2} size={24} cls={styles.accent_icon} />
-              kontakt@automax.pl
+              kontakt@harmonia.pl
             </li>
           </ul>
         </div>

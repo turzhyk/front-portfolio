@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import { LogoSvg } from "./SVG/LogoSvg";
-import { Divider } from "./SVG/Divider";
+
 import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
 import { LeafSvg } from "./SVG/LeafSvg";
 import { useInView } from "./useInView";

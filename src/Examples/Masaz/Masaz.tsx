@@ -41,15 +41,15 @@ export default function Masaz() {
     <>
       <Helmet>
         <title>
-          🛠️ Profesjonalna naprawa twojego samochodu | Serwis POZNAŃ | DEMO
+          Profesjonalna pielęgnacja Twojego ciała | MASAŻ POZNAŃ | DEMO
         </title>
         <meta
           name="description"
-          content="Kompleksowa naprawa i obsługa pojazdów osobowych. Szybko, uczciwie i z gwarancją w Poznaniu"
+          content="Indywidualne masaże i chwile relaksu stworzone z troską o Twoje samopoczucie. Komfort, spokój i pełne zaangażowanie."
         />
         <meta
           property="og:title"
-          content="Kompleksowa naprawa i obsługa pojazdów w poznaniu"
+          content="Profesjonalna pielęgnacja Twojego ciała"
         />
       </Helmet>
       <div className={styles.ex2}>
@@ -63,10 +63,10 @@ export default function Masaz() {
         <Process/>
         <AboutMe/>
         <Opinion/>
-        {/* <Faq/> */}
+        <Faq/>
 
-        {/* <Contact/> */}
-        {/* <Footer/> */}
+        <Contact/>
+        <Footer/>
       </div>
     </>
   );

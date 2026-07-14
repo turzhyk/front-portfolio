@@ -4,7 +4,7 @@ import type { SvgProps } from "./SvgProps";
 export const LogoSvg = ({
   size,
   cls,
-  thickness,
+  
 }: SvgProps) => {
   return (
    <svg width={size} height={size} className={cls} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

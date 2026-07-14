@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "./democta.module.css";
 export default function DemoCta() {
-      const [hidden, setHidden] = useState(true);
-       useEffect(() => {
+  const [hidden, setHidden] = useState(true);
+  useEffect(() => {
     // После монтирования
-     const timer1 = setTimeout(() => {
+    const timer1 = setTimeout(() => {
       setHidden(false);
     }, 3000);
 
@@ -13,20 +13,28 @@ export default function DemoCta() {
       setHidden(true);
     }, 8000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
-    <div className={styles.democta+" "+(hidden?styles.hidden:"")}>
+    <div className={styles.democta + " " + (hidden ? styles.hidden : "")}>
       <div>
-        <p>Projekt demonstracyjny</p><p>Wyobraź sobie, że to strona Twojej firmy.</p>
+        <p>Projekt demonstracyjny</p>
+        <p>Wyobraź sobie, że to strona Twojej firmy.</p>
         <p>Podoba Ci się taki styl?</p>
         {/* <strong>Chesz podobną stronę dla swojej firmy?</strong> */}
-        <a href="/web" className={styles.contact} style={{color:"white"}}>Chcę podobną stronę</a>
-        <p>albo</p> <a className={styles.home} href="/web">Wróć do głównej</a>
+        <a href="/web" className={styles.contact} style={{ color: "white" }}>
+          Chcę podobną stronę
+        </a>
+        <p>albo</p>{" "}
+        <a className={styles.home} href="/web">
+          Wróć do głównej
+        </a>
       </div>
-      <button onClick={()=>setHidden(!hidden)}>{hidden?">":"<"}</button>
-      
+      <button onClick={() => setHidden(!hidden)}>{hidden ? ">" : "<"}</button>
     </div>
   );
 }

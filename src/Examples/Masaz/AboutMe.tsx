@@ -1,6 +1,5 @@
-import React from "react";
+
 import styles from "./styles.module.css";
-import { LogoSvg } from "./SVG/LogoSvg";
 import { HeartSvg } from "./SVG/HeartSvg";
 import { Leaf2Svg } from "./SVG/Leaf2Svg";
 import { Flower } from "lucide-react";

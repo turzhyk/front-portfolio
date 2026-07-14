@@ -157,6 +157,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* overflow-x: hidden; */
+  width: 100%;
+  box-sizing: border-box;
   /* width: 100%; */
 
   --radius: 5px;
@@ -177,6 +180,9 @@
   font-weight: 600;
   font-family: "Aleo";
   z-index: 5;
+}
+.ex2 * {
+  box-sizing: border-box;
 }
 .ex2 h1 {
   font-family: "Aleo";
@@ -1189,6 +1195,34 @@ head a:visited {
   /* margin-bottom: 4rem; */
   color: var(--p);
 }
+.contact .modal{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.439);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+.contact .modal.visible{
+  visibility: visible;
+}
+.contact .modal > div{
+  background-color: white;
+  border-radius: var(--radius);
+  margin: auto;
+  padding: 20px;
+  z-index: 100;
+  width: 300px;
+}
+.contact .modal > div p{
+  font-size: 18px;
+  color: var(--p);
+}
 .contact h2 {
   z-index: 5;
   position: relative;
@@ -1200,19 +1234,22 @@ head a:visited {
 
 .contact form {
   margin-bottom: 100px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: auto;
+
 }
 .contact .top {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
   margin-top: 2rem;
 }
 .contact input[type="submit"] {
-  float: right;
+  margin: auto;
+  margin-top: 30px;
   padding: 1.5rem 3rem;
-  color: var(--p);
+  color: var(--p-light);
+  font-weight: 600;
   background-color: var(--accent);
   border-radius: var(--radius);
   border: none;
@@ -1223,6 +1260,7 @@ head a:visited {
   flex-direction: column;
   align-items: stretch;
   gap: 1rem;
+
 }
 .contact .field {
   border-radius: var(--radius);
@@ -1246,26 +1284,52 @@ head a:visited {
 }
 .contact .right {
   position: relative;
+  display: flex;
+
+  gap: 10px;
 }
 .contact .right .textarea_label {
   font-weight: 600;
   color: var(--bg-dark);
-
-  /* background-color: var(--p-light); */
 }
-.contact textarea {
-  margin-top: 10px;
-  width: 100%;
-  border-radius: var(--radius);
+.contact  h3{
+  margin-top: 0;
+}
+.contact  .left h3{
+  margin-bottom: 5px;
+}
+.contact  .time_select h3{
+   margin-top: 0;
+}
+.contact  .time_select{
+  opacity: 0;
+  transform: translateX(50px);
+  transition-duration: 200ms;
+}
+.contact  .time_select.visible{
+  opacity: 1;
+  transform: none;
+}
+.contact .time_select .time_list{
+   border-radius: var(--radius);
+  border: 1px solid rgb(193, 193, 193);
+  background-color: var(--bg-light);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact .time_select button{
+  padding: 10px;
+  font-weight: 700;
+  font-size: 15px;
   background: none;
-  padding: 1rem;
-  background-color: var(--p-light);
   border: none;
-  font-family: "lato";
+  border-radius: var(--radius);
 }
-.contact .example {
-  color: gray;
-  text-align: left;
+.contact .time_select button.selected{
+  background-color: var(--accent);
+  color:var(--p-light)
 }
 .contact :global(.rdp-day_button) {
   font-size: 18px;
@@ -1280,7 +1344,41 @@ head a:visited {
   border-radius: 5px;
   color: var(--bg);
 }
-
+.contact :global(.rdp-month){
+  border-radius: var(--radius);
+  border: 1px solid rgb(193, 193, 193);
+  background-color: var(--bg-light);
+  padding: 15px;
+}
+.contact .massage_type {
+ border-radius: var(--radius);
+  border: 1px solid rgb(193, 193, 193);
+  background-color: var(--bg-light);
+}
+.contact .massage_type>p{
+  font-weight: 600;
+  color:var(--p);
+}
+.contact .massage_type .items{
+    display: grid;
+  grid-template-columns: repeat(2,1fr );
+  padding: 15px;
+}
+.contact .massage_type .items>button{
+  padding: 20px;
+display: flex;
+align-items: center;
+text-align: center;
+gap: 5px;
+font-weight: 500;
+font-size: 15px;
+border-radius: var(--radius);
+border:none
+}
+.contact .massage_type .items>button.selected{
+  background-color: var(--accent);
+  color:var(--p-light)
+}
 /* ---------------FOOTER------------------ */
 
 .footer {
@@ -1290,13 +1388,14 @@ head a:visited {
   padding-bottom: 5rem;
 }
 .footer .content {
-  max-width: 1200px;
-  width: 1200px;
+  max-width: 800px;
+  width: 800px;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   margin: auto;
   color: var(--p);
+  flex-wrap: wrap;
 }
 .footer .desc {
   display: flex;
@@ -1401,6 +1500,8 @@ head a:visited {
   }
   .pain {
     max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
   }
   .pain .content {
     max-width: 100%;
@@ -1408,6 +1509,10 @@ head a:visited {
     grid-template-columns: 1fr 1fr; */
     flex-wrap: wrap;
     padding: 10px;
+  }
+  .pain .content > div {
+    min-width: 0;
+    padding: 12px;
   }
   .pain .solution {
     padding: 2rem;
@@ -1425,8 +1530,8 @@ head a:visited {
     padding: 10px;
     background-size: 800px;
   }
-  .about .content{
-    gap:10px;
+  .about .content {
+    gap: 10px;
   }
   .about img {
     max-width: 90%;
@@ -1461,7 +1566,7 @@ head a:visited {
   .about .right {
     flex-direction: column;
   }
-  .process{
+  .process {
     max-width: 100%;
     width: 100%;
   }
@@ -1490,62 +1595,36 @@ head a:visited {
   .opinion .content {
     overflow-x: auto;
   }
-  .opinion .top {
-    flex-direction: column;
-    /* align-items: baseline; */
-  }
-  .opinion .vert {
-    display: none;
-  }
-  .opinion .top .left .stars {
-    gap: 0;
-  }
-  .opinion .top .mid strong {
-    gap: 0;
-  }
-  .opinion .top .left {
-    margin: 0;
-    align-items: center;
-  }
-  .opinion .top .mid {
-    align-items: center;
-    gap: 10px;
-  }
+
   .opinion .content .item:nth-child(1) {
     margin-left: 1rem;
   }
   .opinion .contact .item:last-child {
     margin-right: 1rem;
   }
-  .faq {
+  .faq,
+  .faq .wrapper {
     width: 100%;
-    padding: 1rem;
+    max-width: 100%;
+
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
   }
-  .faq > div {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-  .faq .faq_item:nth-child(2) {
-    border-top: 1px solid gray;
+  .faq .wrapper {
+    padding: 0 10px;
+    padding-top: 15px;
   }
   .contact {
     width: 100%;
   }
-  .contact .top {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-    margin-top: 0;
-  }
-  .contact input[type="submit"] {
-    margin-right: 1rem;
-  }
+ 
+ 
   .footer {
     width: 100%;
   }
   .footer .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    
     width: 100%;
   }
   .footer .vert {
@@ -1559,15 +1638,28 @@ head a:visited {
     max-width: 100%;
     width: 100%;
   }
-  .process{
+  .process {
     max-width: 100%;
     width: 100%;
   }
-  .process .content{
+  .process .content {
     max-width: 100%;
     width: 100%;
+    border-radius: 0;
   }
-
+  .uslugi .wrapper .item {
+    padding: 10px;
+  }
+  .contact, .contact .top{
+    width: 100%;
+    max-width: 100%;
+  }
+  .contact .top{
+    flex-direction: column;
+  }
+  .contact .right{
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 800px) {
   .ex2 h2 {
@@ -1620,7 +1712,7 @@ head a:visited {
     gap: 0;
     flex-direction: column;
   }
-  .about .left{
+  .about .left {
     min-width: 0;
   }
   .uslugi .wrapper {
@@ -1628,7 +1720,7 @@ head a:visited {
     justify-content: center;
     flex-wrap: wrap;
   }
-  .uslugi .item{
+  .uslugi .item {
     flex: 1;
   }
   .process {
@@ -1689,6 +1781,27 @@ head a:visited {
   .aboutme .features {
     flex-wrap: wrap;
   }
+  .opinion .top {
+    flex-direction: column;
+    /* align-items: baseline; */
+  }
+  .opinion .vert {
+    display: none;
+  }
+  .opinion .top .left .stars {
+    gap: 0;
+  }
+  .opinion .top .mid strong {
+    gap: 0;
+  }
+  .opinion .top .left {
+    margin: 0;
+    align-items: center;
+  }
+  .opinion .top .mid {
+    align-items: center;
+    gap: 10px;
+  }
   .faq {
     width: 100%;
     max-width: 100%;
@@ -1702,6 +1815,26 @@ head a:visited {
   .faq .faq_item {
     padding: 10px;
   }
+  .contact .right{
+    flex-direction: column;
+    padding: 0;
+  }
+  .contact {
+    padding: 10px;
+  }
+    .contact .time_select{
+      transform: none;
+    }
+  .contact .time_select .time_list{
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+    width: 100%;
+  }
+  .contact .time_list>div{
+    width: auto;
+  }
   .footer .content {
     display: flex;
     flex-direction: column;
@@ -1712,10 +1845,9 @@ head a:visited {
     margin: auto;
   }
 }
-@media screen and (max-width: 400px)
-{
-  .pain .content{
-     display: grid;
+@media screen and (max-width: 400px) {
+  .pain .content {
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }

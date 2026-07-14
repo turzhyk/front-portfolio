@@ -1,9 +1,4 @@
 import styles from "./styles.module.css";
-import { EnigneSvg } from "./SVG/EnigneSvg";
-import { WrenchSvg } from "./SVG/WrenchSvg";
-import { BrakesSvg } from "./SVG/BrakesSvg";
-import { OilIcon } from "./SVG/OilIcon";
-import { SnowflakeSvg } from "./SVG/SnowflakeSvg";
 import { Clock2Svg } from "./SVG/Clock2Svg";
 import { LogoSvg } from "./SVG/LogoSvg";
 
