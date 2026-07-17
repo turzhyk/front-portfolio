@@ -15,6 +15,7 @@ import AboutMe from "./AboutMe";
 import Opinion from "./Opinion";
 import Hero from "./Hero";
 import RunningLine from "./RunningLine";
+import Offer from "./Offer";
 export default function Dentysta() {
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -61,7 +62,7 @@ export default function Dentysta() {
          <Uslugi />
         
         <About/>
-       
+       <Offer/>
         <Process/>
         <AboutMe/>
         <Opinion/>

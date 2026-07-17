@@ -513,7 +513,7 @@ head a:visited {
   overflow: hidden;
   width: 100%;
 }
-.uslugi .item p{
+.uslugi .item p {
   padding: 0 20px;
 }
 .uslugi .item .top img {
@@ -530,6 +530,9 @@ head a:visited {
   height: 90px;
   border-radius: 50%;
 }
+.uslugi .item .iconwrapper svg{
+  margin-top: 15px;
+}
 .uslugi .item h3 {
   width: 100%;
   margin-bottom: 0;
@@ -538,14 +541,13 @@ head a:visited {
   margin-top: 30px;
   padding: 15px;
   height: 80px;
+  color: var(--p)
 }
 .uslugi .item p {
   margin-top: 10px;
   flex: 1;
 }
-.uslugi .item > svg {
-  height: 100px;
-}
+
 .uslugi .item .price,
 .uslugi .item .time {
   padding: 0.5rem 1rem;
@@ -579,6 +581,7 @@ head a:visited {
   gap: 10px;
   border-radius: var(--radius);
 }
+
 .uslugi .item .cta:hover {
   background-color: rgb(var(--accent-values) / 90%);
   color: var(--bg-light);
@@ -624,13 +627,14 @@ head a:visited {
 
 .about .content {
   display: flex;
-  height: 250px;
+  /* height: 250px; */
 
   justify-content: center;
   color: var(--p);
   gap: 30px;
   margin: auto;
-  margin-top: 50px;  margin-bottom: 200px;
+  margin-top: 50px;
+  margin-bottom: 120px;
   max-width: 1200px;
 }
 .about h2 {
@@ -643,7 +647,7 @@ head a:visited {
   background-color: var(--bg-light);
   border: 1px solid rgb(222, 222, 222);
   padding: 2rem;
- 
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -651,24 +655,229 @@ head a:visited {
   /* gap: 15px; */
   box-shadow: 0px 0px 20px var(--bg);
 }
-.about .item p{
+.about .item h4 {
   margin: 0;
-  flex: 1;
-   font-size: 22px;
+
+  font-size: 22px;
   font-weight: 600;
 }
-.about .icon{
-color: var(--accent);
+.about .top {
+  flex: 1;
+}
+.about .icon {
+  color: var(--accent);
   height: 100px;
   width: 100px;
   border-radius: 50%;
   background-color: var(--bg);
-
 }
-.about .icon svg{
+.about .icon svg {
+  margin-top: 15px;
+}
+
+/* ---------------PRICELIST------------------ */
+.offer {
+  margin: auto;
+  margin-top: 60px;
+}
+.offer ul {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+}
+.offer .wrapper {
+  display: flex;
+  justify-content: center;
+  width: 1400px;
+  margin: auto;
+  padding: 2rem;
+  margin-top: 60px;
+  gap: 1rem;
+  /* grid-template-columns: repeat(5, 1fr); */
+}
+.offer .item:hover {
+  box-shadow: var(--shadow2);
+}
+.offer .item {
+  box-shadow: var(--shadow1);
+  display: flex;
+  flex-direction: column;
+  /* width: 250px; */
+  align-items: center;
+  background-color: var(--bg-light);
+  border: 1px solid rgb(213, 213, 213);
+  border-radius: var(--radius);
+
+  /* flex-grow: 1; */
+  transition-duration: 300ms;
+  overflow: visible;
+  flex: 1;
+  position: relative;
+  text-align: center;
+  max-width: 400px;
+}
+.offer .item .top {
+  overflow: hidden;
+  width: 100%;
+}
+.offer .item p {
+  /* padding: 0 20px; */
+}
+.offer .item .top img {
+  width: 100%;
+  object-fit: cover;
+}
+.offer .item .iconwrapper {
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: -50px;
+padding-top: 15px;
+  background-color: rgb(185, 205, 226);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+.offer .item h3 {
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 40px;
+  padding: 15px;
+  height: 80px;
+  color: var(--p);
+}
+.offer .item ul {
+  width: 100%;
+  padding: 0 30px;
   margin-top: 10px;
+  list-style: none;
+  /* padding: 0; */
 }
+.offer .item ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 0;
+  margin: 20px 0;
+}
+.offer .item > svg {
+  height: 100px;
+}
+.offer .item .price,
+.offer .item .time {
+  padding: 0.5rem 1rem;
+  background-color: rgb(225, 225, 225);
+  border-radius: 20px;
+  margin: auto;
+  color: var(--accent);
+}
+.offer .item .footer1 {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+.offer .item .time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.offer .item .cta {
+  padding: 1rem 2rem;
+  margin: 20px 0;
 
+  font-size: 16px;
+  font-weight: 700;
+
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--radius);
+}
+.offer .item .cta:hover {
+  background-color: rgb(var(--accent-values) / 90%);
+  color: var(--bg-light);
+}
+.offer .item .cta:active {
+  background-color: var(--accent);
+}
+.offer .item .cta svg {
+  transition-duration: 200ms;
+}
+.offer .item:hover .cta svg {
+  transform: translateX(10px);
+}
+.offer a.cta2 {
+  padding: 1rem 2rem;
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: var(--radius);
+  background-color: var(--bg-light);
+  border: 1px solid rgb(198, 198, 198);
+  color: var(--p);
+}
+.offer .cta_block {
+  width: auto;
+  background-color: var(--bg);
+  border: 1px solid rgb(var(--accent-values) / 40%);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+.offer .cta_block .iconwrapper {
+  background-color: var(--accent);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  color: var(--bg-light);
+}
+.offer .cta_block .iconwrapper >svg{
+  margin-top: 20px;
+}
+.offer .cta_block .mid{
+  flex: 1;
+  padding: 0 20px;
+}
+.offer .cta_block h4, .offer .cta_block p{
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+}
+.offer .cta_block .cta {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--accent);
+  border-radius: var(--radius);
+  padding: 0.7rem 2rem;
+  font-weight: 700;
+  color: var(--p-light);
+
+  font-size: 16px;
+}
+.offer .info{
+  width: fit-content;
+  max-width: 1000px;
+  display: flex;
+  gap:10px;
+  
+  margin: auto;
+  margin-bottom: 30px;
+}
 /* ---------------PROCESS------------------ */
 .process {
   margin-top: 50px;
@@ -723,14 +932,27 @@ color: var(--accent);
 }
 /* ---------------OPINION------------------ */
 .opinion {
-  width: 1200px;
-  max-width: 1200px;
-  border-radius: var(--radius);
   background-color: var(--bg);
+  width: 100%;
+  border-radius: var(--radius);
+  /* opacity: 0; */
+  transition-duration: 600ms;
+  /* transform: translateY(100px); */
+  background-image: url("/images/demo/dentysta_about_3.svg");
+  /* background-blend-mode:hard-light; */
+  background-size: 1900px;
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  overflow: hidden;
   padding: 2rem;
   position: relative;
   transition-duration: 400ms;
   opacity: 0;
+}
+
+.opinion .wrapper{
+  max-width: 1200px;
+  margin: auto;
 }
 .opinion.visible {
   opacity: 1;

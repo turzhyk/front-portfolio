@@ -1,7 +1,9 @@
-import { MoveRight } from "lucide-react";
+import { Baby, Computer, MoveRight, Sparkle, Sparkles } from "lucide-react";
 import styles from "./styles.module.css";
 import { Clock2Svg } from "./SVG/Clock2Svg";
 import { LogoSvg } from "./SVG/LogoSvg";
+import { ZoomSvg } from "./SVG/ZoomSvg";
+import { ImplantSvg } from "./SVG/ImplantSvg";
 
 export const UslugiItem = ({
   title,
@@ -45,12 +47,7 @@ export default function Uslugi() {
       <div className={styles.wrapper}>
         <UslugiItem
           icon={
-            <img
-              width={100}
-              alt=""
-              loading="lazy"
-              src="/images/demo/masaz_relax.png"
-            />
+           <ZoomSvg size={60} thickness={1.5} cls={styles.accent_icon}/>
           }
           time="1 godzina"
           price={200}
@@ -60,12 +57,7 @@ export default function Uslugi() {
         />
         <UslugiItem
           icon={
-            <img
-              width={100}
-              alt=""
-              loading="lazy"
-              src="/images/demo/masaz_doc.png"
-            />
+            <ImplantSvg size={60} thickness={1.5} cls={styles.accent_icon}/>
           }
           time="1 godzina"
           price={200}
@@ -75,12 +67,7 @@ export default function Uslugi() {
         />
         <UslugiItem
           icon={
-            <img
-              width={100}
-              alt=""
-              loading="lazy"
-              src="/images/demo/masaz_sport.png"
-            />
+               <Sparkles size={60} strokeWidth={1.5} color="var(--accent)"/>
           }
           time="1 godzina"
           price={250}
@@ -90,12 +77,7 @@ export default function Uslugi() {
         />
         <UslugiItem
           icon={
-            <img
-              width={100}
-              alt=""
-              loading="lazy"
-              src="/images/demo/masaz_classic.png"
-            />
+           <Baby size={60} strokeWidth={1.5} color="var(--accent)"/>
           }
           time="1 godzina"
           price={200}
@@ -105,12 +87,7 @@ export default function Uslugi() {
         />
         <UslugiItem
           icon={
-            <img
-              width={100}
-              alt=""
-              loading="lazy"
-              src="/images/demo/masaz_hot.png"
-            />
+             <Computer size={60} strokeWidth={1.5} color="var(--accent)"/>
           }
           time="1 godzina"
           price={250}
