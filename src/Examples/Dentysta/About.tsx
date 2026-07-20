@@ -59,24 +59,24 @@ export default function About() {
             <ShieldCkeckSvg
               thickness={1.5}
               className={styles.accent_icon}
-            size={65}
+            size={55}
             />
           }
         />
         <AboutItem title="Krótkie terminy"  desc="Komfort podczs każdej wizyty" icon={ <TimerCheckSvg
               thickness={2}
               className={styles.accent_icon}
-            size={60}
+            size={50}
             />} />
         <AboutItem title="Zdjęcia RTG na miejscu"  desc="Komfort podczs każdej wizyty" icon={ <ToothBigSvg
               thickness={2}
               className={styles.accent_icon}
-            size={65}
+            size={55}
             />} />
         <AboutItem title="Nowoczesny sprzęt"  desc="Komfort podczs każdej wizyty" icon={<LabSvg
               thickness={2}
               className={styles.accent_icon}
-            size={65}
+            size={55}
             />} />
       </div>
     </section>

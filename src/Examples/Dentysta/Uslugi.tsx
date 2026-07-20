@@ -47,7 +47,7 @@ export default function Uslugi() {
       <div className={styles.wrapper}>
         <UslugiItem
           icon={
-           <ZoomSvg size={60} thickness={1.5} cls={styles.accent_icon}/>
+           <ZoomSvg size={45} thickness={1.5} cls={styles.accent_icon}/>
           }
           time="1 godzina"
           price={200}
@@ -57,7 +57,7 @@ export default function Uslugi() {
         />
         <UslugiItem
           icon={
-            <ImplantSvg size={60} thickness={1.5} cls={styles.accent_icon}/>
+            <ImplantSvg size={45} thickness={1.5} cls={styles.accent_icon}/>
           }
           time="1 godzina"
           price={200}
@@ -67,7 +67,7 @@ export default function Uslugi() {
         />
         <UslugiItem
           icon={
-               <Sparkles size={60} strokeWidth={1.5} color="var(--accent)"/>
+               <Sparkles size={45} strokeWidth={1.5} color="var(--accent)"/>
           }
           time="1 godzina"
           price={250}
@@ -77,7 +77,7 @@ export default function Uslugi() {
         />
         <UslugiItem
           icon={
-           <Baby size={60} strokeWidth={1.5} color="var(--accent)"/>
+           <Baby size={45} strokeWidth={1.5} color="var(--accent)"/>
           }
           time="1 godzina"
           price={200}
@@ -87,7 +87,7 @@ export default function Uslugi() {
         />
         <UslugiItem
           icon={
-             <Computer size={60} strokeWidth={1.5} color="var(--accent)"/>
+             <Computer size={45} strokeWidth={1.5} color="var(--accent)"/>
           }
           time="1 godzina"
           price={250}
