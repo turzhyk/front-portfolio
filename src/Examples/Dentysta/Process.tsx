@@ -8,28 +8,24 @@ export default function Process() {
   return (
     <section ref={ref} id="process" className={styles.process + " " + (isVisible? styles.visible:"")}>
       <h2>Jak wygląda pierwsza wizyta?</h2>{" "}
-      <div className={styles.subtitle}>
-        <div className={styles.line} />
-        <LogoSvg size={50} thickness={3} cls={styles.accent_icon} />
-        <div className={styles.line} />
-      </div>
+     
       <div className={styles.content}>
         <div className={styles.item}>
-          <h3>1.</h3>
-          <p>Krótka rozmowa</p>
+          <h3>#1</h3>
+          <p>Rejestracja</p>
         </div>
         <div className={styles.vert}/>
         <div className={styles.item}>
-          <h3>2.</h3>
-          <p>Ocena problemu</p>
+          <h3>#2</h3>
+          <p>Badanie</p>
         </div> <div className={styles.vert}/>
         <div className={styles.item}>
-          <h3>3.</h3>
-          <p>Masaż dopasowany do Ciebie</p>
+          <h3>#3</h3>
+          <p>Plan leczenia</p>
         </div> <div className={styles.vert}/>
         <div className={styles.item}>
-          <h3>4.</h3>
-          <p>Zalecenia po wizycie</p>
+          <h3>#4</h3>
+          <p>Leczenie</p>
         </div>
       </div>
     </section>

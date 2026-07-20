@@ -16,6 +16,7 @@ export const FaqElement = ({
         <ArrowSvg size={20} thickness={3} cls={styles.accent_icon} />
       </div>
       <div className={styles.content }>
+        <strong>Odpowiedź</strong>
         <p>{text}</p>
       </div>
     </div>

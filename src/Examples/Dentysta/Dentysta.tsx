@@ -7,7 +7,7 @@ import About from "./About";
 import DemoCta from "../DemoCta";
 import Footer from "./Footer";
 import Faq from "./Faq";
-import Contact from "./Contact";
+
 import { Helmet } from "react-helmet-async";
 import Pain from "./Pain";
 import Process from "./Process";
@@ -17,6 +17,7 @@ import Hero from "./Hero";
 import RunningLine from "./RunningLine";
 import Offer from "./Offer";
 import Team from "./Team";
+import Contact from "./Contact";
 export default function Dentysta() {
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -66,7 +67,6 @@ export default function Dentysta() {
        <Offer/>
        <Team/>
         <Process/>
-        <AboutMe/>
         <Opinion/>
         <Faq/>
         <Contact/>

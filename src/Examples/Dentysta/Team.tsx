@@ -60,9 +60,9 @@ const Team: React.FC = () => {
           <div className={styles.item} key={doctor.id}>
             <div className={styles.photo}>
               <img src={doctor.photo} alt={doctor.name} />
-              <span className={styles.icon}>
-                <img src={doctor.icon} alt="" />
-              </span>
+              {/* <span className={styles.icon}>
+                
+              </span> */}
             </div>
 
             <div className={styles.info}>

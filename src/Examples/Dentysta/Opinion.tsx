@@ -52,6 +52,7 @@ export default function Opinion() {
       className={clsx(styles.opinion, isVisible && styles.visible)}
     >
       <div className={styles.wrapper}>
+        <h3>Opinion</h3>
         <h2>Co o mnie mówią klienci</h2>
         <p>
           Zaufanie naszych klientów to dla nas największa motywacja do naszego
