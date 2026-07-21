@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
 import { Calendar, Calendar1, Car, Locate, Mail, Phone, ShieldCheck, User } from "lucide-react";
-import { ToothSvg } from "./SVG/ToothSvg";
-import { ToothBigSvg } from "./SVG/ToothBigSvg";
+import { ToothSvg } from "../SVG/ToothSvg";
+import { ToothBigSvg } from "../SVG/ToothBigSvg";
 
 interface ContactFormState {
   fullName: string;

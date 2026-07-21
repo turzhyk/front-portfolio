@@ -1,23 +1,19 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
-
 import Header from "./Header";
-import Uslugi from "./Uslugi";
-import About from "./About";
+import Uslugi from "./Uslugi/Uslugi";
+import About from "./About/About";
 import DemoCta from "../DemoCta";
-import Footer from "./Footer";
-import Faq from "./Faq";
-
+import Footer from "./Footer/Footer";
+import Faq from "./FAQ/Faq";
 import { Helmet } from "react-helmet-async";
-import Pain from "./Pain";
 import Process from "./Process";
-import AboutMe from "./AboutMe";
-import Opinion from "./Opinion";
-import Hero from "./Hero";
+import Opinion from "./Opinion/Opinion";
 import RunningLine from "./RunningLine";
 import Offer from "./Offer";
-import Team from "./Team";
-import Contact from "./Contact";
+import Team from "./Team/Team";
+import Contact from "./Contact/Contact";
+import Hero from "./Hero/Hero";
 export default function Dentysta() {
   const [activeSection, setActiveSection] = useState("hero");
 

@@ -1,11 +1,6 @@
-import styles from "./styles.module.css";
-import { WarrantySvg } from "./SVG/WarrantySvg";
-import { ClockSvg } from "./SVG/ClockSvg";
-import { LikeSvg } from "./SVG/LikeSvg";
-import { PhoneFillSvg } from "./SVG/PhoneFillSvg";
-import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
+import styles from "./Hero.module.css";
 import { Calendar, ShieldCheck, Users } from "lucide-react";
-import { ToothSvg } from "./SVG/ToothSvg";
+import { ToothSvg } from "../SVG/ToothSvg";
 export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>

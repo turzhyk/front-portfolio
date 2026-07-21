@@ -1,20 +1,11 @@
-import {
-  CheckCheckIcon,
-  LaptopMinimalCheck,
-  Leaf,
-  LucideHeater,
-  Star,
-} from "lucide-react";
-import styles from "./styles.module.css";
-import { CalendarSvg } from "./SVG/CalendarSvg";
-import { CheckmarkThinSvg } from "./SVG/CheckmarkThinSvg";
-import { useInView } from "./useInView";
+import styles from "./About.module.css";
+import { useInView } from "../useInView";
 
 import React from "react";
-import { ShieldCkeckSvg } from "./SVG/ShieldCheckSvg";
-import { TimerCheckSvg } from "./SVG/TimerCheck";
-import { ToothBigSvg } from "./SVG/ToothBigSvg";
-import { LabSvg } from "./SVG/LabSvg";
+import { ShieldCkeckSvg } from "../SVG/ShieldCheckSvg";
+import { TimerCheckSvg } from "../SVG/TimerCheck";
+import { ToothBigSvg } from "../SVG/ToothBigSvg";
+import { LabSvg } from "../SVG/LabSvg";
 
 export const AboutItem = ({
   title,

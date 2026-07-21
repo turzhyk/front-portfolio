@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "./styles.module.css";
-import { ArrowSvg } from "./SVG/ArrowSvg";
+import styles from "./Faq.module.css";
+import { ArrowSvg } from "../SVG/ArrowSvg";
 export const FaqElement = ({
   title,
   text,

@@ -1,0 +1,97 @@
+/* ---------------FOOTER------------------ */
+
+.footer {
+  /* border-top: 5px solid var(--accent); */
+  padding: 2rem;
+  background-color: var(--bg);
+  width: 100%;
+  padding-bottom: 5rem;
+}
+.footer .content {
+  max-width: 1400px;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: auto;
+  color: var(--p);
+}
+.footer .desc {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  max-width: 250px;
+
+  gap: 1rem;
+}
+.footer p {
+  text-align: left;
+  color: var(--p);
+  margin: 0;
+}
+.footer .media {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+}
+.footer .media > a {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid rgb(88, 88, 88);
+  cursor: pointer;
+}
+.footer .media > a:hover {
+  color: var(--bg-dark);
+  background-color: var(--p2);
+}
+.footer .media > a > svg {
+  margin: auto;
+  margin-top: 10px;
+}
+.footer h3 {
+  color: var(--p);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer li {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 12px;
+  color: var(--p);
+  font-size: 16px;
+}
+.footer li a {
+  cursor: pointer;
+}
+.footer li a:hover {
+  color: gray;
+}
+.footer ul {
+  padding: 0;
+}
+.footer .vert {
+  width: 1px;
+  content: "";
+  height: 150px;
+  margin-top: 2rem;
+  border-left: 1px solid gray;
+}
+.footer .contact_ li, .footer .contact_ li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 200px;
+  text-decoration: none;
+  color: var(--p2);
+}
+.footer .contact_ li a:visited{
+  text-decoration: none;
+  color: var(--p2);
+}
+.footer .contact_ svg {
+  min-width: 24px;
+  height: 24px;
+}

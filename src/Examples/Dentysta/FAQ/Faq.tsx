@@ -1,7 +1,6 @@
-import styles from "./styles.module.css";
+import styles from "./Faq.module.css";
 import { FaqElement } from "./FaqElement";
-import { LogoSvg } from "./SVG/LogoSvg";
-import { useInView } from "./useInView";
+import { useInView } from "../useInView";
 import clsx from "clsx";
 export default function Faq() {
   const { ref, isVisible } = useInView(0.2);

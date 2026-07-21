@@ -1,0 +1,107 @@
+.prices {
+}
+
+.prices h3 {
+}
+
+.prices h2 {
+}
+
+.prices p {
+}
+
+/* ---------- Layout ---------- */
+
+.prices .content {
+  margin-top: 48px;
+}
+
+.prices .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  .prices .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .prices .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Card ---------- */
+
+.prices .card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--bg-light);
+  padding: 28px;
+  /* margin: 20px; */
+}
+
+.prices .cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.prices .iconCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.prices .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.prices .cardTitle {
+  margin: 0;
+  font-size: 20px;
+  color: var(--p);
+  text-align: left;
+}
+
+/* ---------- Price list ---------- */
+.prices .priceList {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.prices .priceItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 16px;
+  color: var(--p);
+  
+}
+
+.prices .priceName {
+  opacity: 0.75;
+
+}
+
+.prices .priceValue {
+  font-weight: 600;
+  white-space: nowrap;
+}

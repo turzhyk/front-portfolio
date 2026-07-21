@@ -1,9 +1,8 @@
 import { Baby, Computer, MoveRight, Sparkle, Sparkles } from "lucide-react";
-import styles from "./styles.module.css";
-import { Clock2Svg } from "./SVG/Clock2Svg";
-import { LogoSvg } from "./SVG/LogoSvg";
-import { ZoomSvg } from "./SVG/ZoomSvg";
-import { ImplantSvg } from "./SVG/ImplantSvg";
+import styles from "./Uslugi.module.css";
+
+import { ZoomSvg } from "../SVG/ZoomSvg";
+import { ImplantSvg } from "../SVG/ImplantSvg";
 
 export const UslugiItem = ({
   title,
@@ -26,14 +25,14 @@ export const UslugiItem = ({
         <img src={image} alt="" loading="lazy" height={250} />
       </div>
       <div className={styles.iconwrapper}>{icon}</div>
-      
-      <h3>{title}</h3>
+      <div className={styles.bottom}><h3>{title}</h3>
       <p>{desc}</p>
      
       <a href="#contact" className={styles.cta}>
         Więcej
         <MoveRight color="currentColor" size={20}/>
-      </a>
+      </a></div>
+      
     </div>
   );
 };
