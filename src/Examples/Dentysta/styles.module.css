@@ -421,10 +421,10 @@ head a:visited {
   left: auto;
   right: auto;
   top: -50px;
-  padding-top: 15px;
+  padding-top: 10px;
   background-color: rgb(185, 205, 226);
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(16, 24, 40, 0.1);
 }
