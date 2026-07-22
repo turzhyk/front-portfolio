@@ -10,17 +10,17 @@ import Footer from "./Footer/Footer";
 export default function Dentysta() {
   return (
     <>
-      <Helmet>
+     <Helmet>
         <title>
-          Profesjonalna pielęgnacja Twojego ciała | MASAŻ POZNAŃ | DEMO
+          Ekskluzywna klinika stomatologiczna | Piękny uśmiech | DEMO
         </title>
         <meta
           name="description"
-          content="Indywidualne masaże i chwile relaksu stworzone z troską o Twoje samopoczucie. Komfort, spokój i pełne zaangażowanie."
+          content="Nowoczesna klinika stomatologiczna oferująca kompleksowe leczenie zębów, estetykę uśmiechu i profesjonalną opiekę dentystyczną. Zdrowy i piękny uśmiech każdego dnia."
         />
         <meta
           property="og:title"
-          content="Profesjonalna pielęgnacja Twojego ciała"
+          content="Profesjonalna opieka stomatologiczna"
         />
       </Helmet>
       <div className={styles.ex3}>

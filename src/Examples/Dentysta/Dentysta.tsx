@@ -41,32 +41,32 @@ export default function Dentysta() {
     <>
       <Helmet>
         <title>
-          Profesjonalna pielęgnacja Twojego ciała | MASAŻ POZNAŃ | DEMO
+          Ekskluzywna klinika stomatologiczna | Piękny uśmiech | DEMO
         </title>
         <meta
           name="description"
-          content="Indywidualne masaże i chwile relaksu stworzone z troską o Twoje samopoczucie. Komfort, spokój i pełne zaangażowanie."
+          content="Nowoczesna klinika stomatologiczna oferująca kompleksowe leczenie zębów, estetykę uśmiechu i profesjonalną opiekę dentystyczną. Zdrowy i piękny uśmiech każdego dnia."
         />
         <meta
           property="og:title"
-          content="Profesjonalna pielęgnacja Twojego ciała"
+          content="Profesjonalna opieka stomatologiczna"
         />
       </Helmet>
       <div className={styles.ex3}>
         <Header activeBlock={activeSection} />
         <DemoCta />
         <Hero />
-        <RunningLine/>
-         <Uslugi />
-        
-        <About/>
-       <Offer/>
-       <Team/>
-        <Process/>
-        <Opinion/>
-        <Faq/>
-        <Contact/>
-        <Footer/>
+        <RunningLine />
+        <Uslugi />
+
+        <About />
+        <Offer />
+        <Team />
+        <Process />
+        <Opinion />
+        <Faq />
+        <Contact />
+        <Footer />
       </div>
     </>
   );
