@@ -1,0 +1,156 @@
+.prices {
+}
+
+.prices h3 {
+}
+
+.prices h2 {
+}
+
+.prices p {
+}
+
+/* ---------- Layout ---------- */
+
+.prices .content {
+  margin-top: 48px;
+}
+
+.prices .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  .prices .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .prices .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Card ---------- */
+
+.prices .card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--bg-light);
+  padding: 28px;
+  /* margin: 20px; */
+}
+
+.prices .cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.prices .iconCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.prices .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.prices .cardTitle {
+  margin: 0;
+  font-size: 20px;
+  color: var(--p);
+  text-align: left;
+}
+
+/* ---------- Price list ---------- */
+.prices .priceList {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.prices .priceItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 16px;
+  color: var(--p);
+  
+}
+
+.prices .priceName {
+  opacity: 0.75;
+
+}
+
+.prices .priceValue {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.prices .cta_block {
+  width: auto;
+  background-color: var(--bg);
+  border: 1px solid rgb(var(--accent-values) / 40%);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.prices .cta_block .iconwrapper {
+  background-color: var(--accent);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  color: var(--bg-light);
+}
+.prices .cta_block .iconwrapper > svg {
+  margin-top: 20px;
+}
+.prices .cta_block .mid {
+  flex: 1;
+  padding: 0 20px;
+}
+.prices .cta_block h4,
+.prices .cta_block p {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+}
+.prices .cta_block .cta {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--accent);
+  border-radius: var(--radius);
+  padding: 0.7rem 2rem;
+  font-weight: 700;
+  color: var(--p-light);
+
+  font-size: 16px;
+}

@@ -5,6 +5,8 @@ import Home from "./Pages/Home";
 import NetHome from "./Pages/NetHome";
 import Warsztat from "./Examples/Warsztat/Warsztat";
 import Masaz from "./Examples/Masaz/Masaz";
+import Dentysta from "./Examples/Dentysta/Dentysta";
+import DentystaPrices from "./Examples/Dentysta/DentystaPrices";
 // lazy-load тяжёлых секций
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
       <Route path="net" element={<NetHome/>}/>
       <Route path="demo/warsztat" element={<Warsztat/>}/>
       <Route path="demo/masaz" element={<Masaz/>}/>
+      <Route path="demo/dentysta" element={<Dentysta/>}/>
+      <Route path="demo/dentysta/prices" element={<DentystaPrices/>}/>
     </Routes>
   );
 }

@@ -1,0 +1,112 @@
+/* ---------------FAQ------------------ */
+
+.faq {
+  margin: 2rem auto;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(200px);
+  transition-duration: 300ms;
+}
+.faq.visible {
+  opacity: 1;
+  transform: none;
+}
+.faq .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap:10px;
+  row-gap: 10px;
+  margin: auto;
+  width: 1000px;
+  max-width: 1000px;
+
+  margin-top: 30px;
+}
+.faq .faq_item:hover {
+  background-color: rgb(217, 217, 217);
+}
+.faq .faq_item {
+  text-align: left;
+  flex: 1;
+  font-size: 14px;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  /* background-color: var(--bg); */
+  border: 1px solid rgb(184, 184, 184);
+}
+.faq .faq_item .title p {
+  color: var(--bg-dark);
+  font-weight: 600;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+.faq .faq_item .title {
+  text-align: left;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq .faq_item svg {
+  transform: scaleY(-1);
+  transition-duration: 200ms;
+  color: var(--accent);
+}
+.faq .faq_item.opened svg {
+  transform: scaleY(1);
+}
+.faq .faq_item .content p {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+.faq .faq_item .content {
+  max-height: 0px;
+  margin-top: 15px;
+  /* display: none; */
+  overflow: hidden;
+  transition-duration: 500ms;
+  /* margin-left: 0.5rem; */
+}
+.faq .faq_item.opened .content {
+  max-height: 200px;
+}
+
+@media screen and (max-width: 1200px) {
+  .faq,
+  .faq .wrapper {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .faq .wrapper {
+    padding: 0 10px;
+    padding-top: 15px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .faq {
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+  }
+  .faq .wrapper {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+  .faq .faq_item {
+    padding: 15px;
+border-radius: 0;
+border: none;
+border-bottom: 1px solid rgb(192, 192, 192);
+  }
+}

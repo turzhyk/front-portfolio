@@ -1,0 +1,172 @@
+/* -----------------HERO------------------ */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background-color: var(--bg-light);
+  padding-top: 50px;
+  background:
+    linear-gradient(90deg, rgba(251, 251, 251, 0) 85%, rgb(251, 251, 251) 100%),
+    url("/images/demo/dentysta_hero2.webp");
+  background-position: right;
+  z-index: 0;
+  background-position: right 150px center;
+  background-size: 1000px;
+  background-repeat: no-repeat;
+}
+
+.hero .content {
+  max-width: 1300px;
+  padding: 2rem;
+  text-align: left;
+  margin: auto;
+  z-index: 5;
+}
+
+.hero h1 {
+  color: var(--p);
+  font-size: 60px;
+  max-width: 600px;
+  font-weight: 600;
+}
+.hero p {
+  color: var(--p);
+  max-width: 500px;
+  font-size: 18px;
+}
+.hero .cta_list {
+  display: flex;
+  justify-content: left;
+  gap: 2rem;
+  margin-top: 40px;
+}
+.hero .cta_list > * {
+  padding: 1rem 3rem;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+.hero a.cta_call {
+  background-color: var(--accent);
+  color: var(--p-light);
+  border: none;
+}
+.hero .cta_reserve {
+  border: 1px solid var(--p-light2);
+  color: var(--p);
+  font-weight: 600;
+}
+.hero .cta_call:hover {
+  box-shadow: 0px 2px 20px rgba(0, 34, 255, 0.507);
+}
+.hero .cta_reserve:hover {
+  /* border-width: 4px;
+  box-sizing: content-box; */
+  box-shadow: 0px 2px 20px rgba(255, 255, 255, 0.261);
+}
+.hero .post_cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: var(--p-light2);
+}
+.hero .features {
+  display: flex;
+  gap: 2rem;
+  margin-top: 20px;
+}
+.hero .feature {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.hero .feature .icon {
+  background-color: rgb(219, 224, 232);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.hero .feature .icon svg {
+  margin: 5px;
+  color: var(--accent);
+}
+.hero .feature p,
+.hero .feature strong {
+  max-width: 250px;
+  color: var(--p-light);
+  margin: 0;
+  color: var(--p);
+  font-size: 15px;
+}
+@media screen and (max-width: 1200px) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .hero .feature {
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+  }
+  .hero .feature svg {
+    height: 40px;
+    margin: 0;
+  }
+  .hero .feature p {
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hero {
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 0;
+     background:
+    linear-gradient(90deg, rgb(251, 251, 251, 0.5) 100%, rgb(251, 251, 251, 0.5) 100%),
+    url("/images/demo/dentysta_hero2.webp");
+      background-position: center ;
+    
+  }
+  .hero .content {
+    padding: 10px;
+    padding-top: 10px;
+    margin-top: 0;
+    height: auto;
+  }
+    .hero .content h1,   .hero .content h3{
+      text-align: center;
+    }
+  .hero ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero .features {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .hero .cta_list {
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 10px;
+  }
+  .hero .cta_list > * {
+    margin: 0;
+  }
+  .hero .cta_reserve{
+    backdrop-filter: blur(20px);
+    border-color: var(--accent);
+  }
+  .hero .feature .icon{
+    background-color: var(--bg-light);
+  }
+}

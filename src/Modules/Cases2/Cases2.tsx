@@ -60,6 +60,32 @@ export default function Cases2() {
             </div>
           </div>
         </div>
+        <div className="case">
+          <div className="pic">
+            <img width={300} height={200} src="images/case3.webp" />
+          </div>
+         <div className="center">
+            <h3>{t("cases2.case3.h")}</h3>
+            <ul>
+              <li>{t("cases2.case3.li1")}</li>
+              <li>{t("cases2.case3.li2")}</li>
+              <li>{t("cases2.case3.li3")}</li>
+              <li>{t("cases2.case2.li4")}</li>
+            </ul>
+            <a target="_blank" rel="noopener noreferrer" href="/demo/dentysta">Zobać demo<img src="/svg/external_link.svg" alt="" width={20}/></a>
+          </div>
+          <div className="vert" />
+          <div className="right">
+            <div>
+              <p className="price-tag">{t("cases2.price")}</p>
+              <p className="price">&lt;{t("cases2.case3.price")}</p>
+            </div>
+            <div>
+              <p className="price-tag">{t("cases2.time")}</p>
+              <p className="price">&lt;{t("cases2.case3.time")}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
