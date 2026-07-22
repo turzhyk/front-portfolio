@@ -124,7 +124,7 @@
 }
 .opinion .item .quoteIcon {
   border-radius: 50%;
-  color:var(-accent);
+  color:var(--accent);
   background-color: var(--bg);
   width: 60px;
   height: 60px;
