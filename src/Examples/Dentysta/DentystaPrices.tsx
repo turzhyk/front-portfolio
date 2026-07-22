@@ -1,4 +1,3 @@
-
 import styles from "./styles.module.css";
 
 import DemoCta from "../DemoCta";
@@ -6,6 +5,7 @@ import DemoCta from "../DemoCta";
 import { Helmet } from "react-helmet-async";
 import Header from "./Header";
 import Prices from "./Prices/Prices";
+import Footer from "./Footer/Footer";
 
 export default function Dentysta() {
   return (
@@ -26,7 +26,8 @@ export default function Dentysta() {
       <div className={styles.ex3}>
         <Header activeBlock={""} />
         <DemoCta />
-            <Prices/>
+        <Prices />
+        <Footer />
       </div>
     </>
   );

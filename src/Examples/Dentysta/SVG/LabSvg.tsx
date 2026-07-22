@@ -1,6 +1,6 @@
 import type { SvgProps } from "./SvgProps";
 
-export const LabSvg = ({ size, cls, thickness }: SvgProps) => {
+export const LabSvg = ({ size, cls }: SvgProps) => {
   return (
    <svg fill="currentColor" className={cls} height={size} width={size} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
 	 viewBox="0 0 333.045 333.045" >

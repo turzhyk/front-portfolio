@@ -47,7 +47,7 @@ const doctors: Doctor[] = [
 
 const Team: React.FC = () => {
   return (
-    <section className={styles.team}>
+    <section id='team' className={styles.team}>
       <h3>NASZ ZESPÓŁ</h3>
       <h2>Poznaj naszych lekarzy</h2>
       <p>

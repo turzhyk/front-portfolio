@@ -1,6 +1,6 @@
-import React from "react";
+
 import styles from "./styles.module.css";
-import { LogoSvg } from "./SVG/LogoSvg";
+
 import { useInView } from "./useInView";
 export default function Process() {
    const { ref, isVisible } = useInView(0.4);

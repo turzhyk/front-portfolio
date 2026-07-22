@@ -1,6 +1,15 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
-import { Calendar, Calendar1, Car, Locate, Mail, Phone, ShieldCheck, User } from "lucide-react";
+import {
+  Calendar,
+  Calendar1,
+  Car,
+  Locate,
+  Mail,
+  Phone,
+  ShieldCheck,
+  User,
+} from "lucide-react";
 import { ToothSvg } from "../SVG/ToothSvg";
 import { ToothBigSvg } from "../SVG/ToothBigSvg";
 
@@ -23,25 +32,60 @@ const initialState: ContactFormState = {
   service: "",
   message: "",
 };
-
+const visitTimes = [
+  "9:00",
+  "9:30",
+  "10:00",
+  "10:30",
+  "11:00",
+  "11:30",
+  "12:00",
+  "12:30",
+  "13:00",
+  "13:30",
+  "14:00",
+  "14:30",
+  "15:00",
+  "15:30",
+  "16:00",
+  "16:30",
+  "17:00",
+  "17:30",
+  "18:00",
+  "18:30",
+  "19:00",
+];
 export default function Contact() {
   const [form, setForm] = useState<ContactFormState>(initialState);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
   ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
+  const dates = Array.from({ length: 7 }, (_, i) => {
+    const date = new Date();
+    date.setDate(date.getDate() + i);
 
-  const handleSubmit =  (e: React.FormEvent<HTMLFormElement>) => {
+    return {
+      value: new Intl.DateTimeFormat("pl-PL", {
+        day: "2-digit",
+        month: "2-digit",
+      }).format(date),
+    };
+  });
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO: wire up submission
     console.log(form);
+      alert("Dziękujemy! Twoja wiadomość została wysłana.");
   };
 
   return (
-    <section className={styles.contact}>
+    <section id="contact" className={styles.contact}>
       <h3>KONTAKT</h3>
       <h2>Umów wizytę</h2>
       <p>Skontaktuj się z nami i wybierz dogodny termin wizyty.</p>
@@ -52,7 +96,7 @@ export default function Contact() {
           <div className={styles.formCard}>
             <div className={styles.formHeader}>
               <div className={styles.iconCircle}>
-                <Calendar/>
+                <Calendar />
               </div>
               <div>
                 <h4 className={styles.formTitle}>Umów wizytę</h4>
@@ -68,7 +112,7 @@ export default function Contact() {
                 <div className={styles.field}>
                   <label htmlFor="fullName">Imię i nazwisko *</label>
                   <div className={styles.inputWrapper}>
-                    <User className={styles.inputIcon}/>
+                    <User className={styles.inputIcon} />
                     <input
                       id="fullName"
                       name="fullName"
@@ -84,7 +128,7 @@ export default function Contact() {
                 <div className={styles.field}>
                   <label htmlFor="phone">Numer telefonu *</label>
                   <div className={styles.inputWrapper}>
-                   <Phone className={styles.inputIcon}/>
+                    <Phone className={styles.inputIcon} />
                     <input
                       id="phone"
                       name="phone"
@@ -102,7 +146,7 @@ export default function Contact() {
                 <div className={styles.field}>
                   <label htmlFor="email">Adres e-mail</label>
                   <div className={styles.inputWrapper}>
-                    <Mail className={styles.inputIcon}/>
+                    <Mail className={styles.inputIcon} />
                     <input
                       id="email"
                       name="email"
@@ -117,7 +161,7 @@ export default function Contact() {
                 <div className={styles.field}>
                   <label htmlFor="date">Preferowana data wizyty</label>
                   <div className={styles.inputWrapper}>
-                   <Calendar className={styles.inputIcon}/>
+                    <Calendar className={styles.inputIcon} />
                     <select
                       id="date"
                       name="date"
@@ -125,8 +169,18 @@ export default function Contact() {
                       onChange={handleChange}
                     >
                       <option value="">Wybierz datę</option>
+
+                      {dates.map((date) => (
+                        <option key={date.value} value={date.value}>
+                          {date.value}
+                        </option>
+                      ))}
                     </select>
-                    <img src="/icons/chevron-down.svg" alt="" className={styles.selectChevron} />
+                    <img
+                      src="/icons/chevron-down.svg"
+                      alt=""
+                      className={styles.selectChevron}
+                    />
                   </div>
                 </div>
               </div>
@@ -135,7 +189,11 @@ export default function Contact() {
                 <div className={styles.field}>
                   <label htmlFor="time">Preferowana godzina</label>
                   <div className={styles.inputWrapper}>
-                    <img src="/icons/clock.svg" alt="" className={styles.inputIcon} />
+                    <img
+                      src="/icons/clock.svg"
+                      alt=""
+                      className={styles.inputIcon}
+                    />
                     <select
                       id="time"
                       name="time"
@@ -143,15 +201,30 @@ export default function Contact() {
                       onChange={handleChange}
                     >
                       <option value="">Wybierz godzinę</option>
+                      {visitTimes.map((i) => {
+                        return (
+                          <option value={i} key={i}>
+                            {i}
+                          </option>
+                        );
+                      })}
                     </select>
-                    <img src="/icons/chevron-down.svg" alt="" className={styles.selectChevron} />
+                    <img
+                      src="/icons/chevron-down.svg"
+                      alt=""
+                      className={styles.selectChevron}
+                    />
                   </div>
                 </div>
 
                 <div className={styles.field}>
                   <label htmlFor="service">Wybierz usługę</label>
                   <div className={styles.inputWrapper}>
-                    <ToothSvg className={styles.inputIcon} size={20} thickness={1} />
+                    <ToothSvg
+                      className={styles.inputIcon}
+                      size={20}
+                      thickness={1}
+                    />
                     <select
                       id="service"
                       name="service"
@@ -159,16 +232,43 @@ export default function Contact() {
                       onChange={handleChange}
                     >
                       <option value="">Wybierz usługę</option>
+                      <option value="Wizyta kontrolna">Wizyta kontrolna</option>
+                      <option value="Leczenie próchnicy">
+                        Leczenie próchnicy
+                      </option>
+                      <option value="Wypełnienie kompozytowe">
+                        Wypełnienie kompozytowe
+                      </option>
+                      <option value="Leczenie kanałowe">
+                        Leczenie kanałowe
+                      </option>
+                      <option value="Implanty">Implanty</option>
+                      <option value="Korony">Korony</option>
+                      <option value="Wybielanie zębów">Wybielanie zębów</option>
+                      <option value="Licówki">Licówki</option>
+                      <option value="Bonding">Bonding</option>
+                      <option value="Higienizacja">Higienizacja</option>
+                      <option value="Inne">Inne</option>
                     </select>
-                    <img src="/icons/chevron-down.svg" alt="" className={styles.selectChevron} />
+                    <img
+                      src="/icons/chevron-down.svg"
+                      alt=""
+                      className={styles.selectChevron}
+                    />
                   </div>
                 </div>
               </div>
 
               <div className={styles.field}>
-                <label htmlFor="message">Dodatkowe informacje (opcjonalnie)</label>
+                <label htmlFor="message">
+                  Dodatkowe informacje (opcjonalnie)
+                </label>
                 <div className={styles.textareaWrapper}>
-                  <img src="/icons/message.svg" alt="" className={styles.textareaIcon} />
+                  <img
+                    src="/icons/message.svg"
+                    alt=""
+                    className={styles.textareaIcon}
+                  />
                   <textarea
                     id="message"
                     name="message"
@@ -182,11 +282,13 @@ export default function Contact() {
 
               <div className={styles.formFooter}>
                 <div className={styles.privacyNote}>
-                  <ShieldCheck/>
-                  <span>Twoje dane są bezpieczne i nie udostępniamy ich osobom trzecim.</span>
+                  <ShieldCheck />
+                  <span>
+                    Twoje dane są bezpieczne i nie udostępniamy ich osobom
+                    trzecim.
+                  </span>
                 </div>
                 <button type="submit" className={styles.submitButton}>
-                
                   Wyślij zapytanie
                 </button>
               </div>
@@ -198,7 +300,11 @@ export default function Contact() {
             <div className={styles.infoCard}>
               <div className={styles.infoHeader}>
                 <div className={styles.iconCircle}>
-                  <ToothBigSvg className={styles.icon} size={40} thickness={1}/>
+                  <ToothBigSvg
+                    className={styles.icon}
+                    size={40}
+                    thickness={1}
+                  />
                 </div>
                 <h4 className={styles.infoTitle}>Dane kontaktowe</h4>
               </div>
@@ -206,47 +312,64 @@ export default function Contact() {
               <ul className={styles.infoList}>
                 <li className={styles.item}>
                   <div className={styles.itemIconCircle}>
-                   <Phone size={25} className={styles.itemIcon} />
+                    <Phone size={25} className={styles.itemIcon} />
                   </div>
                   <div className={styles.itemContent}>
                     <span className={styles.itemLabel}>Telefon</span>
-                    <a href="tel:600123456" className={styles.itemLink}>600 123 456</a>
-                    <span className={styles.itemNote}>Pon. – Pt.: 8:00 – 20:00</span>
+                    <a href="tel:600123456" className={styles.itemLink}>
+                      600 123 456
+                    </a>
+                    <span className={styles.itemNote}>
+                      Pon. – Pt.: 8:00 – 20:00
+                    </span>
                   </div>
                 </li>
 
                 <li className={styles.item}>
                   <div className={styles.itemIconCircle}>
-                   <Mail size={25}  className={styles.itemIcon} />
+                    <Mail size={25} className={styles.itemIcon} />
                   </div>
                   <div className={styles.itemContent}>
                     <span className={styles.itemLabel}>E-mail</span>
-                    <a href="mailto:kontakt@usmiechstomatologia.pl" className={styles.itemLink}>
+                    <a
+                      href="mailto:kontakt@usmiechstomatologia.pl"
+                      className={styles.itemLink}
+                    >
                       kontakt@usmiechstomatologia.pl
                     </a>
-                    <span className={styles.itemNote}>Odpowiadamy w ciągu 24h</span>
+                    <span className={styles.itemNote}>
+                      Odpowiadamy w ciągu 24h
+                    </span>
                   </div>
                 </li>
 
                 <li className={styles.item}>
                   <div className={styles.itemIconCircle}>
-                    <Locate  size={25}  className={styles.itemIcon} />
+                    <Locate size={25} className={styles.itemIcon} />
                   </div>
                   <div className={styles.itemContent}>
                     <span className={styles.itemLabel}>Adres</span>
-                    <span className={styles.itemLink}>ul. Uśmiechnięta 15, 60-001 Poznań</span>
-                    <a href="#map" className={styles.itemAction}>Zobacz na mapie</a>
+                    <span className={styles.itemLink}>
+                      ul. Uśmiechnięta 15, 60-001 Poznań
+                    </span>
+                    <a href="#map" className={styles.itemAction}>
+                      Zobacz na mapie
+                    </a>
                   </div>
                 </li>
 
                 <li className={styles.item}>
                   <div className={styles.itemIconCircle}>
-                   <Calendar1  size={25}  className={styles.itemIcon} />
+                    <Calendar1 size={25} className={styles.itemIcon} />
                   </div>
                   <div className={styles.itemContent}>
                     <span className={styles.itemLabel}>Godziny otwarcia</span>
-                    <span className={styles.itemNote}>Pon. – Pt.: 8:00 – 20:00</span>
-                    <span className={styles.itemNote}>Sobota: 9:00 – 14:00</span>
+                    <span className={styles.itemNote}>
+                      Pon. – Pt.: 8:00 – 20:00
+                    </span>
+                    <span className={styles.itemNote}>
+                      Sobota: 9:00 – 14:00
+                    </span>
                   </div>
                 </li>
               </ul>
@@ -254,15 +377,23 @@ export default function Contact() {
 
             <div className={styles.mapCard}>
               <div className={styles.mapImageWrapper}>
-                <img src="/images/demo/dentysta_contact_1.webp" alt="Mapa dojazdu" className={styles.mapImage} />
+                <img
+                  src="/images/demo/dentysta_contact_1.webp"
+                  alt="Mapa dojazdu"
+                  className={styles.mapImage}
+                />
               </div>
               <div className={styles.mapFooter}>
                 <div className={styles.itemIconCircle}>
-                <Car className={styles.itemIcon}/>
+                  <Car className={styles.itemIcon} />
                 </div>
                 <div className={styles.itemContent}>
-                  <span className={styles.itemLabel}>Darmowy parking dla pacjentów</span>
-                  <span className={styles.itemNote}>Wjazd od ul. Uśmiechniętej</span>
+                  <span className={styles.itemLabel}>
+                    Darmowy parking dla pacjentów
+                  </span>
+                  <span className={styles.itemNote}>
+                    Wjazd od ul. Uśmiechniętej
+                  </span>
                 </div>
               </div>
             </div>
@@ -273,17 +404,18 @@ export default function Contact() {
         <div className={styles.banners}>
           <div className={styles.banner}>
             <div className={styles.itemIconCircle}>
-             <Phone className={styles.itemIcon} />
+              <Phone className={styles.itemIcon} />
             </div>
             <div className={styles.itemContent}>
-              <span className={styles.bannerTitle}>Wolisz umówić się telefonicznie?</span>
+              <span className={styles.bannerTitle}>
+                Wolisz umówić się telefonicznie?
+              </span>
               <span className={styles.itemNote}>
                 Zadzwoń do nas – chętnie pomożemy wybrać dogodny termin.
               </span>
             </div>
             <a href="tel:600123456" className={styles.bannerButton}>
-                <Phone className={styles.buttonIcon} />
-             
+              <Phone className={styles.buttonIcon} />
               600 123 456
             </a>
           </div>

@@ -105,3 +105,52 @@
   font-weight: 600;
   white-space: nowrap;
 }
+
+.prices .cta_block {
+  width: auto;
+  background-color: var(--bg);
+  border: 1px solid rgb(var(--accent-values) / 40%);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.prices .cta_block .iconwrapper {
+  background-color: var(--accent);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  color: var(--bg-light);
+}
+.prices .cta_block .iconwrapper > svg {
+  margin-top: 20px;
+}
+.prices .cta_block .mid {
+  flex: 1;
+  padding: 0 20px;
+}
+.prices .cta_block h4,
+.prices .cta_block p {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+}
+.prices .cta_block .cta {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--accent);
+  border-radius: var(--radius);
+  padding: 0.7rem 2rem;
+  font-weight: 700;
+  color: var(--p-light);
+
+  font-size: 16px;
+}

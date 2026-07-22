@@ -104,10 +104,16 @@
 }
 
 @media screen and (max-width: 800px) {
+  .about{
+    height: auto;
+    /* visibility: hidden; */
+  }
   .about .content {
     gap: 0;
     flex-direction: column;
     gap: 10px;
+     height: auto;
+     margin-bottom: 50px;
   }
   .about .left {
     min-width: 0;

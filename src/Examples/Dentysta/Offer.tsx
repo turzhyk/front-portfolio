@@ -1,6 +1,6 @@
-import React from "react";
+
 import styles from "./styles.module.css";
-import { Calendar, CheckCircle, Info, MoveRight, Sparkles } from "lucide-react";
+import { Calendar,  Info, MoveRight, Sparkles } from "lucide-react";
 import { ImplantSvg } from "./SVG/ImplantSvg";
 import { ZoomSvg } from "./SVG/ZoomSvg";
 
@@ -35,7 +35,7 @@ export default function Offer() {
             </li>
           </ul>
 
-          <a href="#contact" className={styles.cta}>
+          <a href="/demo/dentysta/prices" className={styles.cta}>
             Więcej
             <MoveRight color="currentColor" size={20} />
           </a>
@@ -59,7 +59,7 @@ export default function Offer() {
             </li>
           </ul>
 
-          <a href="#contact" className={styles.cta}>
+          <a href="/demo/dentysta/prices" className={styles.cta}>
             Więcej
             <MoveRight color="currentColor" size={20} />
           </a>
@@ -83,7 +83,7 @@ export default function Offer() {
             </li>
           </ul>
 
-          <a href="#contact" className={styles.cta}>
+          <a href="/demo/dentysta/prices" className={styles.cta}>
             Więcej
             <MoveRight color="currentColor" size={20} />
           </a>

@@ -720,6 +720,12 @@ head a:visited {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1400px) {
+  .offer, .offer .wrapper{
+    max-width: 100%;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .header .mid {
     display: none;

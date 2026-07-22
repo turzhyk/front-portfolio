@@ -53,7 +53,7 @@
   cursor: pointer;
   transition-duration: 200ms;
 }
-.hero .cta_call {
+.hero a.cta_call {
   background-color: var(--accent);
   color: var(--p-light);
   border: none;

@@ -12,12 +12,12 @@ export default function Hero() {
           gwarancją.
         </p>
         <div className={styles.cta_list}>
-          <button className={styles.cta_call}>
+          <a href="#contact" className={styles.cta_call}>
             {" "}
             <Calendar />
             Umów wizyte
-          </button>
-          <a className={styles.cta_reserve}>Nasze usługi</a>
+          </a>
+          <a href="#cennik" className={styles.cta_reserve}>Nasze usługi</a>
         </div>
 
         <div className={styles.features}>

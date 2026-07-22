@@ -11,23 +11,28 @@ export default function Header({ activeBlock }: { activeBlock: string }) {
           <nav className={styles.mid}>
             <ul>
               <li className={activeBlock == "hero" ? styles.active : ""}>
-                <a href="#hero">Głowna</a>
+                <a href="/demo/dentysta#hero">Głowna</a>
               </li>
             
               <li  className={activeBlock == "uslugi" ? styles.active : ""}>
-                <a href="#uslugi">Usługi</a>
+                <a href="/demo/dentysta#uslugi">Usługi</a>
               </li>
-              <li className={activeBlock == "aboutme" ? styles.active : ""}>
-                <a href="#aboutme">O mnie</a>
+          
+              <li className={activeBlock == "offer" ? styles.active : ""}>
+                <a href="/demo/dentysta#offer">Ceny</a>
+              </li>
+              <li className={activeBlock == "team" ? styles.active : ""}>
+                <a href="/demo/dentysta#team">Poznaj nas</a>
               </li>
               <li className={activeBlock == "opinion" ? styles.active : ""}>
-                <a href="#opinion">Opinia</a>
+                <a href="/demo/dentysta#opinion">Opinia</a>
               </li>
+            
               <li className={activeBlock == "faq" ? styles.active : ""}>
-                <a href="#faq">Pytania </a>
+                <a href="/demo/dentysta#faq">Pytania </a>
               </li>
               <li className={activeBlock == "contact" ? styles.active : ""}>
-                <a href="#contact">Kontakt</a>
+                <a href="/demo/dentysta#contact">Kontakt</a>
               </li>
             </ul>
           </nav>

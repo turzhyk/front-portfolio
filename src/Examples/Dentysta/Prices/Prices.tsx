@@ -1,3 +1,4 @@
+import { Calendar } from "lucide-react";
 import styles from "./Prices.module.css";
 
 interface PriceItem {
@@ -159,6 +160,22 @@ export default function Prices() {
             </div>
           ))}
         </div>
+      </div>
+       <div className={styles.cta_block}>
+        <div className={styles.iconwrapper}>
+          <Calendar size={50} strokeWidth={1} color="currentColor" />
+        </div>
+        <div className={styles.mid}>
+          <h4>Masz pytania? Umów się na wizytę</h4>
+          <p>
+            Chętnie odpowiemy na wszystkie pytania i dobierzemy najlepsze
+            rozwiązanie dla Ciebie.
+          </p>
+        </div>
+        <a href="/demo/dentysta/#contact" className={styles.cta}>
+          <Calendar size={30} strokeWidth={1.5} color="currentColor" />
+          Umów wizytę
+        </a>
       </div>
     </section>
   );

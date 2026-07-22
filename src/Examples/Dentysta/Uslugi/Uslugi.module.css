@@ -63,6 +63,13 @@
 .uslugi .item .iconwrapper svg {
   margin-top: 20px;
 }
+.uslugi .item .bottom{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
 .uslugi .item h3 {
   width: 100%;
   margin-bottom: 0;
@@ -99,11 +106,9 @@
 }
 .uslugi .item .cta {
   padding: 1rem 2rem;
-  margin: 20px 0;
-
+  margin: 20px 20px;
   font-size: 16px;
   font-weight: 700;
-
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -137,8 +142,22 @@
   background-color: var(--bg-light);
   border: 1px solid rgb(198, 198, 198);
   color: var(--p);
+  transition-duration: 200ms;
 }
-
+.uslugi a.cta2:hover{
+background-color: var(--bg);
+}
+.uslugi a.cta2 svg {
+  transition-duration: 100ms;
+}
+.uslugi a.cta2:hover svg {
+  transform: translateX(10px);
+}
+@media screen and (max-width:1400px) {
+  .uslugi .wrapper{
+  width: 100%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .uslugi {
     max-width: 100%;

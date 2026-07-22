@@ -1,7 +1,7 @@
-import React from "react";
+
 import styles from "./styles.module.css";
 import { Gift, Heart } from "lucide-react";
-import { ToothSvg } from "./SVG/ToothSvg";
+
 import { ToothFillSvg } from "./SVG/ToothFillSvg";
 export default function RunningLine() {
   return (

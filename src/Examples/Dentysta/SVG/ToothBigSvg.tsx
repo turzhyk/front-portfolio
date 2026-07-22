@@ -1,6 +1,6 @@
 import type { SvgProps } from "./SvgProps";
 
-export const ToothBigSvg = ({ size, cls, thickness, ...props}: SvgProps) => {
+export const ToothBigSvg = ({ size, ...props}: SvgProps) => {
   return (
    <svg fill="currentColor" {...props} height={size} width={size}  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
 	 viewBox="0 0 242.45 242.45">

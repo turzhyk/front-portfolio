@@ -12,81 +12,69 @@ export default function Footer() {
     <footer id="footer" className={styles.footer}>
       <div className={styles.content}>
         <div className={styles.desc}>
-          <img src="/images/demo/warsztat_logo.webp" width={200} alt="logo" />
-          <p>Profesjonalny serwis twojego samochodu</p>
+          <img src="/images/demo/dentysta_logo.webp" width={200} alt="logo" />
+          <p>Profesjonalna opieka nad Twoim uśmiechem</p>
           <p>
-            {" "}
-            Kompleksowa naprawa i obsługa pojazdów osobowych. Szybko, uczciwie i
-            z gwarancją.
+            Kompleksowe leczenie i profilaktyka stomatologiczna. Nowoczesne
+            metody, doświadczeni specjaliści i komfort na każdym etapie.А
           </p>
-          <div className={styles.media}>
-            <a>
-              <FacebookThinSvg size={22} thickness={0} cls={styles.media} />
-            </a>
-            <a>
-              <InstagramSvg size={22} thickness={0} cls={styles.media} />
-            </a>
-          </div>
         </div>
         <nav className={styles.nav}>
           <h3>Navigacja</h3>
           <ul>
             <li>
-              <a>Strona głowna</a>
+              <a href="/demo/dentysta#hero">Strona głowna</a>
             </li>
             <li>
-              <a>Usługi</a>
+              <a href="/demo/dentysta#uslugi">Usługi</a>
             </li>
             <li>
-              <a>O nas</a>
+              <a href="/demo/dentysta#about">O nas</a>
             </li>
             <li>
-              <a>Galeria</a>
+              <a href="/demo/dentysta#offer">Cennik</a>
+            </li>
+            <li>
+              <a href="/demo/dentysta#team">Poznaj nas</a>
+            </li>
+            <li>
+              <a href="/demo/dentysta#faq">Pytania i opdowiedzi</a>
+            </li>
+            <li>
+              <a href="/demo/dentysta#contact">Kontakt</a>
             </li>
           </ul>
         </nav>
-        <div className={styles.vert} />
+
         <nav className={styles.nav}>
           <h3>Usługi</h3>
           <ul>
             <li>
-              <a>Diagnostyka</a>
+              <a href="/demo/dentysta/prices">Stomatologia zachowawcza</a>
             </li>
             <li>
-              <a>Naprawy mechaniczne</a>
+              <a href="/demo/dentysta/prices">Implantologia</a>
             </li>
             <li>
-              <a>Hamulce</a>
-            </li>
-            <li>
-              <a>Wymiana oleju</a>
-            </li>
-            <li>
-              <a>Inne</a>
+              <a href="/demo/dentysta/prices">Stomatologia estetyczna</a>
             </li>
           </ul>
         </nav>
-        <div className={styles.vert} />
-        <div className={styles.contact_}>
+
+        <div className={styles.contactCol}>
           <h3>Kontakt</h3>
           <ul>
             <li>
               <a href="tel:123 456 789">
-                <PhoneSvg
-                  thickness={2}
-                  size={25}
-                  cls={styles.accent_icon}
-                />
-                123 456 789
+                <PhoneSvg thickness={2} size={25} cls={styles.accent_icon} />
+                066 456 789
               </a>
             </li>
             <li>
-              <Clock2Svg
-                thickness={2}
-                size={25}
-                cls={styles.accent_icon}
-              />
-              Pn-Pt: 8:00-16:00
+              <Clock2Svg thickness={2} size={25} cls={styles.accent_icon} />
+              Pon. – Pt.: 8:00 – 20:00
+              <br />
+              Sobota: 9:00 – 14:00
             </li>
             <li>
               <LocationSvg
@@ -95,25 +83,30 @@ export default function Footer() {
                 height="24"
                 cls={styles.accent_icon}
               />
-              ul. Przemysłowa 12 60-123 Poznan
+              ul. Uśmiechnięta 15, 60-001 Poznań
             </li>
             <li>
               <a href="mailto:kontakt@automax.pl">
-              <MailSvg thickness={2} size={24} cls={styles.accent_icon} />
-              kontakt@automax.pl</a>
+                <MailSvg thickness={2} size={24} cls={styles.accent_icon} />
+                kontakt@usmiechstomatologia.pl
+              </a>
             </li>
           </ul>
-        </div>
-        <div className={styles.vert} />
-        <div>
           <h3>Gdzie nas znajdziesz?</h3>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2872.2038793069987!2d16.920884412588805!3d52.44234397192433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470443520619846b%3A0xc0b47065da8e1dd3!2zV2lub2dyYWR5LCA2MC0xMDEg0J_QvtC30L3QsNC90Yw!5e1!3m2!1sru!2spl!4v1782673424560!5m2!1sru!2spl"
-            width="300"
-            height="200"
-            loading="lazy"
-          ></iframe>
+          <img
+            className={styles.locationImage}
+            src="/images/demo/dentysta_contact_1.webp"
+            alt="location"
+          />
         </div>
+      </div>
+      <div className={styles.media}>
+        <a>
+          <FacebookThinSvg size={22} thickness={0} />
+        </a>
+        <a>
+          <InstagramSvg size={22} thickness={0} />
+        </a>
       </div>
     </footer>
   );
