@@ -22,6 +22,9 @@
   box-shadow: var(--shadow2);
 }
 .uslugi .item {
+  opacity: 0;
+  transform: translateY(100px);
+  transition-duration: 200ms;
   box-shadow: var(--shadow1);
   display: flex;
   flex-direction: column;
@@ -36,6 +39,17 @@
   flex: 1;
   position: relative;
   text-align: center;
+}
+.uslugi h2, .uslugi p, .uslugi h3{
+  opacity: 0;
+  transition-duration: 300ms;
+}
+.uslugi.visible h2, .uslugi.visible h3, .uslugi.visible p {
+  opacity: 1;
+}
+.uslugi .wrapper.visible .item {
+opacity: 1;
+transform: none;
 }
 .uslugi .item .top {
   overflow: hidden;
@@ -61,7 +75,8 @@
   box-shadow: 0 4px 12px rgba(16, 24, 40, 0.1);
 }
 .uslugi .item .iconwrapper svg {
-  margin-top: 20px;
+  margin-top: 25px;
+  color: var(--accent);
 }
 .uslugi .item .bottom{
   flex: 1;

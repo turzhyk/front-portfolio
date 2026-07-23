@@ -1662,7 +1662,8 @@ border:none
   }
 }
 @media screen and (max-width: 800px) {
-  .ex2 h2 {
+
+  .ex2 h3 {
     margin: 10px;
   }
   .header img {

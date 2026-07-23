@@ -182,24 +182,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .opinion .top {
-    flex-direction: column;
-  }
-  .opinion .vert {
-    display: none;
-  }
-  .opinion .top .left .stars {
-    gap: 0;
-  }
-  .opinion .top .mid strong {
-    gap: 0;
-  }
-  .opinion .top .left {
-    margin: 0;
-    align-items: center;
-  }
-  .opinion .top .mid {
-    align-items: center;
-    gap: 10px;
+  .opinion .item >p{
+    line-height:normal;
   }
 }

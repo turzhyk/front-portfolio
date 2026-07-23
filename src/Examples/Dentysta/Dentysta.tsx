@@ -14,6 +14,7 @@ import Offer from "./Offer";
 import Team from "./Team/Team";
 import Contact from "./Contact/Contact";
 import Hero from "./Hero/Hero";
+import Steps from "./Steps/Steps";
 export default function Dentysta() {
   const [activeSection, setActiveSection] = useState("hero");
 
@@ -62,7 +63,7 @@ export default function Dentysta() {
         <About />
         <Offer />
         <Team />
-        <Process />
+       <Steps/>
         <Opinion />
         <Faq />
         <Contact />

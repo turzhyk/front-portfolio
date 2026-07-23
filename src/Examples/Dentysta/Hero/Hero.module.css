@@ -131,7 +131,7 @@
     padding-bottom: 20px;
     padding-top: 0;
      background:
-    linear-gradient(90deg, rgb(251, 251, 251, 0.5) 100%, rgb(251, 251, 251, 0.5) 100%),
+    linear-gradient(90deg, rgb(251, 251, 251, 0.7) 100%, rgb(251, 251, 251, 0.7) 100%),
     url("/images/demo/dentysta_hero2.webp");
       background-position: center ;
     
@@ -149,7 +149,9 @@
     flex-direction: column;
     gap: 5px;
   }
-
+  .hero h1{
+    font-size: 40px;
+  }
   .hero .features {
     gap: 0;
     justify-content: space-between;
@@ -168,5 +170,18 @@
   }
   .hero .feature .icon{
     background-color: var(--bg-light);
+    padding-top: 7px;
+  }
+    .hero .feature .icon svg{
+      height: 25px;
+  
+    }
+  .hero .feature strong{
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .hero .feature p{
+    font-size: 14px;
+    margin-top: 0;
   }
 }

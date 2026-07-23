@@ -1,0 +1,115 @@
+.steps {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.steps .content {
+  max-width: 1200px;
+  width: 1200px;
+}
+.steps .content .progressbar {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  width: calc(100% - 150px);
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.steps .progressbar .progresspoint {
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgb(var(--accent-values) / 50%);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 70px;
+  opacity: 0;
+  transition-duration: 200ms;
+}
+.steps.visible .progressbar .progresspoint,
+.steps.visible .progressbar .line {
+  opacity: 1;
+}
+.steps .progressbar .line {
+  flex: 1;
+  content: "";
+  border-bottom: 1px solid var(--accent);
+  opacity: 0;
+  transition-duration: 200ms;
+}
+.steps .cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.steps.visible .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+.steps .card {
+  padding: 15px;
+  transition-duration: 200ms;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.steps .card .head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.steps .card .head p {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 800;
+  margin: auto;
+  margin-left: 0;
+}
+.steps .card .iconwrapper {
+  width: 70px;
+  height: 70px;
+  background-color: var(--bg);
+  padding-top: 12px;
+  border-radius: 10px;
+  color: var(--accent);
+}
+.steps .card .description {
+  padding-left: 80px;
+  padding-top: 10px;
+  font-weight: 600;
+  max-width: 300px;
+  text-align: left;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+  .steps {
+    width: 100%;
+    max-width: 100%;
+  }
+  .steps .content {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto 100px ;
+  }
+  .steps .progressbar {
+    flex-direction: column;
+    width: auto;
+    justify-content: start;
+    height: calc( 100% - 200px);
+    margin-top: 0;
+    order: 1;
+  }
+  .steps .progressbar .line {
+    border-bottom: none;
+    border-left: 1px solid var(--accent);
+
+  }
+  .steps .cards {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+}
