@@ -1,0 +1,242 @@
+{
+  "nav": "Navigation",
+  "footer": {
+    "contact": "Contact"
+  },
+  "header": {
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "I build <hi1>landing pages</hi1> and <hi1>websites</hi1> that generate <hi2>customer inquiries</hi2>",
+    "subtitle": "Fast delivery, responsive design, ready for Google Maps and Google Ads",
+    "subtitle2": "B2B invoicing available (VAT invoice)",
+    "cta": "Book a free consultation"
+  },
+  "pain": {
+    "t1": "Is your website",
+    "t2": "costing you customers?",
+    "q1": "loads too slowly",
+    "q2": "doesn't work properly on mobile",
+    "q3": "isn't generating leads from Google",
+    "q4": "makes it hard for customers to contact you",
+    "h2": "That's what I help fix",
+    "option": "Option",
+    "option1": {
+      "h": "You already have a website, but it's not delivering results",
+      "action": "I optimize existing websites to make them faster, mobile-friendly, and easier for customers to use.",
+      "effect": "The result: more inquiries and more potential customers without changing your services."
+    },
+    "option2": {
+      "h": "You don't have a website yet",
+      "action": "I create a professional website from scratch and set it up so customers can easily find your business and get in touch.",
+      "effect": "A complete solution: website, contact setup, and online launch."
+    }
+  },
+  "product": {
+    "h2": "See what you get",
+    "h3": "A website that works for your business",
+    "h4": "Not just a “nice-looking website,” but a tool for attracting customers.",
+    "p1": {
+      "h": "Convenient for mobile users",
+      "p": "Your customers can quickly find your phone number, services, and contact you without any hassle."
+    },
+    "p2": {
+      "h": "More inquiries from Google",
+      "p": "The website is optimized to make your business easier to find online."
+    },
+    "p4": {
+      "h": "Fast performance",
+      "p": "The website loads quickly, so visitors don’t leave for your competitors."
+    },
+    "p3": {
+      "h": "A complete turnkey solution",
+      "p": "You receive a fully finished website ready to go online — with no technical work required on your side. The website belongs to you, and you have full access and control over its content."
+    },
+    "cte": "Let's talk about your project"
+  },
+  "exp": {
+    "projects": "completed web projects",
+    "time": "years of industry experience",
+    "duration": "average project delivery time",
+    "durnum": "7–13 days"
+  },
+  "cases2": {
+    "h": "Example Projects",
+    "price": "price",
+    "time": "delivery time",
+    "cta": "Show Demo",
+    "case1": {
+      "h": "Website for a Massage Studio",
+      "h2": "Helps clients:",
+      "li1": "call quickly",
+      "li2": "send an inquiry",
+      "li3": "find the location",
+      "price": "€420",
+      "time": "3 weeks"
+    },
+    "case2": {
+      "h": "Auto Repair Shop in Poznań",
+      "li1": "quick phone contact",
+      "li2": "service request form",
+      "li3": "location map",
+      "li4": "mobile-friendly version",
+      "price": "€560",
+      "time": "3 weeks"
+    },
+    "case3": {
+      "h": "Dentist",
+      "li1": "fast phone contact",
+      "li2": "appointment request form",
+      "li3": "pricing page",
+      "li4": "mobile-friendly version",
+      "price": "€590",
+      "time": "3 weeks"
+    }
+  },
+  "offer": {
+    "h": "Choose the right solution for your business",
+    "offer1": {
+      "h": "Business Card Website Package",
+      "features": [
+        "Website ready to attract new customers",
+        "Contact form and quick phone contact",
+        "Mobile-friendly version (phone and tablet)",
+        "Website published online",
+        "Basic SEO optimization",
+        "Privacy Policy (GDPR compliant)",
+        "1 month of FREE support after launch"
+      ],
+      "price": "from 1250 PLN",
+      "pricetag": "One-time payment",
+      "cta": "I want a website like this",
+      "deliveryTime": "Delivery time: usually 7–14 business days",
+      "footer": {
+        "stats": "Access to visitor statistics",
+        "access": "Full ownership and access to the website",
+        "domain": "Help with custom domain setup",
+        "invoice": "VAT invoice available",
+        "owner": "The website belongs to you"
+      },
+      "disclaimer": "The price does not include domain and hosting costs."
+    },
+    "offer2": {
+      "h": "Business Package",
+      "popularTag": "Most Popular",
+      "features": [
+        "Everything included in the Business Card Package",
+        "Customer reviews section to build trust",
+        "Portfolio gallery and company photos",
+        "Facebook and Instagram integration",
+        "Additional pages (e.g. Services, Pricing, About Us)",
+        "3 months of FREE support after launch"
+      ],
+      "price": "from PLN 2,200",
+      "pricetag": "One-time payment",
+      "cta": "I want a website like this",
+      "deliveryTime": "Delivery time: usually 12–16 business days"
+    }
+  },
+  "cases": {
+    "title": "Selected projects",
+    "task": "Task",
+    "result": "Result",
+    "budget": "Budget",
+    "time": "Development time",
+    "case1": {
+      "title": "Page for Printing service",
+      "task": "Creation of a landing page for a printing company with a service catalog, separate pages for each service (with price calculators), customer reviews, and a contact form for inquiries.",
+      "result": "Increased number of customer inquiries by making it easy to quickly calculate prices and order services, which led to a higher conversion rate and more valuable inquiries from both individual (B2C) and business (B2B) clients.",
+      "time": "weeks"
+    },
+    "case2": {
+      "title": "Landing page for a driving school",
+      "task": "Creation of a simple landing page (2–3 subpages) for a driving school, including course information, pricing, and a contact form for quick sign-ups.",
+      "result": "Increased number of course registrations thanks to easy access to key information and quick contact options, resulting in a more stable flow of inquiries and fewer abandoned applications.",
+      "time": "weeks"
+    }
+  },
+  "cowork": {
+    "h": "How we'll work together",
+    "s1": "Free consultation",
+    "s2": "Website creation",
+    "s3": "Feedback & revisions",
+    "s4": "Launch and go live"
+  },
+  "process": {
+    "title": "Work process",
+    "step1": {
+      "title": "Discovery & strategy",
+      "subtitle": "Understanding your business needs and goals",
+      "desc": "At this stage, I learn about your business and needs. You tell me what result you want to achieve, what type of website you need, and whether you already have materials (texts, photos, logo) or an initial vision. I ask specific questions to understand your clients and goals. This allows me to propose a solution tailored to your industry and prepare an effective concept for the next step."
+    },
+    "step2": {
+      "title": "Design & feedback",
+      "subtitle": "Creating the concept and gathering feedback",
+      "desc": "At this stage, I prepare the website design based on the agreed strategy. You receive an initial concept (layout, style, key sections), which you can review at your own pace. I collect your feedback and make revisions to refine the look and messaging so it best resonates with your customers and supports sales."
+    },
+    "step3": {
+      "title": "Clean code + SEO",
+      "subtitle": "Fast, reliable and visible website",
+      "desc": "At this stage, I turn the design into a working website. I ensure clean, structured code, fast performance, and full responsiveness across all devices. The website is prepared for SEO (visibility in Google) and ready for integration with tools like Google Analytics and Google Ads."
+    },
+    "step4": {
+      "title": "Ready to sell",
+      "subtitle": "Website launched and ready for clients",
+      "desc": "At this stage, I publish the website and make sure everything works perfectly. Forms, integrations, and basic analytics are set up, so you can start getting clients right away. If needed, I also help with the initial campaign launch or further website development."
+    }
+  },
+  "about": {
+    "title": "About me",
+    "desc": "For over 2 years, I have been creating websites for local businesses. I have completed several projects that actively support sales and help clients stand out online.",
+    "location": {
+      "title": "Location",
+      "desc": "I operate in Poland and understand the specifics of the local market and the needs of Polish customers."
+    },
+    "way": {
+      "title": "Approach",
+      "desc": "Results-focused: I create tools that sell and generate leads, not just “nice-looking designs”."
+    },
+    "tech": {
+      "title": "Technology",
+      "desc": "Speed and performance: I use modern solutions to make your website fast and fully responsive on smartphones."
+    },
+    "garanty": {
+      "title": "Guarantee",
+      "desc": "Full support: I provide technical support after launch and training on how to use the website — you’re not left alone after the project."
+    }
+  },
+  "tech": {
+    "title": "Technical advantage",
+    "subtitle": "Your website will be faster than 95% of your competitors",
+    "warning": "ATTENTION! These numbers are based on real performance metrics from ",
+    "case1": {
+      "title": "Performance",
+      "desc": "The website loads instantly, so users don’t wait and don’t leave for competitors."
+    },
+    "case2": {
+      "title": "Accessibility",
+      "desc": "The website is easy to use for everyone, which increases trust and customer loyalty."
+    },
+    "case3": {
+      "title": "Best practices",
+      "desc": "The code is modern, secure, and written according to standards — without unnecessary errors."
+    },
+    "case4": {
+      "title": "SEO",
+      "desc": "Google favors fast websites, so your site ranks higher in search results."
+    },
+    "after": "Speed means money. Every second of loading time can cost you up to 20% of potential customers"
+  },
+  "contact": {
+    "title": "Request a free quote",
+    "desc": "Want to get started? Leave a message and I’ll get back to you!",
+    "landing": "Landing Page",
+    "page": "Business Website",
+    "other": "Other",
+    "name": "Your name",
+    "phone": "Your phone",
+    "mail": "Your email",
+    "message": "Message",
+    "button": "Request a free quote"
+  }
+}
