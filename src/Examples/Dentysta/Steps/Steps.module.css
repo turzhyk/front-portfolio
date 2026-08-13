@@ -2,6 +2,7 @@
   margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 .steps .content {
   max-width: 1200px;
@@ -84,7 +85,21 @@
   font-size: 16px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1300px) {
+  .steps .content,
+  .steps {
+    width: 100%;
+    max-width: 100%;
+  }
+  .steps .cards .card .head {
+    flex-direction: column;
+    align-items: center;
+  }
+  .steps .cards .card .description {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
   .steps {
     width: 100%;
     max-width: 100%;
@@ -93,23 +108,29 @@
     width: 100%;
     max-width: 100%;
     display: grid;
-    grid-template-columns: auto 100px ;
+    grid-template-columns: auto 100px;
   }
   .steps .progressbar {
     flex-direction: column;
     width: auto;
     justify-content: start;
-    height: calc( 100% - 200px);
+    height: calc(100% - 200px);
     margin-top: 0;
     order: 1;
   }
   .steps .progressbar .line {
     border-bottom: none;
     border-left: 1px solid var(--accent);
-
   }
   .steps .cards {
     flex-direction: column;
     margin-top: 25px;
+  }
+  .steps .cards .card .head {
+    flex-direction: row;
+    align-items: center;
+  }
+  .steps .cards .card .description{
+    padding-left: 80px;
   }
 }

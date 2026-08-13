@@ -1,10 +1,12 @@
 import React from "react";
 import "./pain.css";
 import { useTranslation } from "react-i18next";
+import { useInView } from "../../Examples/Warsztat/useInView";
 export default function Pain() {
     const { t } = useTranslation();
+     const { ref, isVisible } = useInView(0.3);
   return (
-    <section className="pain" id="pain">
+    <section ref={ref} className={"pain "+(isVisible? "visible":"")} id="pain">
       <div className="wide">
         <div className="problem">
           <div>
@@ -12,10 +14,10 @@ export default function Pain() {
             <h1>{t("pain.t2")}</h1>
           </div>
           <div className="quests">
-            <p className="quest">{t("pain.q1")}</p>
-            <p className="quest">{t("pain.q2")}</p>
-            <p className="quest">{t("pain.q3")}</p>
-            <p className="quest">{t("pain.q4")}</p>
+            <p className="quest" >{t("pain.q1")}</p>
+            <p className="quest" style={{animationDelay:"500ms"}}>{t("pain.q2")}</p>
+            <p className="quest" style={{animationDelay:"1000ms"}}>{t("pain.q3")}</p>
+            <p className="quest" style={{animationDelay:"1500ms"}}>{t("pain.q4")}</p>
 
           </div>
         </div>

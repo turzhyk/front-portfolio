@@ -16,6 +16,10 @@
   margin: auto;
   align-items: center;
 }
+.exp.visible .features  .feat {
+transform: none;
+opacity: 1;
+}
 .exp .features  .feat {
   display: flex;
   flex-direction: column;
@@ -24,6 +28,9 @@
   padding: 1rem 2rem;
   border-radius: 10px;
   align-items: center;
+  transition-duration: 200ms;
+  opacity: 0;
+  transform: translateY(60px);
 }
 .exp .features > .feat:hover {
   background-color: var(--bg-rich);
@@ -52,7 +59,8 @@
   padding: 0;
   content: "";
 }
-@media (max-width: 400px) {
+/* @media (max-width: 600px) {} */
+@media (max-width: 600px) {
   .exp {
     padding: 1rem 1rem;
     border-left: 0;

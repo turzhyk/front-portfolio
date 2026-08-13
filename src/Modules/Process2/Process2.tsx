@@ -1,10 +1,12 @@
 import React from "react";
 import "./process2.css";
 import { useTranslation } from "react-i18next";
+import { useInView } from "../../Examples/Warsztat/useInView";
 export default function Process2() {
    const { t } = useTranslation();
+   const { ref, isVisible } = useInView(0.5);
   return (
-    <section id="result" className="process2">
+    <section ref={ref} id={"result"} className={"process2 "+(isVisible?" visible":"")}>
       <h2>{t("product.h2")}</h2>
       <div className="main-feature">
         <h1>{t("product.h3")}</h1>
@@ -89,7 +91,7 @@ export default function Process2() {
             </p>
           </div>
         </div>
-        <div className="feature">
+        <div className="feature" style={{transitionDelay:"200ms"}}>
           <div className="left">
             {" "}
             <div className="pic">
@@ -199,7 +201,7 @@ export default function Process2() {
             </p>
           </div>{" "}
         </div>
-        <div className="feature">
+        <div className="feature"  style={{transitionDelay:"400ms"}}>
           <div className="left">
             <div className="pic">
               <svg
@@ -226,7 +228,7 @@ export default function Process2() {
             </p>
           </div>{" "}
         </div>
-        <div className="feature">
+        <div className="feature"  style={{transitionDelay:"600ms"}}>
           <div className="left">
             {" "}
             <div className="pic">

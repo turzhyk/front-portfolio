@@ -7,7 +7,6 @@ import DemoCta from "../DemoCta";
 import Footer from "./Footer/Footer";
 import Faq from "./FAQ/Faq";
 import { Helmet } from "react-helmet-async";
-import Process from "./Process";
 import Opinion from "./Opinion/Opinion";
 import RunningLine from "./RunningLine";
 import Offer from "./Offer";

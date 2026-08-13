@@ -89,7 +89,7 @@ i18n.use(initReactI18next).init({
           h: "Example Projects",
           price: "price",
           time: "delivery time",
-
+          cta:"Show Demo",
           case1: {
             h: "Website for a Massage Studio",
             h2: "Helps clients:",
@@ -327,6 +327,7 @@ i18n.use(initReactI18next).init({
           h: "Przykładowe realizacj",
           price: "cena",
           time: "czas realizacji",
+          cta: "Zobacz Demo",
           case1: {
             h: "Strona dla salonu masażu",
             h2: "Pomaga klientom:",
@@ -399,7 +400,7 @@ i18n.use(initReactI18next).init({
           },
         },
         product: {
-          h2: "Patrz, co otrzymasz",
+          h2: "Zobacz, co otrzymasz",
           h3: "Strona, która pracuje na Twoją firmę ",
           h4: "Nie tylko „ładna strona”, ale narzędzie do zdobywania klientów.",
           p1: {
@@ -472,7 +473,7 @@ i18n.use(initReactI18next).init({
           },
         },
         about: {
-          title: "Poznajmy się O mnie",
+          title: "Poznajmy się",
           desc: "Od ponad 2 lat zajmuję się tworzeniem stron internetowych dla biznesów lokalnych. Zrealizowałem już kilka projektów, które realnie wspierają sprzedaż i pomagają klientom wyróżnić się w internecie.",
           location: {
             title: "Localizacja",
@@ -480,7 +481,7 @@ i18n.use(initReactI18next).init({
           },
           way: {
             title: "Podejście",
-            desc: "Koncentracja na wynikach: Tworzę narzędzia, które sprzedają и generują leady, a nie tylko „ładne obrazki”.",
+            desc: "Koncentracja na wynikach: Tworzę narzędzia, które sprzedają i generują leady, a nie tylko „ładne obrazki”.",
           },
           tech: {
             title: "Technologie",
