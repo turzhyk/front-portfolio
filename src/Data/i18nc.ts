@@ -324,7 +324,7 @@ i18n.use(initReactI18next).init({
           durnum: "7-13 dni",
         },
         cases2: {
-          h: "Przykładowe realizacj",
+          h: "Przykładowe realizacji",
           price: "cena",
           time: "czas realizacji",
           cta: "Zobacz Demo",
