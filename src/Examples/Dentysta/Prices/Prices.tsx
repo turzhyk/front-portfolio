@@ -1,4 +1,4 @@
-import { Calendar } from "lucide-react";
+import { Calendar, CheckLine } from "lucide-react";
 import styles from "./Prices.module.css";
 
 interface PriceItem {
@@ -144,7 +144,8 @@ export default function Prices() {
             <div className={styles.card} key={category.title}>
               <div className={styles.cardHeader}>
                 <div className={styles.iconCircle}>
-                  <img src={category.icon} alt="" className={styles.icon} />
+                  <CheckLine size={25} color="var(--accent)"/>
+                  {/* <img src={category.icon} alt="" className={styles.icon} /> */}
                 </div>
                 <h4 className={styles.cardTitle}>{category.title}</h4>
               </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Team.module.css';
+import { useInView } from '../useInView';
+import clsx from 'clsx';
 
 interface Doctor {
   id: string;
@@ -46,8 +48,9 @@ const doctors: Doctor[] = [
 ];
 
 const Team: React.FC = () => {
+  const { ref, isVisible } = useInView(0.5);
   return (
-    <section id='team' className={styles.team}>
+    <section ref={ref} id='team' className={clsx (styles.team, isVisible && styles.visible)}>
       <h3>NASZ ZESPÓŁ</h3>
       <h2>Poznaj naszych lekarzy</h2>
       <p>
@@ -56,8 +59,8 @@ const Team: React.FC = () => {
       </p>
 
       <div className={styles.content}>
-        {doctors.map((doctor) => (
-          <div className={styles.item} key={doctor.id}>
+        {doctors.map((doctor, i) => (
+          <div className={styles.item} key={doctor.id}  style={{transitionDelay:i*70+"ms"}}>
             <div className={styles.photo}>
               <img src={doctor.photo} alt={doctor.name} />
               {/* <span className={styles.icon}>

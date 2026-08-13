@@ -8,16 +8,17 @@ export default function Hero() {
         <h3>Stomatologia na najwyższym poziomie</h3>
         <h1>Zdrowy uśmiech, lepsze życie</h1>
         <p>
-          Kompleksowa naprawa i obsługa pojazdów osobowych. Szybko, uczciwie i z
-          gwarancją.
+          Kompleksowa opieka stomatologiczna. Zdrowy uśmiech, nowoczesne
+          leczenie i indywidualne podejście.
         </p>
         <div className={styles.cta_list}>
           <a href="#contact" className={styles.cta_call}>
-            {" "}
             <Calendar />
             Umów wizyte
           </a>
-          <a href="#cennik" className={styles.cta_reserve}>Nasze usługi</a>
+          <a href="#cennik" className={styles.cta_reserve}>
+            Nasze usługi
+          </a>
         </div>
 
         <div className={styles.features}>
@@ -32,8 +33,11 @@ export default function Hero() {
           </div>
           <div className={styles.feature}>
             <div className={styles.icon}>
-              <Users size={35} stroke="currentColor" style={{margin:"7px"}}/>
-              
+              <Users
+                size={35}
+                stroke="currentColor"
+                style={{ margin: "7px" }}
+              />
             </div>
             <span>
               <strong>Indywidualne podejście</strong>

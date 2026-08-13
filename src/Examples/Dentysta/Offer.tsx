@@ -16,7 +16,7 @@ export default function Offer() {
       <div className={styles.wrapper}>
         <div className={styles.item}>
           <div className={styles.iconwrapper}>
-            {<ZoomSvg size={60} cls={styles.accent_icon} thickness={1.5}/>}
+            {<ZoomSvg size={45} cls={styles.accent_icon} thickness={1.5}/>}
           </div>
 
           <h3>Stomatologia zachowawcza</h3>
@@ -31,7 +31,7 @@ export default function Offer() {
               Wypełnienie kompozytowe<strong>od 250 zł</strong>
             </li>
             <li>
-              Leczenie kanałowe<strong>od 600 zł</strong>
+              Leczenie kanałowe<strong>od 450 zł</strong>
             </li>
           </ul>
 
@@ -41,7 +41,7 @@ export default function Offer() {
           </a>
         </div>
         <div className={styles.item}>
-          <div className={styles.iconwrapper}>{<ImplantSvg size={60} cls={styles.accent_icon} thickness={1.5}/>}</div>
+          <div className={styles.iconwrapper}>{<ImplantSvg size={45} cls={styles.accent_icon} thickness={1.5}/>}</div>
 
           <h3>Implantologia</h3>
           <ul>
@@ -65,7 +65,7 @@ export default function Offer() {
           </a>
         </div>
         <div className={styles.item}>
-          <div className={styles.iconwrapper}>{  <Sparkles size={60} strokeWidth={1.5} color="var(--accent)"/>}</div>
+          <div className={styles.iconwrapper}>{  <Sparkles size={45} strokeWidth={1.5} color="var(--accent)"/>}</div>
 
           <h3>Stomatologia estetyczna</h3>
           <ul>

@@ -3,46 +3,68 @@
   position: relative;
   width: 100%;
   padding: 1rem 0;
+  opacity: 0;
+  transition-duration: 300ms;
+  overflow: hidden;
 }
-.pain h2{
+.pain.visible {
+  opacity: 1;
+}
+@keyframes textGlow {
+  0%,
+  50%,
+  100% {
+    text-shadow: 0 0 0 transparent;
+  }
+
+  60% {
+    text-shadow: 0 0 20px #fff;
+  }
+
+  90% {
+    text-shadow: 0 0 3px #fff;
+  }
+}
+.pain h2 {
   margin-bottom: 3rem;
 }
 .pain h1 {
   /* letter-spacing: 10%; */
- text-align: left;
+  text-align: left;
   font-size: 50px;
   width: 100%;
 }
-.pain .problem{
+.pain .problem {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.pain .quests{
- display: grid;
- grid-template-columns: 1fr 1fr;
- max-width: 400px;
- gap: 0;
-margin-top: 2rem;
+.pain .quests {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 400px;
+  gap: 0;
+  margin-top: 2rem;
 }
-.pain .quest{
+.pain .quest {
   padding: 2rem;
   margin: 0;
   transition-duration: 200ms;
-  display:  flex;
+  display: flex;
   align-items: center;
+  animation: textGlow 3s ease-in-out infinite;
 }
-.pain .quest:hover{
+.pain .quest:hover {
   background-color: var(--border);
 }
-.pain .quest:first-child{
+.pain .quest:first-child {
   border-right: var(--border-param);
   border-bottom: var(--border-param);
 }
-.pain .quest:nth-child(2){
+.pain .quest:nth-child(2) {
   border-bottom: var(--border-param);
 }
-.pain .quest:nth-child(3){
+.pain .quest:nth-child(3) {
   border-right: var(--border-param);
 }
 .pain .action {
@@ -57,6 +79,17 @@ margin-top: 2rem;
   width: 100%;
   /* margin-bottom: 3rem; */
 }
+
+.pain .option:nth-child(1) {
+  transform: translateX(-200px);
+}
+.pain .option:nth-child(2) {
+  transform: translateX(200px);
+}
+.pain.visible .option {
+  opacity: 1;
+  transform: none;
+}
 .pain .option {
   border: var(--border-param);
   padding: 1rem 2rem;
@@ -64,6 +97,7 @@ margin-top: 2rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transition-duration: 300ms;
 }
 .pain .option h3 {
   background-color: var(--bg);
@@ -86,7 +120,7 @@ margin-top: 2rem;
   /* background-color: rgb(45, 127, 235); */
   background-color: var(--accent2);
   padding: 1rem 1.5rem;
-  color:white;
+  color: white;
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
@@ -111,26 +145,31 @@ margin-top: 2rem;
   transform: scale(1.05);
 }
 @media (max-width: 1000px) {
+  .pain .wide{
+    padding-top: 3rem;
+  }
   .pain .options {
     grid-template-columns: 1fr;
     padding: 1rem;
     margin-top: 1rem;
   }
-  .pain .problem .quest{
+  .pain .problem .quest {
     padding: 1rem;
   }
-  .pain .problem{
+  .pain .problem {
     flex-direction: column;
   }
-  .pain  h1 {
-    padding: 1rem;
+  .pain h1 {
+  padding: 0;
     margin-bottom: 0;
+
+    margin-top: 0;
   }
-  .pain .action{
-    padding:0;
+  .pain .action {
+    padding: 0;
     margin-top: 1rem;
   }
-  .pain{
+  .pain {
     padding: 0rem;
   }
   .pain .option-title {
@@ -141,13 +180,13 @@ margin-top: 2rem;
   .pain {
     padding-top: 2rem;
   }
-  .pain h1{
+  .pain h1 {
     font-size: 30px;
     margin: 0;
     text-align: center;
     padding: 0;
   }
-  .pain h2{
+  .pain h2 {
     margin-top: 3rem;
   }
 }
