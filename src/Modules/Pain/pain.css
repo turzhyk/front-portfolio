@@ -18,11 +18,11 @@
   }
 
   60% {
-    text-shadow: 0 0 20px #fff;
+    text-shadow: 0 0 20px var(--text-h);
   }
 
   90% {
-    text-shadow: 0 0 3px #fff;
+    text-shadow: 0 0 3px var(--text-h);
   }
 }
 .pain h2 {

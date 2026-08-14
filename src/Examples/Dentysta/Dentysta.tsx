@@ -14,6 +14,8 @@ import Team from "./Team/Team";
 import Contact from "./Contact/Contact";
 import Hero from "./Hero/Hero";
 import Steps from "./Steps/Steps";
+
+
 export default function Dentysta() {
   const [activeSection, setActiveSection] = useState("hero");
 

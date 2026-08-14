@@ -7,7 +7,7 @@
     "contact": "Kontakt"
   },
   "header": {
-    "contact": "Skontaktuj"
+    "contact": "Skontaktuj się"
   },
   "hero": {
     "title": "Więcej <hi2>klientów</hi2> z internetu <hi1>bez</hi1> skomplikowanego marketingu",
@@ -19,14 +19,14 @@
     "t1": "Czy Twoja strona",
     "t2": "traci klientów?",
     "q1": "wolno się ładuje",
-    "q2": "źle działa na telefonie",
+    "q2": "źle działa na urządzeniach mobilnych",
     "q3": "nie ma zapytań z Google",
     "q4": "trudno znaleźć numer telefonu",
     "h2": "Właśnie to naprawiam",
     "option": "Opcja",
     "option1": {
       "h": " Masz już stronę, ale nie działa tak jak powinna",
-      "action": " Poprawiamy istniejące strony, żeby były szybsze, czytelne na telefonie i łatwiejsze w kontakcie.",
+      "action": " Poprawiam istniejące strony, żeby były szybsze, czytelniejsze na telefonie i ułatwiały kontakt z firmą.",
       "effect": "  Efekt: więcej zapytań od klientów bez zmiany Twojej oferty."
     },
     "option2": {
@@ -42,18 +42,19 @@
     "durnum": "7-13 dni"
   },
   "cases2": {
-    "h": "Przykładowe realizacji",
+    "h": "Przykładowe realizacje",
     "price": "cena",
     "time": "czas realizacji",
     "cta": "Zobacz Demo",
+    "cta2": "Zobacz realizację",
     "case1": {
       "h": "Strona dla salonu masażu",
       "h2": "Pomaga klientom:",
       "li1": "szybko zadzwonić",
-      "li2": "wysłac zapytanie",
+      "li2": "wysłać zapytanie",
       "li3": "znaleźć lokalizację",
-      "price": "1800zł",
-      "time": "3 tygodni"
+      "price": "1800 zł",
+      "time": "3 tygodnie"
     },
     "case2": {
       "h": "Serwis samochodowy w Poznaniu",
@@ -61,8 +62,8 @@
       "li2": "formularz zgłoszeniowy",
       "li3": "mapa dojazdu",
       "li4": "wersja mobilna",
-      "price": "2400zł",
-      "time": "3 tygodni"
+      "price": "2400 zł",
+      "time": "3 tygodnie"
     },
     "case3": {
       "h": "Dentysta",
@@ -70,8 +71,17 @@
       "li2": "formularz zgłoszeniowy",
       "li3": "cennik",
       "li4": "wersja mobilna",
-      "price": "2500zł",
-      "time": "3 tygodni"
+      "price": "2500 zł",
+      "time": "3 tygodnie"
+    },
+     "case4": {
+      "h": "Strona dla drukarni",
+       "h2": "Ułatwia klientom:",
+      "li1": "sprawdzić ofertę i ceny",
+      "li2": "szybko wysłać zapytanie",
+      "li3": "znaleźć odpowiednią usługę",
+      "price": "2200 zł",
+      "time": "3 tygodnie"
     }
   },
   "offer": {
@@ -79,7 +89,7 @@
     "offer1": {
       "h": "Pakiet Start",
       "features": [
-        "Strona gotowa do pozyskiwania klientów",
+        "Strona gotowa na pozyskiwanie klientów",
         "Formularz kontaktowy i szybki kontakt telefoniczny",
         "Wersja mobilna (telefon i tablet)",
         "Publikacja strony online",
@@ -106,7 +116,7 @@
       "features": [
         "Wszystko z pakietu Start",
         "Sekcja opinii klientów budująca zaufanie",
-        "Galeria realizacji i zdjęć firmy",
+        "Galeria realizacji i zdjęć Twojej firmy",
         "Integracja z Facebookiem i Instagramem",
         "Dodatkowe podstrony (np. Oferta, Cennik, O nas)",
         "3 miesiące wsparcia po uruchomieniu GRATIS"
@@ -143,8 +153,8 @@
     "title": "Wybrane realizacje",
     "task": "Zadanie",
     "result": "Wynik",
-    "budget": "Budget",
-    "time": "Development time",
+    "budget": "Budżet",
+    "time": "Czas realizacji",
     "case1": {
       "title": "Page for Printing service",
       "task": "Stworzenie landing page dla drukarni z katalogiem usług, osobnymi podstronami dla każdej usługi (z kalkulatorami cen), opiniami klientów oraz formularzem kontaktowym do składania zapytań.",
